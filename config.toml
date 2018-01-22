@@ -28,7 +28,7 @@ ordersectionsby = "weight"
 publishDir= "docs"
 
 [params]
- themeVariant="red"
+ themeVariant="blue"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
