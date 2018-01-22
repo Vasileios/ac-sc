@@ -15,4 +15,4 @@ build:
     - script:
         name: build site
         code: |
-          cd exampleSite && hugo
+           hugo
