@@ -1,7 +1,7 @@
 ---
 date: 180123
 title: AC
-type: index
+type: page
 ---
 
 #+BEGIN_SRC java

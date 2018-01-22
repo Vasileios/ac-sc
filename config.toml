@@ -2,15 +2,15 @@ baseURL = "https://vasileios.github.io/ac-sc/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Algorithmic Composition"
-theme = "/academic/ac-sc/themes/hugo-theme-learn"
-themesdir = "../.."
+title = "Hugo Learn Documentation"
+theme = "hugo-theme-learn"
+themesdir = "themes/"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
-publishDir = "docs"
-
+publishdir="docs"
 [params]
-themeVariant = "red"
+ themeVariant="red"
+
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
@@ -32,7 +32,7 @@ url = "showcase"
 weight = 11
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fa fa-fw fa-bookmark'></i> Creative Coding"
+name = "<i class='fa fa-fw fa-bookmark'></i> creative-coding"
 identifier = "CC"
 url = "https://vasileios.github.io/creative-coding"
 weight = 20
@@ -41,4 +41,3 @@ weight = 20
 name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
 url = "/credits"
 weight = 30
-
