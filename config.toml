@@ -3,11 +3,12 @@ languageCode = "en-US"
 defaultContentLanguage = "en"
 
 title = "Algorithmic Composition"
-theme = "/academic/AC_SC/themes/hugo-theme-learn"
+theme = "/academic/ac-sc/themes/hugo-theme-learn"
 themesdir = "../.."
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 publishDir = "docs"
+
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
   description = "Documentation for Hugo Learn Theme"
