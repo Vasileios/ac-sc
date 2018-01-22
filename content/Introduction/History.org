@@ -1,0 +1,26 @@
++++
+title = "History"
+chapter = true
+weight = 5
++++
+
+*** Chapter 1
+
+
+* History
+
+The history of Algorithmic Composition traced back to
+antiquity. Pythagoras found that maths can be tranlated to music and
+through this ...
+
+Primary principles of automated information
+processing can already be found in the 13th century. Through the works of
+Charles Babbage and Ada Lovelace,
+The history of algorithmic composition has its beginning
+shortly after the turn of the first millennium with a system developed by Guido
+of Arezzo enabling the generation of melodic material from texts, spans over the application
+of algorithmic principles in the developing complex polyphony and is also
+found in the “composition machines” of Athanasius Kircher in the Baroque period.
+Furthermore, first applications of algorithms for compositional tasks can be found
+in the popular “musical dice game” in the 18th century.
+

@@ -6,7 +6,6 @@
     <description>Recent content on Documentation for Hugo Learn Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 03 Jan 1970 04:02:03 +0200</lastBuildDate>
     
 	<atom:link href="https://vasileios.github.io/ac-sc/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,11 +13,60 @@
     <item>
       <title>AC</title>
       <link>https://vasileios.github.io/ac-sc/</link>
-      <pubDate>Sat, 03 Jan 1970 04:02:03 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/</guid>
-      <description>define _foo  Algorithmic Composition Algorithm is:
+      <description>Chapter 1 define _foo  Algorithmic Composition Algorithm is:
  A set of mathematical instructions that must be followed in a fixed order, and that, especially if given to a computer, will help to calculate an answer to a mathematical problem [1]. A systematic procedure that produces – in a finite number of steps the answer to a question or the solution of a problem [2]. [...] (especially computing) a set of rules that must be followed when solving a particular problem [4].</description>
+    </item>
+    
+    <item>
+      <title>History</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/history/</guid>
+      <description>Chapter 1 History The history of Algorithmic Composition traced back to antiquity. Pythagoras found that maths can be tranlated to music and through this ...
+Primary principles of automated information processing can already be found in the 13th century. Through the works of Charles Babbage and Ada Lovelace, The history of algorithmic composition has its beginning shortly after the turn of the first millennium with a system developed by Guido of Arezzo enabling the generation of melodic material from texts, spans over the application of algorithmic principles in the developing complex polyphony and is also found in the “composition machines” of Athanasius Kircher in the Baroque period.</description>
+    </item>
+    
+    <item>
+      <title>SuperCollider</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</guid>
+      <description>SuperCollider // Collins Cellular automata // ===================================================================== // SuperCollider Workspace // ===================================================================== s.boot ( SynthDef(\cellularautomataexample,{arg freq=440, amp=0.1; Out.ar(0,amp*Line.kr(1,0,0.2,doneAction:2)*LPF.ar(LFSaw.ar(freq),Line.kr(5000,1000,0.2))) }).send(s) ) ( var a, ca; var diatonic= #[0,2,4,5,7,9,11]; var w, ms; var r; w= GUI.window.new(&amp;quot;cellular automata&amp;quot;, Rect(100,300,300,100)); ms= GUI.multiSliderView.new(w,Rect(20,0,210,100)); ms.indexThumbSize_(10.0); ms.xOffset_(0.0); w.front; a= Array.rand(21,0.0,1.0); //starting data array ms.value_(a); //initialise view //function for updating the current array ca= {|array| var b; b= array.copy; b= array.collect{|val,i| var tmp, noise= 1.0.rand; tmp=(noise*array.wrapAt(i-1)) + ((1.0-noise)*array.wrapAt(i+1)); if(0.</description>
+    </item>
+    
+    <item>
+      <title>Paradigms</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/paradigms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/paradigms/</guid>
+      <description>Chapter 1 Paradigms  Markov models  Markov models are for the most part employed in the field of style imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.
+ Generative grammars  Chomsky&#39;s generative grammars generation of musical structure
+ Transition networks  David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.
+http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://vasileios.github.io/ac-sc/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/logo/</guid>
+      <description>                </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://vasileios.github.io/ac-sc/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/logo/</guid>
+      <description>../images/logo.png</description>
     </item>
     
   </channel>

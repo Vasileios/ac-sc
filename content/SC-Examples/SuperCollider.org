@@ -1,0 +1,80 @@
++++
+title = "SuperCollider"
+chapter = true
+weight = 6
++++
+
+* SuperCollider
+
+
+#+BEGIN_SRC js
+
+// Collins Cellular automata
+
+// =====================================================================
+// SuperCollider Workspace
+// =====================================================================
+
+s.boot
+(
+SynthDef(\cellularautomataexample,{arg freq=440, amp=0.1; 
+
+Out.ar(0,amp*Line.kr(1,0,0.2,doneAction:2)*LPF.ar(LFSaw.ar(freq),Line.kr(5000,1000,0.2)))
+
+}).send(s)
+
+)
+
+(
+var a, ca; 
+var diatonic= #[0,2,4,5,7,9,11]; 
+var w, ms; 
+var r; 
+
+w= GUI.window.new("cellular automata", Rect(100,300,300,100));
+ms= GUI.multiSliderView.new(w,Rect(20,0,210,100));
+ms.indexThumbSize_(10.0);
+ms.xOffset_(0.0);
+w.front;
+
+
+a= Array.rand(21,0.0,1.0); //starting data array
+
+ms.value_(a); //initialise view
+
+//function for updating the current array
+ca= {|array|  
+var b; 
+
+b= array.copy; 
+
+b= array.collect{|val,i| var tmp, noise= 1.0.rand; tmp=(noise*array.wrapAt(i-1)) + ((1.0-noise)*array.wrapAt(i+1)); if(0.1.coin,1.0.rand,tmp)}; 
+
+b
+};
+
+r= {
+	
+	//iterations of CA function
+	inf.do{
+		
+		a= ca.value(a); //update line using cellular automata rules
+		
+		//a.postln;
+		{ms.value_(a);}.defer;
+		
+		a.do{|val,i| if(val>0.7,{Synth(\cellularautomataexample, [\freq, (diatonic.wrapAt(i) + ((i.div(7))*12) + 48).midicps, \amp, 0.1])}); }; 
+		
+		0.25.wait;
+	}
+
+}.fork; 
+
+w.onClose_({r.stop;});
+
+);
+
+ 
+
+#+END_SRC
+

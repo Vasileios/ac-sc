@@ -1,8 +1,11 @@
----
-date: 180123
-title: AC
-type: page
----
++++
+title = "AC"
+chapter = true
+weight = 5
+pre = "<b>1. </b>"
++++
+
+*** Chapter 1
 
 #+BEGIN_SRC java
 define _foo
