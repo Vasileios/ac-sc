@@ -2,12 +2,13 @@ baseURL = "https://vasileios.github.io/ac-sc"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Hugo Learn Documentation"
+title = "Algorithmic Composition"
 theme = "hugo-theme-learn"
 themesdir = "themes/"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 publishdir="docs"
+
 [params]
  themeVariant="red"
 
