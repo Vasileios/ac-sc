@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Documentation for Hugo Learn Theme</title>
+    <title>Documentation for Algorithmic Composition</title>
     <link>https://vasileios.github.io/ac-sc/</link>
-    <description>Recent content on Documentation for Hugo Learn Theme</description>
+    <description>Recent content on Documentation for Algorithmic Composition</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     
@@ -49,24 +49,6 @@ Primary principles of automated information processing can already be found in t
  Generative grammars  Chomsky&#39;s generative grammars generation of musical structure
  Transition networks  David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.
 http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://vasileios.github.io/ac-sc/logo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/logo/</guid>
-      <description>                </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://vasileios.github.io/ac-sc/logo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/logo/</guid>
-      <description>../images/logo.png</description>
     </item>
     
   </channel>

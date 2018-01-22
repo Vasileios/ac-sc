@@ -42,20 +42,6 @@
 	"content": "Chapter 1 Paradigms  Markov models  Markov models are for the most part employed in the field of style imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.\n Generative grammars  Chomsky's generative grammars generation of musical structure\n Transition networks  David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.\nhttp://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/\n chaos and self-similarity  Fractals, Lindenmayer systems\n Genetic algorithms   Cellular automata   Neural networks   Artificial intelligence  "
 },
 {
-	"uri": "https://vasileios.github.io/ac-sc/logo/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "                "
-},
-{
-	"uri": "https://vasileios.github.io/ac-sc/logo/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "../images/logo.png\n"
-},
-{
 	"uri": "https://vasileios.github.io/ac-sc/categories/",
 	"title": "Categories",
 	"tags": [],
@@ -64,7 +50,7 @@
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/",
-	"title": "Documentation for Hugo Learn Theme",
+	"title": "Documentation for Algorithmic Composition",
 	"tags": [],
 	"description": "",
 	"content": ""
