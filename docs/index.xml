@@ -27,6 +27,7 @@
       
       <guid>https://vasileios.github.io/ac-sc/introduction/history/</guid>
       <description>Chapter 1 History The history of Algorithmic Composition traced back to antiquity. Pythagoras found that maths can be tranlated to music and through this ...
+../images/CircleOfFifths.jpg
 Primary principles of automated information processing can already be found in the 13th century. Through the works of Charles Babbage and Ada Lovelace, The history of algorithmic composition has its beginning shortly after the turn of the first millennium with a system developed by Guido of Arezzo enabling the generation of melodic material from texts, spans over the application of algorithmic principles in the developing complex polyphony and is also found in the “composition machines” of Athanasius Kircher in the Baroque period.</description>
     </item>
     
@@ -36,7 +37,9 @@ Primary principles of automated information processing can already be found in t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</guid>
-      <description>SuperCollider // Collins Cellular automata // ===================================================================== // SuperCollider Workspace // ===================================================================== s.boot ( SynthDef(\cellularautomataexample,{arg freq=440, amp=0.1; Out.ar(0,amp*Line.kr(1,0,0.2,doneAction:2)*LPF.ar(LFSaw.ar(freq),Line.kr(5000,1000,0.2))) }).send(s) ) ( var a, ca; var diatonic= #[0,2,4,5,7,9,11]; var w, ms; var r; w= GUI.window.new(&amp;quot;cellular automata&amp;quot;, Rect(100,300,300,100)); ms= GUI.multiSliderView.new(w,Rect(20,0,210,100)); ms.indexThumbSize_(10.0); ms.xOffset_(0.0); w.front; a= Array.rand(21,0.0,1.0); //starting data array ms.value_(a); //initialise view //function for updating the current array ca= {|array| var b; b= array.copy; b= array.collect{|val,i| var tmp, noise= 1.0.rand; tmp=(noise*array.wrapAt(i-1)) + ((1.0-noise)*array.wrapAt(i+1)); if(0.</description>
+      <description>SuperCollider SuperCollider From: SuperCollider
+Basics SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
+SuperCollider features three major components:  scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
     </item>
     
     <item>
