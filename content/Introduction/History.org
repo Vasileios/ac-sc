@@ -106,3 +106,19 @@ Alongside Babbage, Ada Countess of Lovelace (1815–1852) played an important ro
 
 Furthermore, first applications of algorithms for compositional tasks can be found
 in the popular “musical dice game” in the 18th century. (Nierhaus 2009)
+
+*Logical Operations*
+
+*Boole (1815-1864)*
+
+George Boole (1815– 1864) developed in his publications “The Mathematical Analysis of Logic” (1847) and “An Investigation of the Laws of Thought” (1854) a formalism for the repre- sentation of propositional logic.
+
+*Shannon (1916-2001)*
+
+/Boolean algebra in electronic circuits/
+
+#+BEGIN_SRC latex
+ \alpha \rightarrow \beta
+#+END_SRC
+
+X1V(X4(X2VX3))
