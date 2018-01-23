@@ -9,4 +9,6 @@ weight = 5
 
  Algorithmic Composition & Sound Synthesis
 
+#+CAPTION: Nebula
+
 [[../images/Nebula1.jpg]]
