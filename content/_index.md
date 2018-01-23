@@ -9,6 +9,7 @@ weight = 5
 
  Algorithmic Composition & Sound Synthesis
 
-#+CAPTION: Nebula
+![Alt text][id]
 
-[[../images/Nebula1.jpg]]
+[id]: http://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
