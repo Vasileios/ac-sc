@@ -28,6 +28,13 @@
 	"content": "Chapter 2 This chapter contains SuperCollider examples of Algorithmic Composition\n"
 },
 {
+	"uri": "https://vasileios.github.io/ac-sc/introduction/paradigms/",
+	"title": "Paradigms",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Paradigms  Markov models  Markov models are for the most part employed in the field of style imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.\n Generative grammars  Chomsky's generative grammars generation of musical structure\n Transition networks  David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.\nhttp://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/\n chaos and self-similarity  Fractals, Lindenmayer systems\n Genetic algorithms   Cellular automata   Neural networks   Artificial intelligence  "
+},
+{
 	"uri": "https://vasileios.github.io/ac-sc/sc-examples/supercollider/",
 	"title": "SuperCollider",
 	"tags": [],
@@ -39,14 +46,7 @@
 	"title": "Tuning-Scales",
 	"tags": [],
 	"description": "",
-	"content": "chapter 1 Scales ../images/CircleOfFifths.jpg\n"
-},
-{
-	"uri": "https://vasileios.github.io/ac-sc/introduction/paradigms/",
-	"title": "Paradigms",
-	"tags": [],
-	"description": "",
-	"content": "Chapter 1 Paradigms  Markov models  Markov models are for the most part employed in the field of style imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.\n Generative grammars  Chomsky's generative grammars generation of musical structure\n Transition networks  David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.\nhttp://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/\n chaos and self-similarity  Fractals, Lindenmayer systems\n Genetic algorithms   Cellular automata   Neural networks   Artificial intelligence  "
+	"content": "chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.\n../images/CircleOfFifths.jpg\n"
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/categories/",

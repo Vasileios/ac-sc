@@ -1,7 +1,7 @@
 +++
 title = "Paradigms"
 chapter = true
-weight = 15
+weight = 6
 +++
 
 *** Chapter 1

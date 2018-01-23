@@ -9,7 +9,9 @@ weight = 7
 
 * Scales
 
-
+*Circle of fiths* is the relationship among the 12 tones of the chromatic scale, their
+corresponding key signatures, and the associated major and minor
+keys. 
 
 #+CAPTION:Circle of Fifths
 
