@@ -20,51 +20,15 @@ SuperCollider is a platform for audio synthesis and algorithmic composition, use
 - *sclang*, an interpreted programming language. It is focused on sound, but not limited to any specific domain. sclang controls scsynth via Open Sound Control. You can use it for algorithmic composition and sequencing, finding new sound synthesis methods, connecting your app to external hardware including MIDI controllers, network music, writing GUIs and visual displays, or for your daily programming experiments. It has a stock of user-contributed extensions called Quarks.
 - *scide* is an editor for sclang with an integrated help system.
 
-
-
-** Nodes
-
-From: [[https://composerprogrammer.com/teaching/supercollider/sctutorial/6.3%2520Nodes.html][composerprogrammer.com]]
-
-The Server has a graph of all the running Synths, which may be organised into Groups for convenience. You can see Synths and Groups being created just by looking at the Server graphics.
-
-A Node means a Synth or a Group. Whenever you press command+period you reset the graph, cleaning out all the Synths and Groups you added, that is, clearing all Nodes.
-
-The initial state of the Node graph on the Server looks like this (do command+period first to destroy any existing nodes so you have the starting state):
-
-#+BEGIN_SRC js
-s.queryAllNodes //run me to see the Nodes on the Server
-#+END_SRC
-
-The two default Nodes are convenient Groups for putting your Synths into.
-
-Group(0) is the absolute root of the tree. All new Synths get placed within this Group somewhere (they might be in subGroups but they will be within the RootNode Group at the top of the hierarchy).
-
-#+BEGIN_SRC js
-r=RootNode.new; //this gets a reference to Group(0)
-#+END_SRC
-
-Group(1) was added as an additional default to receive all created Synths, to avoid cluttering the base of the tree.
-
-#+BEGIN_SRC js
-Group.basicNew(s, 1); //this gets a reference to Group(1)
-#+END_SRC
-
-
-
-
 ** Find recordings folder
 
 #+BEGIN_SRC js
 thisProcess.platform.recordingsDir;
 #+END_SRC
 
+** Sound synthesis techniques
 
-
-** Synthesis techniques
-
-
-Introduction to sound design (origin, definition, procedures, application fields).
+Introduction to sound synthesis and  sound design (origin, definition, procedures, application fields).
 
 #+BEGIN_QUOTE
 SuperCollider example:
@@ -125,6 +89,7 @@ Joystick
 Game Paddles
 etc
 #+END_QUOTE
+
 ** Instrument design
 
 
@@ -135,89 +100,7 @@ Capacitive touch sensor-raspberry pi
 
 [[https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/overview][MPR121]]
 
-
-
-
-** Mapping the Data from the Input Device
-
-The message coming from digital input devices are streams of binary
-numbers. A microprocessor inside the receiving synthesizer must decode
-these streams before commanding the synthesis engine  to emit
-sound. (Roads 1996: 625)
-
-
-
-   
-** Algorithmic Composition examples
-
-#+BEGIN_SRC js
-
-// Collins Cellular automata
-
-// =====================================================================
-// SuperCollider Workspace
-// =====================================================================
-
-s.boot
-(
-SynthDef(\cellularautomataexample,{arg freq=440, amp=0.1; 
-
-Out.ar(0,amp*Line.kr(1,0,0.2,doneAction:2)*LPF.ar(LFSaw.ar(freq),Line.kr(5000,1000,0.2)))
-
-}).send(s)
-
-)
-
-(
-var a, ca; 
-var diatonic= #[0,2,4,5,7,9,11]; 
-var w, ms; 
-var r; 
-
-w= GUI.window.new("cellular automata", Rect(100,300,300,100));
-ms= GUI.multiSliderView.new(w,Rect(20,0,210,100));
-ms.indexThumbSize_(10.0);
-ms.xOffset_(0.0);
-w.front;
-
-
-a= Array.rand(21,0.0,1.0); //starting data array
-
-ms.value_(a); //initialise view
-
-//function for updating the current array
-ca= {|array|  
-var b; 
-
-b= array.copy; 
-
-b= array.collect{|val,i| var tmp, noise= 1.0.rand; tmp=(noise*array.wrapAt(i-1)) + ((1.0-noise)*array.wrapAt(i+1)); if(0.1.coin,1.0.rand,tmp)}; 
-
-b
-};
-
-r= {
-	
-	//iterations of CA function
-	inf.do{
-		
-		a= ca.value(a); //update line using cellular automata rules
-		
-		//a.postln;
-		{ms.value_(a);}.defer;
-		
-		a.do{|val,i| if(val>0.7,{Synth(\cellularautomataexample, [\freq, (diatonic.wrapAt(i) + ((i.div(7))*12) + 48).midicps, \amp, 0.1])}); }; 
-		
-		0.25.wait;
-	}
-
-}.fork; 
-
-w.onClose_({r.stop;});
-
-);
-
- 
-
-#+END_SRC
+#+BEGIN_QUOTE
+To be continued...
+#+END_QUOTE
 

@@ -27,7 +27,7 @@ David Cope’s program
 “EMI” generates style imitations after having analyzed a sufficient
 number of compositions of a particular genre.
 
-http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/
+[[http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/][EMI history]]
 
 - chaos and self-similarity
 

@@ -9,12 +9,97 @@ weight = 5
 
 * History
 
-The history of Algorithmic Composition traced back to
-antiquity. Pythagoras found that maths can be tranlated to music and
-through this ...
+Music and maths.
 
+*Pythagoras*
+
+The sound of blacksmiths hammering had led Pythagoras to
+important conclusions about the nature of pitch and the mathematical
+basis of harmony after comparing the pitches made by hammers.
+
+*Guido D'Arrezo*
+
+Also in the context of algorithmic composition, by around AD 1000 a first approach to automatic musical structure genesis had been developed. Guido of Arezzo (around 991–1031) contributed considerably to the development of notation, developed solmization and was an important music theorist of the medieval era. One of his most significant works, “Micrologus,” is the earliest compendium of monodic and polyphonic singing practice. I
 Primary principles of automated information
-processing can already be found in the 13th century. Through the works of
+processing can already be found in the 13th century. 
+
+*Ars Magna*
+
+If the abovementioned principles represent the beginnings of
+algorithmic manipulation of musical material, then the “Ars Magna”
+of Raimundus Lullus effectively realizes the concept of a computer
+(music) system. 
+
+*Kircher*
+
+In his exhaustive musicologist work “Musurgia Universalis” from 1650,
+Kircher developed amongst others a system of algorithmic
+composition. This system consists of three categories of labeled
+wooden sticks (syntagmas) on which both numbers and rhythmic values
+are engraved. 
+
+[[http://special.lib.gla.ac.uk/exhibns/month/nov2002.html][See here more]]
+
+
+*Leibniz (1646–1716)*
+
+“universal language”
+
+Formalization of the sciences. 
+
+..enable the solution of any scientific problem within a comprehensive
+calculus.
+
+The concept of a universal language was also a vision of
+cross-national communication in Europe after the Thirty-Year War. 
+
+Programm's preconditions:
+
+1. Precompile encyclopedia of all terms that are necessary to formalize the sciences; 
+
+2. a formal system was to be developed, namely the “lingua universalis,” within which all scientific terms could be coded;
+
+3. creating the “calculus ratiocinator” that should enable the connection of all terms of the universal language by means of logical operations. 
+
+
+Use of symbols to represent all scientific terms.
+
+As a set of symbols, he chose the group of natural numbers.
+
+For example,
+
+#+BEGIN_QUOTE
+Thing = 2
+Being = 6=2*3
+Human Being = 30=6*5
+etc.
+#+END_QUOTE
+
+“Musica est exercitium arithmeticae occultum, nescientis se numerare animi” (“Music is a hidden arithmetic exercise of the soul, which does not know that it is counting.”).
+
+
+
+ *Calculating process & machines*
+
+A mechanization of calculating processes, 1617 by the Scottish
+mathematician John Napier and Jost Bu ̈rgi (1552–1632) pioneered in the
+field of logarithms with his “Mirifici logarithmorum canonis
+descriptio” appearing in 1614, designed a device for multiplication
+and division, based on the principle of the Pythagorean abacus. (1550–1617).
+
+The Napier’s abacus, also known as Napier’s bones.
+
+#+CAPTION: Napier's Bones
+
+[[../images/NapiersBones.jpg]]
+
+Similar to Napier's Bones:
+
+Caspar Schott (1608–1666),
+“Organum Mathematicum” (1668)
+ 
+////
+Through the works of
 Charles Babbage and Ada Lovelace,
 The history of algorithmic composition has its beginning
 shortly after the turn of the first millennium with a system developed by Guido

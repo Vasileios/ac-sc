@@ -13,19 +13,19 @@
     <title>SuperCollider :: Documentation for Algorithmic Composition</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1516718011" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1516718011" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1516726709" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1516726709" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-blue.css?1516718011" rel="stylesheet">
+      <link href="/ac-sc/css/theme-blue.css?1516726709" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1516718011"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1516726709"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1516718011"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1516718011"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1516726709"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1516726709"></script>
 <script type="text/javascript">
     
         var baseurl = '\/ac-sc';
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1516718011"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1516726709"></script>
 
     
   </div>
@@ -510,43 +510,15 @@
 <li><strong>scide</strong> is an editor for sclang with an integrated help system.</li>
 </ul>
 
-<h2 id="nodes">Nodes</h2>
-
-<p>From: <a href="https://composerprogrammer.com/teaching/supercollider/sctutorial/6.3%2520Nodes.html" title="composerprogrammer.com">composerprogrammer.com</a></p>
-
-<p>The Server has a graph of all the running Synths, which may be organised into Groups for convenience. You can see Synths and Groups being created just by looking at the Server graphics.</p>
-
-<p>A Node means a Synth or a Group. Whenever you press command+period you reset the graph, cleaning out all the Synths and Groups you added, that is, clearing all Nodes.</p>
-
-<p>The initial state of the Node graph on the Server looks like this (do command+period first to destroy any existing nodes so you have the starting state):</p>
-
-<pre><code class="language-js">
-s.queryAllNodes //run me to see the Nodes on the Server
-</code></pre>
-
-<p>The two default Nodes are convenient Groups for putting your Synths into.</p>
-
-<p>Group(0) is the absolute root of the tree. All new Synths get placed within this Group somewhere (they might be in subGroups but they will be within the RootNode Group at the top of the hierarchy).</p>
-
-<pre><code class="language-js">
-r=RootNode.new; //this gets a reference to Group(0)
-</code></pre>
-
-<p>Group(1) was added as an additional default to receive all created Synths, to avoid cluttering the base of the tree.</p>
-
-<pre><code class="language-js">
-Group.basicNew(s, 1); //this gets a reference to Group(1)
-</code></pre>
-
 <h2 id="find-recordings-folder">Find recordings folder</h2>
 
 <pre><code class="language-js">
 thisProcess.platform.recordingsDir;
 </code></pre>
 
-<h2 id="synthesis-techniques">Synthesis techniques</h2>
+<h2 id="sound-synthesis-techniques">Sound synthesis techniques</h2>
 
-<p>Introduction to sound design (origin, definition, procedures, application fields).</p>
+<p>Introduction to sound synthesis and  sound design (origin, definition, procedures, application fields).</p>
 
 <blockquote>
 <p>
@@ -637,85 +609,11 @@ etc
 
 <p><a href="https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/overview" title="MPR121">MPR121</a></p>
 
-<h2 id="mapping-the-data-from-the-input-device">Mapping the Data from the Input Device</h2>
-
-<p>The message coming from digital input devices are streams of binary
-numbers. A microprocessor inside the receiving synthesizer must decode
-these streams before commanding the synthesis engine  to emit
-sound. (Roads 1996: 625)</p>
-
-<h2 id="algorithmic-composition-examples">Algorithmic Composition examples</h2>
-
-<pre><code class="language-js">
-
-// Collins Cellular automata
-
-// =====================================================================
-// SuperCollider Workspace
-// =====================================================================
-
-s.boot
-(
-SynthDef(\cellularautomataexample,{arg freq=440, amp=0.1; 
-
-Out.ar(0,amp*Line.kr(1,0,0.2,doneAction:2)*LPF.ar(LFSaw.ar(freq),Line.kr(5000,1000,0.2)))
-
-}).send(s)
-
-)
-
-(
-var a, ca; 
-var diatonic= #[0,2,4,5,7,9,11]; 
-var w, ms; 
-var r; 
-
-w= GUI.window.new(&quot;cellular automata&quot;, Rect(100,300,300,100));
-ms= GUI.multiSliderView.new(w,Rect(20,0,210,100));
-ms.indexThumbSize_(10.0);
-ms.xOffset_(0.0);
-w.front;
-
-
-a= Array.rand(21,0.0,1.0); //starting data array
-
-ms.value_(a); //initialise view
-
-//function for updating the current array
-ca= {|array|  
-var b; 
-
-b= array.copy; 
-
-b= array.collect{|val,i| var tmp, noise= 1.0.rand; tmp=(noise*array.wrapAt(i-1)) + ((1.0-noise)*array.wrapAt(i+1)); if(0.1.coin,1.0.rand,tmp)}; 
-
-b
-};
-
-r= {
-
-	//iterations of CA function
-	inf.do{
-
-		a= ca.value(a); //update line using cellular automata rules
-
-		//a.postln;
-		{ms.value_(a);}.defer;
-
-		a.do{|val,i| if(val&gt;0.7,{Synth(\cellularautomataexample, [\freq, (diatonic.wrapAt(i) + ((i.div(7))*12) + 48).midicps, \amp, 0.1])}); }; 
-
-		0.25.wait;
-	}
-
-}.fork; 
-
-w.onClose_({r.stop;});
-
-);
-
-
-
-</code></pre>
+<blockquote>
+<p>
+To be continued...
+</p>
+</blockquote>
 
 
 <footer class=" footline" >
@@ -871,20 +769,20 @@ w.onClose_({r.stop;});
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1516718011"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1516718011"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1516718011"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1516718011"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1516718011"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1516718011"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1516718011"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1516726709"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1516726709"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1516726709"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1516726709"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1516726709"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1516726709"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1516726709"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1516718011"></script>
-    <script src="/ac-sc/js/learn.js?1516718011"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1516718011"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1516726709"></script>
+    <script src="/ac-sc/js/learn.js?1516726709"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1516726709"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1516718011" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1516718011"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1516726709" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1516726709"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
