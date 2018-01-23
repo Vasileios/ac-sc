@@ -11,4 +11,4 @@ weight = 5
 
 #+CAPTION: Nebula
 
-[[../images/Nebula1.jpg]]
+[[https://vasileios.github.io/ac-sc/contents/images/Nebula1.jpg][Nebula]]
