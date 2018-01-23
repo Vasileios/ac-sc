@@ -5,6 +5,9 @@ weight = 5
 +++
 
 
-* AC Classes
+# AC Classes
 
  Algorithmic Composition & Sound Synthesis
+
+
+![Minion](http://octodex.github.com/images/minion.png)
