@@ -13,10 +13,6 @@ The history of Algorithmic Composition traced back to
 antiquity. Pythagoras found that maths can be tranlated to music and
 through this ...
 
-#+CAPTION:Circle of Fifths
-
-[[../images/CircleOfFifths.jpg]]
-
 Primary principles of automated information
 processing can already be found in the 13th century. Through the works of
 Charles Babbage and Ada Lovelace,

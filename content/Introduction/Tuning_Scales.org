@@ -1,0 +1,16 @@
++++
+title = "Tuning-Scales"
+chapter = true
+weight = 7
++++
+
+
+*** chapter 1
+
+* Scales
+
+
+
+#+CAPTION:Circle of Fifths
+
+[[../images/CircleOfFifths.jpg]]

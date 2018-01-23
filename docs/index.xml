@@ -27,7 +27,6 @@
       
       <guid>https://vasileios.github.io/ac-sc/introduction/history/</guid>
       <description>Chapter 1 History The history of Algorithmic Composition traced back to antiquity. Pythagoras found that maths can be tranlated to music and through this ...
-../images/CircleOfFifths.jpg
 Primary principles of automated information processing can already be found in the 13th century. Through the works of Charles Babbage and Ada Lovelace, The history of algorithmic composition has its beginning shortly after the turn of the first millennium with a system developed by Guido of Arezzo enabling the generation of melodic material from texts, spans over the application of algorithmic principles in the developing complex polyphony and is also found in the “composition machines” of Athanasius Kircher in the Baroque period.</description>
     </item>
     
@@ -40,6 +39,15 @@ Primary principles of automated information processing can already be found in t
       <description>SuperCollider SuperCollider From: SuperCollider
 Basics SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
 SuperCollider features three major components:  scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
+    </item>
+    
+    <item>
+      <title>Tuning-Scales</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/tuning_scales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/tuning_scales/</guid>
+      <description>chapter 1 Scales ../images/CircleOfFifths.jpg</description>
     </item>
     
     <item>
