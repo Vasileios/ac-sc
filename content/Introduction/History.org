@@ -22,5 +22,5 @@ of Arezzo enabling the generation of melodic material from texts, spans over the
 of algorithmic principles in the developing complex polyphony and is also
 found in the “composition machines” of Athanasius Kircher in the Baroque period.
 Furthermore, first applications of algorithms for compositional tasks can be found
-in the popular “musical dice game” in the 18th century.
+in the popular “musical dice game” in the 18th century. (Nierhaus 2009)
 
