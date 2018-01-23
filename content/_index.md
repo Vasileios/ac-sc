@@ -10,4 +10,4 @@ weight = 5
  Algorithmic Composition & Sound Synthesis
 
 
-![Minion](http://octodex.github.com/images/minion.png)
+![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
