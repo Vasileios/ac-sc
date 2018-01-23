@@ -90,7 +90,7 @@ and division, based on the principle of the Pythagorean abacus. (1550–1617).
 The Napier’s abacus, also known as Napier’s bones.
 
 #+CAPTION: Napier's Bones
-
+#+NAME: FIG.1
 [[../images/NapiersBones.jpg]]
 
 Similar to Napier's Bones:
