@@ -1,0 +1,12 @@
++++
+title = "AC"
+chapter = true
+weight = 5
++++
+
+
+# AC Classes
+
+ Algorithmic Composition & Sound Synthesis
+
+[[/images/nebula1.jpg]]
