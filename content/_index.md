@@ -10,4 +10,4 @@ weight = 5
  Algorithmic Composition & Sound Synthesis
 
 
-![Alt text](http://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Alt text](https://github.com/Vasileios/ac-sc/tree/master/content/Introduction/images/rendering3.jpg "The Stormtroopocat")
