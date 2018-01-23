@@ -117,8 +117,7 @@ George Boole (1815– 1864) developed in his publications “The Mathematical An
 
 /Boolean algebra in electronic circuits/
 
-#+BEGIN_SRC latex
  \alpha \rightarrow \beta
-#+END_SRC
+
 
 X1V(X4(X2VX3))
