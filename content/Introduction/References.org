@@ -1,3 +1,8 @@
++++
+title = "References"
+chapter = true
+weight = 8
++++
 
 
 Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
