@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/history/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/introduction/history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/introduction/history/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/introduction/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/sc-examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/paradigms/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/sc-examples/supercollider/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/tuning_scales/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/references/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/en/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/tags/"
+                />
+  </url>
+  
+</urlset>

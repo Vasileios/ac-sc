@@ -1,47 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/history/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/paradigms/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/tuning_scales/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/references/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>https://vasileios.github.io/ac-sc/el/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://vasileios.github.io/ac-sc/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ΑΣ on Αλγοριθμική Σύνθεση</title>
+    <link>https://vasileios.github.io/ac-sc/el/</link>
+    <description>Recent content in ΑΣ on Αλγοριθμική Σύνθεση</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://vasileios.github.io/ac-sc/el/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ιστορία</title>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/history/</guid>
+      <description>chapter 1 Ιστορία Μουσική και μαθηματικά.
+Πυθαγόρας Ο ήχος των σφυριών των σιδηρουργών έκανε τον Πυθαγόρα να βγάλει σημαντικά συμπεράσματα σχετικά με τη φύση του τονισμού και τα μαθηματικά με βάση την αρμονία μετά τη σύγκριση των τονισμών που έγιναν απο τα σφυριά.
+Guido D&#39;Arrezo Επίσης, στο πλαίσιο της αλγοριθμικής σύνθεσης, γύρω στο AD 1000 είχε αναπτυχθεί η πρώτη προσέγγιση στην αυτόματη γένεση της μουσικής δομής. Ο Guido του Arezzo (γύρω στο 991-1031) συνέβαλε στην ανάπτυξη της σημειογραφίας, ανέπτυξε το solmization και ήταν ένας σημαντικός μουσικός θεωρητικός της μεσαιωνικής εποχής.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/introduction/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/introduction/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/history/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/introduction/history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/introduction/history/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/el/tags/"
+                />
+  </url>
+  
+</urlset>

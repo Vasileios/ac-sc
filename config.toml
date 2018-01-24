@@ -34,6 +34,12 @@ publishDir= "docs"
 home = [ "HTML", "RSS", "JSON"]
 
 [Languages]
+[Languages.el]
+title = "Αλγοριθμική Σύνθεση"
+weight = 1
+languageName = "Ελληνικά"
+
+
 [Languages.en]
 title = "Documentation for Algorithmic Composition"
 weight = 1
@@ -60,3 +66,4 @@ weight = 20
 name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
 url = "/credits"
 weight = 30
+

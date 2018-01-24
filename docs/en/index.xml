@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AC on Documentation for Algorithmic Composition</title>
+    <link>https://vasileios.github.io/ac-sc/en/</link>
+    <description>Recent content in AC on Documentation for Algorithmic Composition</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://vasileios.github.io/ac-sc/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>History</title>
+      <link>https://vasileios.github.io/ac-sc/en/introduction/history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/en/introduction/history/</guid>
+      <description>Chapter 1 History Music and maths.
+Pythagoras
+The sound of blacksmiths hammering had led Pythagoras to important conclusions about the nature of pitch and the mathematical basis of harmony after comparing the pitches made by hammers.
+Guido D&#39;Arrezo
+Also in the context of algorithmic composition, by around AD 1000 a first approach to automatic musical structure genesis had been developed. Guido of Arezzo (around 991–1031) contributed considerably to the development of notation, developed solmization and was an important music theorist of the medieval era.</description>
+    </item>
+    
+    <item>
+      <title>Paradigms</title>
+      <link>https://vasileios.github.io/ac-sc/en/introduction/paradigms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/en/introduction/paradigms/</guid>
+      <description>Chapter 1 Paradigms Markov models Markov models are for the most part employed in the field of style imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.
+Generative grammars Chomsky&#39;s generative grammars generation of musical structure
+Transition networks David Cope’s program “EMI” “EMI” generates style imitations after having analyzed a sufficient number of compositions of a particular genre.
+EMI history
+chaos and self-similarity Fractals, Lindenmayer systems</description>
+    </item>
+    
+    <item>
+      <title>SuperCollider</title>
+      <link>https://vasileios.github.io/ac-sc/en/sc-examples/supercollider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/en/sc-examples/supercollider/</guid>
+      <description>SuperCollider SuperCollider From: SuperCollider
+Basics SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
+SuperCollider features three major components:  scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
+    </item>
+    
+    <item>
+      <title>Tuning-Scales</title>
+      <link>https://vasileios.github.io/ac-sc/en/introduction/tuning_scales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/en/introduction/tuning_scales/</guid>
+      <description>chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.
+../images/CircleOfFifths.jpg</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://vasileios.github.io/ac-sc/en/introduction/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/en/introduction/references/</guid>
+      <description>Chapter 1 References Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
+Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
+Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London. https://doi.org/10.1007/978-1-84628-600-1_1.
+Miranda, Eduardo R., and John Al Biles. 2007. Evolutionary Computer Music. Springer Science &amp; Business Media.</description>
+    </item>
+    
+  </channel>
+</rss>
