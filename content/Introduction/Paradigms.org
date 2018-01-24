@@ -45,6 +45,7 @@ Miranda describes various implementations of cellular automata (CA) models for m
 
 ** Swarm Algorithms
 
+
 - Collective Behaviour
 
 - Swarm behaviour
@@ -65,5 +66,12 @@ Three basic rules
 
 
 
+
+- *Tim Blackwell’s work on Swarm music*
+
+The model is based on three simple principles: separation, alignment and cohesion. Separation means each bird must steer to avoid bumping into each other or any other object in the environment. Alignment keeps each individual moving in a similar path by taking the average heading of local flockmates. Cohesion keeps the flock together as each bird steers towards the average position of local flockmates. 
+Blackwell has employed a similar algorithm to parameterise a granular
+synthesis engine, creating an eerily lifelike movement of sound
+swarming through time. (Husbands 2007 22)
 
 
