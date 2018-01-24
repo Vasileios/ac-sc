@@ -10,17 +10,17 @@ weight = 6
 
 
 
-- Markov models
+** Markov models
 
 Markov models are for the most part employed in the field of style
 imitation, but also, for example by Hiller and Xenakis, for applications of genuine composition.
 
-- Generative grammars
+** Generative grammars
 
 Chomsky's generative grammars
 generation of musical structure
 
-- Transition networks
+** Transition networks
 
 David Cope’s program
 “EMI”
@@ -29,14 +29,41 @@ number of compositions of a particular genre.
 
 [[http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/][EMI history]]
 
-- chaos and self-similarity
+** chaos and self-similarity
 
 Fractals, Lindenmayer systems
 
-- Genetic algorithms
+** Genetic algorithms
 
-- Cellular automata
+** Cellular automata
 
-- Neural networks
+Miranda describes various implementations of cellular automata (CA) models for musical applications. In one of these, Chaosynth, a chemical oscillator CA is used to parameterise a granular synthesis engine (Miranda 2000).
 
-- Artificial intelligence
+** Neural networks
+
+** Artificial intelligence
+
+** Swarm Algorithms
+
+- Collective Behaviour
+
+- Swarm behaviour
+
+Mathematical models to simulate and anderstand the behaviour.
+
+Three basic rules
+
+1. Move in the same direction as your neighbours
+2. Remain close to your neighbours
+3. Avoid collisions with your neighbours
+
+[[http://www.cleveralgorithms.com/nature-inspired/swarm.html][Clever Algorithms]]
+
+[[http://igor.gold.ac.uk/~mas01tb/SwarmMusic/swarmmusic.html%0A][Swarm Music]]
+
+[[http://swarms.cc/downloads/][Swarms tutorials]]
+
+
+
+
+
