@@ -1,0 +1,98 @@
++++
+title = "Παραδείγματα"
+chapter = true
+weight = 6
++++
+
+*** Chapter 1
+
+* Παραδείγματα
+
+
+
+** Μαρκοβιανά Μοντέλα - Markov models
+
+Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της
+μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί από τον Χίλερ και τον
+Ξενάκη, σαν τεχνικές σύνθεσης μουσικής.
+
+** Generative grammars
+
+Chomsky's generative grammars
+generation of musical structure
+
+** Μεταβατικά δίκτυα-Transition networks
+
+Το πρόγραμμα του David Cope “EMI”
+Το “EMI” δημιουργεί απομιμήσεις αφού πρώτα αναλύσει έναν επαρκή
+αριθμό συνθέσεων ενός συγκεκριμένου είδους όπως για παράδειγμά νόμους
+και κανόνες σύνθεσης της σονάτας.
+
+[[http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/][EMI history]]
+
+** chaos and self-similarity
+
+Fractals, Lindenmayer systems
+
+- Random walk-brown noise,
+- biology - Growth of living organisms such
+algea and plants. 
+
+** Γενετικοί αλγόριθμοι-Genetic algorithms
+
+Οι γενετικοί αλγόριθμοι ώς μιά κλάση των εξελικτικών αλγορίθμων
+(evolutionary algorithms), για παράδειγμα,
+στρατηγικών μοντάλων για φυσικά συστήματα, είναι στοχαστικές
+τεχνικές αναζήτησης.Η ορολογία των γενετικών αλγορίθμων
+συμπεριλαμβανομένης της "επιλογής", της "μετάλλαξης", της "επιβίωσης
+του ικανότερου", κλπ. σχετίζεται με τις διαδικασίες βιολογικής επιλογής.
+
+Από τη δεκαετία του 1960, οι Ingo Rechenberg και Hans-Paul Schwefel
+εισήγαγαν τις στρατηγικές εξέλιξης στο Τεχνικό Πανεπιστήμιο του
+Βερολίνου και στη δεκαετία του 1970 οι Αμερικανοί John H. Holland και
+David E. Goldberg ανέπτυξαν γενετικούς αλγόριθμους. Τα μοντέλα
+Rechenberg και Schwefel βασίζονται σε μια γραφική παράσταση και έχουν
+διαμορφωθεί με βάση βιολογικές διαδικασίες για την ανάπτυξη τεχνικών
+τεχνικών βελτιστοποίησης.
+
+** Κυτταρικά αυτόματα-Cellular automata
+
+Ο Miranda περιγράφει διάφορες εφαρμογές μοντέλων κυτταρικών αυτομάτων (CA) για μουσικές εφαρμογές. Σε ένα από αυτά, το Chaosynth, ένας χημικός ταλαντωτής χρησιμοποιείται για την παραμετροποίηση μιας μηχανής κοκκώδους σύνθεσης (Miranda 2000).
+
+
+** Neural networks
+
+** Artificial intelligence
+
+** Swarm Algorithms
+
+
+- Collective Behaviour
+
+- Swarm behaviour
+
+Mathematical models to simulate and anderstand the behaviour.
+
+Three basic rules
+
+1. Move in the same direction as your neighbours
+2. Remain close to your neighbours
+3. Avoid collisions with your neighbours
+
+[[http://www.cleveralgorithms.com/nature-inspired/swarm.html][Clever Algorithms]]
+
+[[http://igor.gold.ac.uk/~mas01tb/SwarmMusic/swarmmusic.html%0A][Swarm Music]]
+
+[[http://swarms.cc/downloads/][Swarms tutorials]]
+
+
+
+
+- *Tim Blackwell’s work on Swarm music*
+
+The model is based on three simple principles: separation, alignment and cohesion. Separation means each bird must steer to avoid bumping into each other or any other object in the environment. Alignment keeps each individual moving in a similar path by taking the average heading of local flockmates. Cohesion keeps the flock together as each bird steers towards the average position of local flockmates. 
+Blackwell has employed a similar algorithm to parameterise a granular
+synthesis engine, creating an eerily lifelike movement of sound
+swarming through time. (Husbands 2007 22)
+
+

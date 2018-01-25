@@ -36,38 +36,5 @@ EMI history
 chaos and self-similarity Fractals, Lindenmayer systems</description>
     </item>
     
-    <item>
-      <title>SuperCollider</title>
-      <link>https://vasileios.github.io/ac-sc/en/sc-examples/supercollider/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/en/sc-examples/supercollider/</guid>
-      <description>SuperCollider SuperCollider From: SuperCollider
-Basics SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
-SuperCollider features three major components:  scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
-    </item>
-    
-    <item>
-      <title>Tuning-Scales</title>
-      <link>https://vasileios.github.io/ac-sc/en/introduction/tuning_scales/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/en/introduction/tuning_scales/</guid>
-      <description>chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.
-../images/CircleOfFifths.jpg</description>
-    </item>
-    
-    <item>
-      <title>References</title>
-      <link>https://vasileios.github.io/ac-sc/en/introduction/references/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/en/introduction/references/</guid>
-      <description>Chapter 1 References Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
-Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
-Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London. https://doi.org/10.1007/978-1-84628-600-1_1.
-Miranda, Eduardo R., and John Al Biles. 2007. Evolutionary Computer Music. Springer Science &amp; Business Media.</description>
-    </item>
-    
   </channel>
 </rss>

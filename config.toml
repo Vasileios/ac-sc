@@ -1,6 +1,6 @@
 baseURL = "https://vasileios.github.io/ac-sc"
 languageCode = "en-US"
-defaultContentLanguage = "en"
+defaultContentLanguage = "el"
 
 title = "Algorithmic Composition"
 theme = "hugo-theme-learn"

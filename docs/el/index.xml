@@ -12,15 +12,59 @@
     
     <item>
       <title>Ιστορία</title>
-      <link>https://vasileios.github.io/ac-sc/el/introduction/history/</link>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/hisrory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://vasileios.github.io/ac-sc/el/introduction/history/</guid>
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/hisrory/</guid>
       <description>chapter 1 Ιστορία Μουσική και μαθηματικά.
 Πυθαγόρας
 Ο ήχος των σφυριών των σιδηρουργών έκανε τον Πυθαγόρα να βγάλει σημαντικά συμπεράσματα σχετικά με τη φύση του τονισμού και τα μαθηματικά με βάση την αρμονία μετά τη σύγκριση των τονισμών που έγιναν απο τα σφυριά.
 Guido D&#39;Arrezo
 Επίσης, στο πλαίσιο της αλγοριθμικής σύνθεσης, γύρω στο AD 1000 είχε αναπτυχθεί η πρώτη προσέγγιση στην αυτόματη γένεση της μουσικής δομής. Ο Guido του Arezzo (γύρω στο 991-1031) συνέβαλε στην ανάπτυξη της σημειογραφίας, ανέπτυξε το solmization και ήταν ένας σημαντικός μουσικός θεωρητικός της μεσαιωνικής εποχής.</description>
+    </item>
+    
+    <item>
+      <title>SuperCollider</title>
+      <link>https://vasileios.github.io/ac-sc/el/sc-examples/supercollider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/sc-examples/supercollider/</guid>
+      <description>SuperCollider SuperCollider From: SuperCollider
+Basics SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
+SuperCollider features three major components:  scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
+    </item>
+    
+    <item>
+      <title>Παραδείγματα</title>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</guid>
+      <description>Chapter 1 Παραδείγματα Μαρκοβιανά Μοντέλα - Markov models Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί από τον Χίλερ και τον Ξενάκη, σαν τεχνικές σύνθεσης μουσικής.
+Generative grammars Chomsky&#39;s generative grammars generation of musical structure
+Μεταβατικά δίκτυα-Transition networks Το πρόγραμμα του David Cope “EMI” Το “EMI” δημιουργεί απομιμήσεις αφού πρώτα αναλύσει έναν επαρκή αριθμό συνθέσεων ενός συγκεκριμένου είδους όπως για παράδειγμά νόμους και κανόνες σύνθεσης της σονάτας.</description>
+    </item>
+    
+    <item>
+      <title>Tuning-Scales</title>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/tuning_scales/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/tuning_scales/</guid>
+      <description>chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.
+../images/CircleOfFifths.jpg</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/references/</guid>
+      <description>Chapter 1 References Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
+Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
+Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London. https://doi.org/10.1007/978-1-84628-600-1_1.
+Miranda, Eduardo R., and John Al Biles. 2007. Evolutionary Computer Music. Springer Science &amp; Business Media.</description>
     </item>
     
   </channel>

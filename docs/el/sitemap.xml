@@ -31,17 +31,37 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/history/</loc>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/hisrory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/sc-examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/sc-examples/supercollider/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/history/"
+                href="https://vasileios.github.io/ac-sc/en/introduction/paradigms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/introduction/history/"
+                href="https://vasileios.github.io/ac-sc/el/introduction/paradigms/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/tuning_scales/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/el/introduction/references/</loc>
   </url>
   
   <url>
