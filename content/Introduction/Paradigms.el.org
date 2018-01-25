@@ -26,6 +26,16 @@ weight = 6
 Stochastic processes are used to describe a sequence of random events dependent on the time parameter (t).
 #+END_QUOTE
 
+
+η πιθανότητα της μελλοντικής κατάστασης Xt + 1 (η τυχαία μεταβλητή Χ
+τη στιγμή t + 1) εξαρτάται από την τρέχουσα κατάσταση Xt. Για τους
+δεδομένους χρόνους tm και tm + 1, αυτή η πιθανότητα είναι:
+#+BEGIN_QUOTE
+P(Xtm+1 = j|Xtm =i)=pij(tm,tm+1)
+\charactrer a \Longleftrightarrow character\ b
+#+END_QUOTE
+
+
 Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της
 μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί από τον Χίλερ και τον
 Ξενάκη, σαν τεχνικές σύνθεσης μουσικής.
