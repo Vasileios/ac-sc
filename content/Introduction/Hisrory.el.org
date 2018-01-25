@@ -84,10 +84,7 @@ descriptio "που εμφανίζεται το 1614, σχεδιασμένο γι
 
 Ο άβακάς του Napier, γνωστό και ως οστά του Napier (Napier's bones).
 
-#+CAPTION: Τα οστά του Napier
-#+NAME: FIG.1
-
-[[../history/NapiersBones.jpg/]]
+[[https://images-na.ssl-images-amazon.com/images/I/7148oHM98qL._SX355_.jpg%0A][Napier's bones]]
 
 Παρόμοια με τα οστά του Napier:
 
