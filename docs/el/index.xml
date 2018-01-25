@@ -40,8 +40,8 @@ SuperCollider features three major components:  scsynth, a real-time audio serve
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</guid>
-      <description>Chapter 1 Παραδείγματα Μαρκοβιανά Μοντέλα - Markov models Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί από τον Χίλερ και τον Ξενάκη, σαν τεχνικές σύνθεσης μουσικής.
-Generative grammars Οι γενετικές γραμματικές είναι μέθοδοι για την αλγοριθμική σύνθεση και τη μουσική ανάλυση. Το βασικό γλωσσικό μοντέλο που ανέπτυξε ο Noam Chomsky το 1957, είναι το αρχικό σημείο για την εφαρμογή αυτών των γενικών αρχών στη μουσική.</description>
+      <description>Chapter 1 Παραδείγματα Μαρκοβιανά Μοντέλα - Markov models time dependent random variables
+ Markov chains or models  Ο Markov μελέτησε τη σειρά των 20.000 γραμμάτων στο ποίημα του AS Pushkin «Eugeny Onegin», ανακαλύπτοντας ότι η σταθερή πιθανότητα των φωνηέντων είναι p = 0,432, η πιθανότητα ενός φωνήεντος να ακολουθείται απο ένα άλλο είναι p1 = 0,128 και ότι η πιθανότητα ενός φωνήεντος να ακολουθείται απο σύμφωνο είναι p2 = 0.</description>
     </item>
     
     <item>

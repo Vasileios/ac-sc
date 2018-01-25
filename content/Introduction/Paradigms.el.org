@@ -12,6 +12,20 @@ weight = 6
 
 ** Μαρκοβιανά Μοντέλα - Markov models
 
+ *time dependent random variables*
+
+- Markov chains or models
+  
+Ο Markov μελέτησε τη σειρά των 20.000 γραμμάτων στο ποίημα του AS
+ Pushkin «Eugeny Onegin», ανακαλύπτοντας ότι η σταθερή  πιθανότητα των
+ φωνηέντων είναι p = 0,432, η πιθανότητα ενός φωνήεντος να ακολουθείται
+ απο ένα άλλο είναι p1 = 0,128 και ότι η πιθανότητα ενός φωνήεντος να
+ ακολουθείται απο σύμφωνο είναι p2 = 0.663. (στοχατική διαδικασία)
+
+#+BEGIN_QUOTE
+Stochastic processes are used to describe a sequence of random events dependent on the time parameter (t).
+#+END_QUOTE
+
 Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της
 μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί από τον Χίλερ και τον
 Ξενάκη, σαν τεχνικές σύνθεσης μουσικής.
