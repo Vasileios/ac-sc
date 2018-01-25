@@ -67,10 +67,10 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 σε εντελώς απρόβλεπτες μετεωρολογικές συνέπειες και σε πολύ
 απομακρυσμένες περιοχές.
 
-Fractals, Lindenmayer systems
+*Fractals, Lindenmayer systems*
 
-- Random walk-brown noise,
-- biology - Growth of living organisms such as
+- Fractal geometry (Fragmented): Mandelbrot, Random walk, brown noise, etc
+- L-systems: biology - Growth of living organisms such as
 algea and plants. 
 
 ** Γενετικοί αλγόριθμοι-Genetic algorithms
