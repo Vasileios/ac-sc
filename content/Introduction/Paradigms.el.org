@@ -21,7 +21,7 @@ weight = 6
 Οι γενετικές γραμματικές είναι  μέθοδοι για την αλγοριθμική
 σύνθεση και τη μουσική ανάλυση. Το βασικό γλωσσικό μοντέλο που
 ανέπτυξε ο Noam Chomsky το 1957, είναι το αρχικό σημείο για την
-εφαρμογή αυτών των γενικών αρχών στη μουσικά.
+εφαρμογή αυτών των γενικών αρχών στη μουσική.
 
 THe representation of language rules have been classified into four
 types (zero to three) by Noam Chomsky (1957) (Holtzman 2015)
