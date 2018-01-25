@@ -39,6 +39,27 @@ title = "Αλγοριθμική Σύνθεση"
 weight = 1
 languageName = "Ελληνικά"
 
+[[Languages.el.menu.shortcuts]] 
+name = "<i class='fa fa-fw fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/Vasileios/ac-sc.git"
+weight = 10
+
+[[Languages.el.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-camera'></i> Showcases"
+url = "showcase"
+weight = 11
+
+[[Languages.el.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bookmark'></i> creative-coding"
+identifier = "CC"
+url = "https://vasileios.github.io/creative-coding"
+weight = 20
+
+[[Languages.el.menu.shortcuts]]
+name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
 
 [Languages.en]
 title = "Documentation for Algorithmic Composition"
