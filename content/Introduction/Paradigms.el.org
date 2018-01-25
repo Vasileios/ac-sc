@@ -27,13 +27,20 @@ Stochastic processes are used to describe a sequence of random events dependent 
 #+END_QUOTE
 
 
-η πιθανότητα της μελλοντικής κατάστασης Xt + 1 (η τυχαία μεταβλητή Χ
-τη στιγμή t + 1) εξαρτάται από την τρέχουσα κατάσταση Xt. Για τους
-δεδομένους χρόνους tm και tm + 1, αυτή η πιθανότητα είναι:
+η πιθανότητα της μελλοντικής κατάστασης <var>X<sub>tm+1</var> (η τυχαία μεταβλητή Χ
+τη στιγμή t + 1) εξαρτάται από την τρέχουσα κατάσταση <var>X<sub>t</var>. Για τους
+δεδομένους χρόνους <var>t<sub>m</var> και <var>t<sub>m+1</var>, αυτή η πιθανότητα είναι:
+
 #+BEGIN_QUOTE
-P(Xtm+1 = j|Xtm =i)=pij(tm,tm+1)
-\charactrer a \Longleftrightarrow character\ b
+<p>Stochastic Process
+<var>P<var>(<var>X<sub>tm+1</var><var>=<var>j</var><var>|<var>X<sub>tm</var>=<var>i</var>)<var>=<var>P<sub>ij</var><var>(<var>t<sub>m</var><var>,<var>t<sub>m+1</var><var>)<p>
 #+END_QUOTE
+
+*transition probabilities*
+
+
+
+
 
 
 Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της
