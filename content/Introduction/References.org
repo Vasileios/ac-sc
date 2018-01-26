@@ -19,8 +19,10 @@ Miranda, Eduardo R., and John Al Biles. 2007. Evolutionary Computer Music. Sprin
 
 Nierhaus, Gerhard. 2008. Algorithmic Composition: Paradigms of Automated Music Generation. 2009 edition. Wien ; New York: Springer.
 
-Roads, Curtis. 1996. The Computer Music Tutorial. Edition Unstated edition. Cambridge, Mass: The MIT Press.
-———. 2004. Microsound. PAP/CDR edition. Cambridge, Mass.: The MIT Press.
+Roads, Curtis. 1996. The Computer Music Tutorial. Edition Unstated
+edition. Cambridge, Mass: The MIT Press.
+
+Roads, Curtis. 2004. Microsound. PAP/CDR edition. Cambridge, Mass.: The MIT Press.
 
 Sethares, William A. 2004. Tuning, Timbre, Spectrum, Scale. 2nd edition. London: Springer.
 
