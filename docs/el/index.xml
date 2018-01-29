@@ -67,8 +67,8 @@ frequency the number of times that a wave, especially a light, sound, or radio w
 amplitude the distance between the top and the bottom of a wave.
 Computing-SC
 function lamda calculus
-Function-SC a = { [100, 200, 300].choose };
-Event An Event is a Environment with a &#39;play&#39; method.</description>
+SC Function a = { [100, 200, 300].choose };
+SC Event An Event is a SC Environment with a &#39;play&#39; method.</description>
     </item>
     
     <item>

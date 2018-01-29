@@ -25,12 +25,12 @@ second.
 
 =function= lamda calculus
 
-=Function-SC= a = { [100, 200, 300].choose };  
+=SC Function= a = { [100, 200, 300].choose };  
 
-=Event= An Event is a =Environment= with a 'play' method. An Event specifies an action to be taken in response to a =-play= message.
+=SC Event= An Event is a =SC Environment= with a 'play' method. An Event specifies an action to be taken in response to a =-play= message.
 
-=Pattern= creates a Stream that iterates an array.
+=SC Pattern= creates a Stream that iterates an array.
 
-=Stream=: Streams represent sequences of values that are obtained one at a time.
+=SC Stream= Streams represent sequences of values that are obtained one at a time.
 
-=Pbind=: The pattern Pbind connects specific patterns with specific names. Consult its help page for details.
+=SC Pbind= The pattern Pbind connects specific patterns with specific names. Consult its help page for details.

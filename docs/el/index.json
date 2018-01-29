@@ -53,7 +53,7 @@
 	"title": "Glossary",
 	"tags": [],
 	"description": "",
-	"content": "chapter 1 Glossary Mathematics\npremise a statement that is assumed to be true.\nPhysics\nfrequency the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.\namplitude the distance between the top and the bottom of a wave.\nComputing-SC\nfunction lamda calculus\nFunction-SC a = { [100, 200, 300].choose };\nEvent An Event is a Environment with a 'play' method. An Event specifies an action to be taken in response to a -play message.\nPattern creates a Stream that iterates an array.\n=Stream=: Streams represent sequences of values that are obtained one at a time.\n=Pbind=: The pattern Pbind connects specific patterns with specific names. Consult its help page for details.\n"
+	"content": "chapter 1 Glossary Mathematics\npremise a statement that is assumed to be true.\nPhysics\nfrequency the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.\namplitude the distance between the top and the bottom of a wave.\nComputing-SC\nfunction lamda calculus\nSC Function a = { [100, 200, 300].choose };\nSC Event An Event is a SC Environment with a 'play' method. An Event specifies an action to be taken in response to a -play message.\nSC Pattern creates a Stream that iterates an array.\nSC Stream Streams represent sequences of values that are obtained one at a time.\nSC Pbind The pattern Pbind connects specific patterns with specific names. Consult its help page for details.\n"
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/el/introduction/references/",
