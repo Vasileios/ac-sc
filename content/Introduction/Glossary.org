@@ -10,24 +10,26 @@ weight = 8
 *Mathematics*
 
 
-=premise=: a statement that is assumed to be true.
+=premise= a statement that is assumed to be true.
 
 *Physics*
 
-=frequency=: the number of times that a wave, especially a light, sound,
+=frequency= the number of times that a wave, especially a light, sound,
 or radio wave, is produced within a particular period, especially one
 second.
 
-=amplitude=: the distance between the top and the bottom of a wave.
+=amplitude= the distance between the top and the bottom of a wave.
 
 
 *Computing-SC*
 
-=function=:
+=function= lamda calculus
 
-=Event=: An =Event= is a =Environment= with a 'play' method. An Event specifies an action to be taken in response to a =-play= message.
+=Function-SC= a = { [100, 200, 300].choose };  
 
-=Pattern=: creates a Stream that iterates an array.
+=Event= An Event is a =Environment= with a 'play' method. An Event specifies an action to be taken in response to a =-play= message.
+
+=Pattern= creates a Stream that iterates an array.
 
 =Stream=: Streams represent sequences of values that are obtained one at a time.
 

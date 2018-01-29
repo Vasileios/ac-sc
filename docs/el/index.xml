@@ -61,13 +61,14 @@ Circles of Fifths</description>
       
       <guid>https://vasileios.github.io/ac-sc/el/introduction/glossary/</guid>
       <description>chapter 1 Glossary Mathematics
-=premise=: a statement that is assumed to be true.
+premise a statement that is assumed to be true.
 Physics
-=frequency=: the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
-=amplitude=: the distance between the top and the bottom of a wave.
+frequency the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
+amplitude the distance between the top and the bottom of a wave.
 Computing-SC
-=function=:
-Event=: An =Event is a Environment with a &#39;play&#39; method. An Event specifies an action to be taken in response to a -play message.</description>
+function lamda calculus
+Function-SC a = { [100, 200, 300].choose };
+Event An Event is a Environment with a &#39;play&#39; method.</description>
     </item>
     
     <item>
