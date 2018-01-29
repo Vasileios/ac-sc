@@ -33,30 +33,30 @@ Trautmann, Lutz, and Rudolf Rabenstein. 2012. Digital Sound Synthesis by Physica
 
 
 * Sites
-• http://doc.sccode.org/
-• http://supercollider.github.io/tutorials/
-• http://chuck.cs.princeton.edu/doc/language/
-• http://chuck.cs.princeton.edu/doc/learn/
-• https://www.gnu.org/software/emacs/manual/
-• https://guides.github.com
-• https://ccrma.stanford.edu/~blackrse/algorithm.html
-• https://dictionary.cambridge.org/dictionary/english/algorithm
-• http://digicult.it/digimag/issue-055/athanasius-kircher-arca-musarithmica-and-
-• https://www.youtube.com/watch?v=9Zdg6Ec4mVw
-• https://www.npmjs.com/package/mozart-dice-game
-• http://doc.sccode.org/Classes/Shaper.html
-• http://doc.sccode.org/Classes/Wavetable.html
-• http://doc.sccode.org/Browse.html#UGens%3EGranularSynthesis
-• https://www.youtube.com/watch?v=MotG3XI2qSs
-• http://chuck.cs.princeton.edu/release/
-• http://chuck.cs.princeton.edu/doc/learn/tutorial.html
-• http://chuck.cs.princeton.edu/doc/program/ugen.html
-• http://www.johncage.org/reunion/
-• https://www.youtube.com/watch?v=iPgwF3G5i4k
-• https://getchip.com
-• https://www.raspberrypi.org
-• https://community.dur.ac.uk/nick.collins/teaching/supercollider/advanced/ machinelearningresources.scd
-• https://composerprogrammer.com/researchml.html
-• https://luuma.net/code
+- http://doc.sccode.org/
+-  http://supercollider.github.io/tutorials/
+- http://chuck.cs.princeton.edu/doc/language/
+- http://chuck.cs.princeton.edu/doc/learn/
+- https://www.gnu.org/software/emacs/manual/
+-  https://guides.github.com
+- https://ccrma.stanford.edu/~blackrse/algorithm.html
+- https://dictionary.cambridge.org/dictionary/english/algorithm
+- http://digicult.it/digimag/issue-055/athanasius-kircher-arca-musarithmica-and
+- https://www.youtube.com/watch?v=9Zdg6Ec4mVw
+ - https://www.npmjs.com/package/mozart-dice-game
+ - http://doc.sccode.org/Classes/Shaper.html
+ - http://doc.sccode.org/Classes/Wavetable.html
+ - http://doc.sccode.org/Browse.html#UGens%3EGranularSynthesis
+ - https://www.youtube.com/watch?v=MotG3XI2qSs
+ - http://chuck.cs.princeton.edu/release/
+ - http://chuck.cs.princeton.edu/doc/learn/tutorial.html
+ - http://chuck.cs.princeton.edu/doc/program/ugen.html
+- http://www.johncage.org/reunion/
+ - https://www.youtube.com/watch?v=iPgwF3G5i4k
+- https://getchip.com
+- https://www.raspberrypi.org
+ - https://community.dur.ac.uk/nick.collins/teaching/supercollider/advanced/ machinelearningresources.scd
+ - https://composerprogrammer.com/researchml.html
+- https://luuma.net/code
 
-- https://www.cc.gatech.edu/~turk/bio_sim/articles/genetic_algorithm.pdf
+ - https://www.cc.gatech.edu/~turk/bio_sim/articles/genetic_algorithm.pdf
