@@ -8,7 +8,7 @@ weight = 6
 
 * Παραδείγματα
 
-** Μαρκοβιανά Μοντέλα - Markov models
+**** Μαρκοβιανά Μοντέλα - Markov models
 
  *time dependent random variables (TDRV)*
 
@@ -78,7 +78,7 @@ Belar, ανέπτυξε το "Electronic Synthesizer" το 1955, το πρώτο
 
 
 
-** Generative grammars
+**** Generative grammars
 
 Οι γενετικές γραμματικές είναι  μέθοδοι για την αλγοριθμική
 σύνθεση και τη μουσική ανάλυση. Το βασικό γλωσσικό μοντέλο που
@@ -97,7 +97,7 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 φορμαλισμοί με τις γενετικές γραμματικές είναι τα αυξημένα
 μεταβατικά δίκτυα (augmented  transition networks), τα οποία χρησιμοποιούνται στην περίπτωση του David Cope.
 
-** Μεταβατικά δίκτυα-Transition networks
+**** Μεταβατικά δίκτυα-Transition networks
 
 Το πρόγραμμα του David Cope “EMI”
 Το “EMI” δημιουργεί απομιμήσεις αφού πρώτα αναλύσει έναν επαρκή
@@ -106,7 +106,7 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 
 [[http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/][EMI history]]
 
-** chaos and self-similarity
+**** chaos and self-similarity
 
 Ο όρος "χάος" προέρχεται από την ελληνική γλώσσα και αρχικά σήμαινε "διάστημα" ή
 "άβυσσο".
@@ -135,7 +135,7 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 - L-systems: biology - Growth of living organisms such as
 algea and plants.
 
-** Γενετικοί αλγόριθμοι-Genetic algorithms
+**** Γενετικοί αλγόριθμοι-Genetic algorithms
 
 Οι γενετικοί αλγόριθμοι ώς μιά κλάση των εξελικτικών αλγορίθμων
 (evolutionary algorithms), για παράδειγμα,
@@ -168,16 +168,16 @@ GENETIC ALGORITHMS AND ADAPTATION
  που είναι δύσκολο να μοντελοποιηθούν μαθηματικά και που δεν έχουν ένα σαφές  σύστημα κανόνων.
 
 
-** Κυτταρικά αυτόματα-Cellular automata
+**** Κυτταρικά αυτόματα-Cellular automata
 
 Ο Miranda περιγράφει διάφορες εφαρμογές μοντέλων κυτταρικών αυτομάτων (CA) για μουσικές εφαρμογές. Σε ένα από αυτά, το Chaosynth, ένας χημικός ταλαντωτής χρησιμοποιείται για την παραμετροποίηση μιας μηχανής κοκκώδους σύνθεσης (Miranda 2000).
 
 
-** Neural networks
+**** Neural networks
 
-** Artificial intelligence
+**** Artificial intelligence
 
-** Swarm Algorithms
+**** Swarm Algorithms
 
 - Συλλογική Συμπεριφορά
 
