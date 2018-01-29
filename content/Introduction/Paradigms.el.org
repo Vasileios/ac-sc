@@ -18,6 +18,10 @@ weight = 6
 
 - *Markov chains or models*
 
+#+BEGIN_QUOTE
+Markov chain - Markov process: Ένα στοχαστικό μοντέλο ή διαδικασία ... η πιθανότητα κάθε συμβάν εξαρτάται μόνο από την κατάσταση που επιτεύχθηκε στο προηγούμενο συμβάν.
+#+END_QUOTE
+
 Ο όρος "αλυσίδα Markov" (ή
 Markov Models
 για αυτή την κατηγορία των στοχαστικών διαδικασιών χρησιμοποιήθηκε για πρώτη φορά το 1926 σε μια δημοσίευση του Ρώσου μαθηματικού Σεργκέι Νατανοβιτς Μπερνστάιν.
@@ -28,13 +32,13 @@ Markov Models
  απο ένα άλλο είναι p1 = 0,128 και ότι η πιθανότητα ενός φωνήεντος να
  ακολουθείται απο σύμφωνο είναι p2 = 0.663. (στοχατική διαδικασία)
 
-To πεδίο της στοχαστικής διαδικασίας περιλαμβάνei  υπολογίσμο πιθανοτήτων,
-(probability calculus)
-και σταστιστική.
-
 #+BEGIN_QUOTE
 Stochastic processes are used to describe a sequence of random events dependent on the time parameter (t).
 #+END_QUOTE
+
+To πεδίο της στοχαστικής διαδικασίας περιλαμβάνei  υπολογίσμο πιθανοτήτων,
+(probability calculus)
+και σταστιστική.
 
 Σε μια στοχαστική αλυσίδα, κάθε διακριτός χρόνος t έχει μια τυχαία
 μεταβλητή Χ. Σε μια αλυσίδα Markov, η οποία είναι ένα ιδιαίτερο είδος στοχαστικής αλυσίδας,
@@ -48,9 +52,6 @@ Stochastic processes are used to describe a sequence of random events dependent 
 <var>P<var>(<var>X<sub>tm+1</var><var>=<var>j</var><var>|<var>X<sub>tm</var>=<var>i</var>)<var>=<var>P<sub>ij</var><var>(<var>t<sub>m</var><var>,<var>t<sub>m+1</var><var>)<p>
 #+END_QUOTE
 
-#+BEGIN_QUOTE
-Markov chain - Markov process: Ένα στοχαστικό μοντέλο ή διαδικασία ... η πιθανότητα κάθε συμβάν εξαρτάται μόνο από την κατάσταση που επιτεύχθηκε στο προηγούμενο συμβάν.
-#+END_QUOTE
 
 *Markov models in algorithmic composition*
 
