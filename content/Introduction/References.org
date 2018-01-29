@@ -58,5 +58,4 @@ Trautmann, Lutz, and Rudolf Rabenstein. 2012. Digital Sound Synthesis by Physica
  - https://community.dur.ac.uk/nick.collins/teaching/supercollider/advanced/ machinelearningresources.scd
  - https://composerprogrammer.com/researchml.html
 - https://luuma.net/code
-
  - https://www.cc.gatech.edu/~turk/bio_sim/articles/genetic_algorithm.pdf
