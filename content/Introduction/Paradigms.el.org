@@ -8,8 +8,6 @@ weight = 6
 
 * Παραδείγματα
 
-
-
 ** Μαρκοβιανά Μοντέλα - Markov models
 
  *time dependent random variables (TDRV)*
