@@ -88,6 +88,22 @@ Circles of Fifths</description>
     </item>
     
     <item>
+      <title>Glossary</title>
+      <link>https://vasileios.github.io/ac-sc/el/introduction/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/el/introduction/glossary/</guid>
+      <description>chapter 1 Glossary Mathematics
+=premise=: a statement that is assumed to be true.
+Physics
+=frequency=: the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
+=amplitude=: the distance between the top and the bottom of a wave.
+Computing-SC
+=function=:
+Event=: An =Event is a Environment with a &#39;play&#39; method. An Event specifies an action to be taken in response to a -play message.</description>
+    </item>
+    
+    <item>
       <title>References</title>
       <link>https://vasileios.github.io/ac-sc/el/all/references/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -109,22 +125,6 @@ Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An In
 Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
 Holtzman, Steven. 1981. Generative Grammars for Music Composition. Computer Music Journal, Vol.5, No.1, pp. 51-64. The MIT Press.
 Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://vasileios.github.io/ac-sc/el/introduction/glossary/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/el/introduction/glossary/</guid>
-      <description>chapter 1 Glossary Mathematics
-=premise=: a statement that is assumed to be true.
-Physics
-=frequency=: the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
-=amplitude=: the distance between the top and the bottom of a wave.
-Computing-SC
-=function=:
-Event=: An =Event is a Environment with a &#39;play&#39; method. An Event specifies an action to be taken in response to a -play message.</description>
     </item>
     
   </channel>

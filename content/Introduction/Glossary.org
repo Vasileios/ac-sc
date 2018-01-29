@@ -1,4 +1,8 @@
-
++++
+title = "Glossary"
+chapter = true
+weight = 8
++++
 *** chapter 1
 
 **** Glossary
