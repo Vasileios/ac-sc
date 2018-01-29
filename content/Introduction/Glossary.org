@@ -1,0 +1,30 @@
+
+*** chapter 1
+
+**** Glossary
+
+*Mathematics*
+
+
+=premise=: a statement that is assumed to be true.
+
+*Physics*
+
+=frequency=: the number of times that a wave, especially a light, sound,
+or radio wave, is produced within a particular period, especially one
+second.
+
+=amplitude=: the distance between the top and the bottom of a wave.
+
+
+*Computing-SC*
+
+=function=:
+
+=Event=: An =Event= is a =Environment= with a 'play' method. An Event specifies an action to be taken in response to a =-play= message.
+
+=Pattern=: creates a Stream that iterates an array.
+
+=Stream=: Streams represent sequences of values that are obtained one at a time.
+
+=Pbind=: The pattern Pbind connects specific patterns with specific names. Consult its help page for details.
