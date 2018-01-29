@@ -12,13 +12,15 @@ weight = 6
 
 ** Μαρκοβιανά Μοντέλα - Markov models
 
- *time dependent random variables*
+ *time dependent random variables (TDRV)*
 
-- Markov chains or models
-  
+Στο πλαίσιο των πειραμάτων και παρατηρήσεων σχετικά με την TDRV  έχουν ήδη γίνει από τους *Pierre Simon de Laplace* και *Daniel Bernoulli*. Η πρώτη εφαρμογή αυτής της μεθόδου ήταν μια εκτενή ανάλυση κειμένου από τον Markov: "Το 1913 ο Markov είχε δημοσιεύσει την τρίτη έκδοση του εγχειριδίου του. Σε αυτή την έκδοση γράφει: «Ας τελειώσουμε το άρθρο και ολόκληρο το βιβλίο με ένα καλό παράδειγμα TDRV, που μπορούν να θεωρηθούν ως μια απλή αλυσίδα» (chain).
+
+- *Markov chains or models*
+
 Ο Markov μελέτησε τη σειρά των 20.000 γραμμάτων στο ποίημα του AS
  Pushkin «Eugeny Onegin», ανακαλύπτοντας ότι η σταθερή  πιθανότητα των
- φωνηέντων είναι p = 0,432, η πιθανότητα ενός φωνήεντος να ακολουθείται
+ φωνηέντων σε αυτό το ποίημα είναι p = 0,432, η πιθανότητα ενός φωνήεντος να ακολουθείται
  απο ένα άλλο είναι p1 = 0,128 και ότι η πιθανότητα ενός φωνήεντος να
  ακολουθείται απο σύμφωνο είναι p2 = 0.663. (στοχατική διαδικασία)
 
@@ -102,7 +104,7 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 
 - Fractal geometry (Fragmented): Mandelbrot, Random walk, brown noise, etc
 - L-systems: biology - Growth of living organisms such as
-algea and plants. 
+algea and plants.
 
 ** Γενετικοί αλγόριθμοι-Genetic algorithms
 
@@ -177,5 +179,3 @@ GENETIC ALGORITHMS AND ADAPTATION
 Ο Blackwell δημιούργησε έναν παρόμοιο αλγόριθμο ο οποίος
 παραμετροποιούσε μια μηχανή κοκκώδους σύνθεσης, δημιουργώντας σε ήχο
 την κίνηση του σμήνους σε σχέση με χρόνο.(Husbands 2007 22)
-
-
