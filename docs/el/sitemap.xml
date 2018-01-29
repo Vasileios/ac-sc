@@ -17,20 +17,6 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/all/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/all/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/all/"
-                />
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/el/introduction/</loc>
     <xhtml:link
                 rel="alternate"
@@ -45,10 +31,6 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/all/hisrory/</loc>
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/el/introduction/hisrory/</loc>
   </url>
   
@@ -58,20 +40,6 @@
   
   <url>
     <loc>https://vasileios.github.io/ac-sc/el/sc-examples/supercollider/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/el/all/paradigms/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/paradigms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/all/paradigms/"
-                />
   </url>
   
   <url>
@@ -89,19 +57,11 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/all/tuning_scales/</loc>
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/el/introduction/tuning_scales/</loc>
   </url>
   
   <url>
     <loc>https://vasileios.github.io/ac-sc/el/introduction/glossary/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/el/all/references/</loc>
   </url>
   
   <url>
