@@ -5,7 +5,8 @@ defaultContentLanguage = "el"
 title = "Algorithmic Composition"
 theme = "hugo-theme-learn"
 themesdir = "themes/"
-
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
 ordersectionsby = "weight"
   
 publishDir= "docs"
