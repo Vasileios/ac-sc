@@ -1,5 +1,5 @@
 +++
-title = "ΑΣ"
+title = "Αλγοριθμική Σύνθεση"
 chapter = true
 weight = 5
 +++
