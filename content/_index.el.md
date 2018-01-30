@@ -11,8 +11,8 @@ weight = 5
 Ιόνιο Πανεπιστήμιο
 
 
-
 ![Alt text][id]
 
-[id]: http://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://orig00.deviantart.net/572b/f/2013/009/6/8/abstract_dance_01_by_basmur-d5qzt2m.jpg "Fragments"
+
 
