@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/</loc>
+    <loc>https://vasileios.github.io/ac-sc/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -12,12 +12,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/"
+                href="https://vasileios.github.io/ac-sc/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -26,24 +26,24 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/introduction/"
+                href="https://vasileios.github.io/ac-sc/introduction/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/hisrory/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/hisrory/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/sc-examples/</loc>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/sc-examples/supercollider/</loc>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/paradigms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -52,24 +52,24 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/introduction/paradigms/"
+                href="https://vasileios.github.io/ac-sc/introduction/paradigms/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/tuning_scales/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/tuning_scales/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/glossary/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/glossary/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/introduction/references/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/references/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/categories/</loc>
+    <loc>https://vasileios.github.io/ac-sc/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -79,12 +79,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/categories/"
+                href="https://vasileios.github.io/ac-sc/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/el/tags/</loc>
+    <loc>https://vasileios.github.io/ac-sc/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -94,7 +94,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
-                href="https://vasileios.github.io/ac-sc/el/tags/"
+                href="https://vasileios.github.io/ac-sc/tags/"
                 />
   </url>
   

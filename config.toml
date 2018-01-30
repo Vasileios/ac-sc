@@ -5,24 +5,7 @@ defaultContentLanguage = "el"
 title = "Algorithmic Composition"
 theme = "hugo-theme-learn"
 themesdir = "themes/"
-metaDataFormat = "yaml"
-defaultContentLanguageInSubdir= true
 
-
-
-#showVisitedLinks = false
-  # Disable search function. It will hide search bar
-#disableSearch = false
-  # Javascript and CSS cache are automatically busted when new version of site is generated. 
-  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
-#disableAssetsBusting = false
-  # Set this to true to disable copy-to-clipboard button for inline code.
-#disableInlineCopyToClipBoard = false
-  # A title for shortcuts in menu is set by default. Set this to true to disable it. 
-#disableShortcutsTitle = false
-  # When using mulitlingual website, disable the switch language button.
-#disableLanguageSwitchingButton = false
-  # Order sections in menu by "weight" or "title". Default to "weight"
 ordersectionsby = "weight"
   
 publishDir= "docs"
@@ -63,7 +46,7 @@ weight = 30
 
 [Languages.en]
 title = "Documentation for Algorithmic Composition"
-weight = 1
+weight = 2
 languageName = "English"
 
 [[Languages.en.menu.shortcuts]] 
