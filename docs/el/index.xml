@@ -40,7 +40,7 @@ SuperCollider features three major components:  scsynth, a real-time audio serve
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/el/introduction/paradigms/</guid>
-      <description>Chapter 1 Παραδείγματα Μαρκοβιανά Μοντέλα - Markov models time dependent random variables (TDRV)
+      <description>Chapter 1 Παραδειγματα Μαρκοβιανά Μοντέλα - Markov models time dependent random variables (TDRV)
 Στο πλαίσιο των πειραμάτων και παρατηρήσεων σχετικά με την TDRV έχουν ήδη γίνει από τους Pierre Simon de Laplace και Daniel Bernoulli. Η πρώτη εφαρμογή αυτής της μεθόδου ήταν μια εκτενή ανάλυση κειμένου από τον Markov: &#34;Το 1913 ο Markov είχε δημοσιεύσει την τρίτη έκδοση του εγχειριδίου του. Σε αυτή την έκδοση γράφει: «Ας τελειώσουμε το άρθρο και ολόκληρο το βιβλίο με ένα καλό παράδειγμα TDRV, που μπορούν να θεωρηθούν ως μια απλή αλυσίδα» (chain).</description>
     </item>
     
