@@ -13,6 +13,6 @@ weight = 5
 
 ![Alt text][id]
 
-[id]: https://orig00.deviantart.net/572b/f/2013/009/6/8/abstract_dance_01_by_basmur-d5qzt2m.jpg "Fragments"
+[id]: https://img00.deviantart.net/ad9f/i/2018/030/a/2/substructivo_copy_by_basmur-dc1o257.png "Fragments"
 
 
