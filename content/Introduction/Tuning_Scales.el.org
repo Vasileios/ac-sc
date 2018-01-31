@@ -1,5 +1,5 @@
 +++
-title = "Tuning-Scales"
+title = "Κλίμακες και Χορδίσματα"
 chapter = true
 weight = 7
 +++

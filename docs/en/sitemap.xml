@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/</loc>
+    <loc>https://vasileios.github.io/ac-sc/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
@@ -12,16 +12,16 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/"
+                href="https://vasileios.github.io/ac-sc/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/introduction/history/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/history/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/introduction/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
@@ -30,12 +30,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/"
+                href="https://vasileios.github.io/ac-sc/introduction/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/introduction/paradigms/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/paradigms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="el"
@@ -44,12 +44,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/paradigms/"
+                href="https://vasileios.github.io/ac-sc/introduction/paradigms/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/categories/</loc>
+    <loc>https://vasileios.github.io/ac-sc/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -59,12 +59,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/categories/"
+                href="https://vasileios.github.io/ac-sc/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/en/tags/</loc>
+    <loc>https://vasileios.github.io/ac-sc/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -74,7 +74,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/tags/"
+                href="https://vasileios.github.io/ac-sc/tags/"
                 />
   </url>
   
