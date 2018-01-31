@@ -37,7 +37,7 @@ weight = 20
 
 [[Languages.el.menu.shortcuts]]
 name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
-url = "/credits"
+url = "./credits"
 weight = 30
 
 [Languages.en]
