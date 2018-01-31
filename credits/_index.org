@@ -1,0 +1,18 @@
+---
+title: "About"
+weight: 1
+---
+
+**** About
+
+#+AUTHOR: Vasilis Agiomyrgianakis
+
+This sites communicates the basics of algorithmic composition for
+educational puproses.   
+
+There is also paradigms of algorithmic composition and sound synthesis
+techniques in SuperCollider syntax.
+
+See "References" section for bibliography and webography.
+
+
