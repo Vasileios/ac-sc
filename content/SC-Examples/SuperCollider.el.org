@@ -21,6 +21,7 @@ SuperCollider is a platform for audio synthesis and algorithmic composition, use
 - *sclang*, an interpreted programming language. It is focused on sound, but not limited to any specific domain. sclang controls scsynth via Open Sound Control. You can use it for algorithmic composition and sequencing, finding new sound synthesis methods, connecting your app to external hardware including MIDI controllers, network music, writing GUIs and visual displays, or for your daily programming experiments. It has a stock of user-contributed extensions called Quarks.
 - *scide* is an editor for sclang with an integrated help system.
 
+**** Code examples 
 ***** Find recordings folder
 
 #+BEGIN_SRC js
