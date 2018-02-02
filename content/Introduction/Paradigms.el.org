@@ -46,7 +46,7 @@ To πεδίο της στοχαστικής διαδικασίας περιλα�
 δεδομένους χρόνους <var>t<sub>m</var> και <var>t<sub>m+1</var>, αυτή η πιθανότητα είναι:
 
 #+BEGIN_QUOTE
-<p>Stochastic Process
+<p>Stochastic Process - Markov Chain
 <var>P<var>(<var>X<sub>tm+1</var><var>=<var>j</var><var>|<var>X<sub>tm</var>=<var>i</var>)<var>=<var>P<sub>ij</var><var>(<var>t<sub>m</var><var>,<var>t<sub>m+1</var><var>)<p>
 #+END_QUOTE
 
