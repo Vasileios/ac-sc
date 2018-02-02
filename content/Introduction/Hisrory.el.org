@@ -233,10 +233,18 @@ Bell Laboratory:
 
 - Zuse3 or Z3 1941
 
+Από το 1934 έως το 1938, ο Konrad Zuse ανέπτυξε το πρώτο του μοντέλο υπολογιστικής μηχανής με βάση το πρόγραμμα. Το Z1 (Zuse 1) κατασκευάστηκε αποκλειστικά από μηχανικά εξαρτήματα. Ο Zuse χρησιμοποίησε μια μνήμη ικανή να αποθηκεύσει 16 δυαδικούς αριθμούς 24 bit, ο καθένας από τους οποίους αποτελείται από μεταλλικά φύλλα που μπορούν να επανατοποθετηθούν. Παρόλο που η ιδέα του θεωρήθηκε σωστή, προέκυψαν κάποια προβλήματα λόγω του μηχανικού φορτίου υλικού.
+Στα μοντέλα παρακολούθησης Z2 (1940) και Z3 (1941), τα μηχανικά στοιχεία μεταγωγής αντικαταστάθηκαν από ρελέ. Το Z3, που θεωρείται ο πρώτος προγραμματιζόμενος ηλεκτρονικός υπολογιστής, επέτρεψε την επεξεργασία "floating-point numbers" που δεν εφαρμόστηκαν σε παρόμοια μοντέλα, όπως Mark I, ENIAC και άλλα, της εποχής εκείνης. Η (half-logarithmic notation ) που χρησιμοποιείται από τον Zuse  επιτρέπει μια πιο αποτελεσματική αριθμητική αναπαράσταση από τη "fixed-point notation" που χρησιμοποιείται σε παρόμοια μοντέλα υπολογιστών.
+
 - ABC
 
 - ENIAC patching - not sequentially programmed.
 
-- Mark 1 sequentially programmed step by step one operation after the other
+Από το 1934, ο Howard Hathaway Aiken (1900-1973) σχεδίασε, σε συνεργασία με την IBM, το Mark I, το οποίο παρουσιάστηκε για πρώτη φορά στο Harvard το 1944. Η μηχανή του Aiken βασίζεται στο δεκαδικό σύστημα και αποτελείται από μια διασύνδεση των μηχανών του Hollerith τον υπολογισμό των γενικών αριθμητικών εργασιών.
+
+- Mark Ι sequentially programmed step by step one operation after the other.
+
+The Mark I also computed and printed mathematical tables, which had been the initial goal of British inventor Charles Babbage for his "analytical engine".
+
 
 [[https://www.youtube.com/watch?v=qundvme1Tik][Computer Pioneers]]
