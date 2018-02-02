@@ -154,3 +154,34 @@ X1&or;(X4&and;(X2&and;X3))
 
 
 Επίσης, το "Formalists" του David Hilbert (1862-1943).
+
+
+*John von Neumann*
+
+- John von Neumann (1903-1957) - /game theory/ and /quantum mechanics/, /Von Neumann architecture/ in computing, /linear programming/, /self-replicating machines/, /stochastic computing/.
+
+**** Workable definition of an algorithm
+
+- Hilbert's decision problem
+Given a mathematical proposition, can one find an algorithm to decide
+whether the proposition is true or false?
+
+- Turing machine
+Turing's Thesis was that:
+
+Any "algorithm" can be carried out by one of his machines.
+
+***** Turing Machine
+
+Infinte tape
+
+Symbols 0, 1 and blank ""
+
+Read/Write head
+
+Read the symbol on the square under the head.
+
+Leave it unchanged or edit the symbol by writing another symbol.
+
+Move the tape left or right by one square so that the machine can read
+and edit the symbol on a neghbouring square.
