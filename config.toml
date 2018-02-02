@@ -1,10 +1,10 @@
 baseURL = "https://vasileios.github.io/ac-sc"
 languageCode = "en-US"
-#defaultContentLanguage = "el"
+defaultContentLanguage = "el"
 
 title = "Algorithmic Composition"
 theme = "hugo-theme-learn"
-themesdir = "themes/"
+#themesdir = "themes/"
 metaDataFormat = "yaml"
 #defaultContentLanguageInSubdir= true
 ordersectionsby = "weight"
