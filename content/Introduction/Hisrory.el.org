@@ -152,9 +152,23 @@ X1&or;(X4&and;(X2&and;X3))
 
 ο Γιάννης Ξενάκης (1922-2001) σε διάφορες συνθέσεις του εφάρμοσε λογικούς συνδυασμούς για τη δημιουργία μουσικής δομής από τη θεωρία των κοσκίνων.
 
+Το φάσμα εφαρμογών της λογικής επεκτέινεται με ένα σύστημα που ειναι ο προπομπός της σημερινής "first-order logic".
+ο βασικός υπολογισμός γίνεται ένας μηχανισμός θεμελιώδους μαθηματικής έρευνας, των οποίων οι στόχοι οδηγούν σε πολώσεις μεταξύ των επιστημόνων. Οι «φορμαλιστές» του David Hilbert (1862-1943) είχαν ως στόχο να θέσουν βασικούς μαθηματικούς χώρους σε μια αξιωματική βάση και να αποδείξουν την συνοχή τους.
+Αντίθετα, οι "Διανοούμενοι" που ιδρύθηκαν από τον Luitzen Egbertus Jan Brouwer (1881-1966), δεν συμφωνούσαν με τους φορμαλιστές και
+προκάλεσαν τον David Hilbert, σε μια επική προσπάθεια, να θέσει την αριθμητική των φυσικών αριθμών σε μια αξιωματική επιβεβαιωμένη βάση και επίσης να αποδείξει τη συνοχή των μαθηματικών πεδίων, όπως η θεωρία των συνόλων.
 
-Επίσης, το "Formalists" του David Hilbert (1862-1943).
+"Theoretical Logic"
+Automatic processing of Logical Calculus.
 
+*Decidabilitz Problem*: the idea that there could be an algorithm being able to decide for any first order logical expression if its statement is true or false.
+or
+the *halting problem of a Turing machine*.
+
+*Kurt Gödel*
+
+Με το "On Formally Undecidable Propositions of the Principia Mathematica Related Systems "
+
+o Kurt Gödel το 1931 καθόρισε σαφή όρια στις προσπάθειές τους ([[https://www.britannica.com/topic/predicate-calculus][the predicate calculus]]). Έδειξε πρώτα ότι σε ένα αρκετά ισχυρό σύστημα που περιέχει τουλάχιστον αριθμητική, η συνέπεια του συστήματος δεν μπορεί να αποδειχθεί μέσα στο σύστημα. Δεύτερον, κατάφερε να αποδείξει ότι σε ένα τέτοιο σύστημα μπορούν να γίνουν προτάσεις που στο πλαίσιο αυτού του συστήματος δεν είναι ούτε αποδεδειγμένες ούτε ασυμβίβαστες.
 
 *John von Neumann*
 
@@ -162,11 +176,19 @@ X1&or;(X4&and;(X2&and;X3))
 
 - John von Neumann (1903-1957) - /game theory/ and /quantum mechanics/, /Von Neumann architecture/ in computing, /linear programming/, /self-replicating machines/, /stochastic computing/.
 
+IAS computer 1952 (5 kilobytes capacity)
+
+*Theory of Self-Reproducing Automata*
+
 **** Workable definition of an algorithm
+
+ *David Hilbert*
 
 - Hilbert's decision problem
 Given a mathematical proposition, can one find an algorithm to decide
 whether the proposition is true or false?
+
+*Alan Turing*
 
 - Turing machine
 Turing's Thesis was that:
@@ -187,3 +209,34 @@ Leave it unchanged or edit the symbol by writing another symbol.
 
 Move the tape left or right by one square so that the machine can read
 and edit the symbol on a neghbouring square.
+***** Enigma Machine
+
+Poly alphabetic machine.
+
+***** The Imitation Game
+
+Mind A Quarterly review of Psychology and Philosophy
+Computing machinery and Intelligence
+
+- The Turing Test
+
+Interrogator, Machine and a woman.
+
+
+- Calculus
+
+Computers between 1930s and 50s.
+
+Bell Laboratory:
+
+ *Konrad Zuse*
+
+- Zuse3 or Z3 1941
+
+- ABC
+
+- ENIAC patching - not sequentially programmed.
+
+- Mark 1 sequentially programmed step by step one operation after the other
+
+[[https://www.youtube.com/watch?v=qundvme1Tik][Computer Pioneers]]
