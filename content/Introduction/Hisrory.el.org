@@ -158,6 +158,8 @@ X1&or;(X4&and;(X2&and;X3))
 
 *John von Neumann*
 
+[[https://en.wikipedia.org/wiki/John_von_Neumann#/media/File:JohnvonNeumann-LosAlamos.gif][John von Neumann]]
+
 - John von Neumann (1903-1957) - /game theory/ and /quantum mechanics/, /Von Neumann architecture/ in computing, /linear programming/, /self-replicating machines/, /stochastic computing/.
 
 **** Workable definition of an algorithm
