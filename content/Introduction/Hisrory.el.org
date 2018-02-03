@@ -160,7 +160,9 @@ X1&or;(X4&and;(X2&and;X3))
 "Theoretical Logic"
 Automatic processing of Logical Calculus.
 
-*Decidabilitz Problem*: the idea that there could be an algorithm being able to decide for any first order logical expression if its statement is true or false.
+*Decidability Problem*
+
+The idea that there could be an algorithm being able to decide for any first order logical expression if its statement is true or false.
 or
 the *halting problem of a Turing machine*.
 
@@ -235,8 +237,7 @@ Bell Laboratory:
 
 - ABC
 
-
-
+- Mark I
 Από το 1934, ο Howard Hathaway Aiken (1900-1973) σχεδίασε, σε συνεργασία με την IBM, το Mark I, το οποίο παρουσιάστηκε για πρώτη φορά στο Harvard το 1944. Η μηχανή του Aiken βασίζεται στο δεκαδικό σύστημα και αποτελείται από μια διασύνδεση των μηχανών του Hollerith τον υπολογισμό των γενικών αριθμητικών εργασιών.
 
 - Mark Ι sequentially programmed step by step one operation after the other.
