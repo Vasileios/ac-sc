@@ -146,7 +146,8 @@ Caspar Schott (1608-1666),
 
 Παράλληλα με το Babbage, η Ada Countess of Lovelace (1815-1852)
 διαδραμάτισε σημαντικό ρόλο. Ήταν ένας αυτοδίδακτος μαθηματικός και
-συνεργάστηκε με τον Babbage στην έννοια του «αναλυτικού κινητήρα».
+συνεργάστηκε με τον Babbage στην έννοια του «αναλυτικού κινητήρα»
+([[https://en.wikipedia.org/wiki/Analytical_Engine#/media/File:AnalyticalMachine_Babbage_London.jpg][analytical engine]]).
 
 [[http://static1.squarespace.com/static/507dba43c4aabcfd2216a447/507dba43c4aabcfd2216a451/539853fde4b043aa14e924b9/1411669805035/Lady+Ada+Lovelace.jpg?format=1000w][Ada Lovelace]]
 
