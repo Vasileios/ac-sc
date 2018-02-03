@@ -225,7 +225,6 @@ whether the proposition is true or false?
 
 *Alan Turing*
 
-- Turing machine
 Turing's Thesis was that:
 
 Any "algorithm" can be carried out by one of his machines.
@@ -246,11 +245,11 @@ Move the tape left or right by one square so that the machine can read
 and edit the symbol on a neghbouring square.
 #+END_QUOTE
 
- *Enigma Machine*
+- Cracking Enigma Machine
 
-Polyalphabetic machine.
+A Polyalphabetic machine.
 
- *The Imitation Game*
+- The Imitation Game
 
 Mind A Quarterly review of Psychology and Philosophy
 Computing machinery and Intelligence
