@@ -182,7 +182,7 @@ IAS computer 1952 (5 kilobytes capacity)
 
 *Theory of Self-Reproducing Automata*
 
-**** Workable definition of an algorithm
+ *Workable definition of an algorithm*
 
  *David Hilbert*
 
@@ -197,7 +197,7 @@ Turing's Thesis was that:
 
 Any "algorithm" can be carried out by one of his machines.
 
-***** Turing Machine
+ *Turing Machine*
 
 Infinte tape
 
@@ -211,11 +211,12 @@ Leave it unchanged or edit the symbol by writing another symbol.
 
 Move the tape left or right by one square so that the machine can read
 and edit the symbol on a neghbouring square.
-***** Enigma Machine
+
+ *Enigma Machine*
 
 Poly alphabetic machine.
 
-***** The Imitation Game
+ *The Imitation Game*
 
 Mind A Quarterly review of Psychology and Philosophy
 Computing machinery and Intelligence
@@ -224,7 +225,7 @@ Computing machinery and Intelligence
 
 Interrogator, Machine and a woman.
 
-**** Computers between 1930s and 50s.
+ *Computers between 1930s and 50s*
 
 Bell Laboratory:
 
