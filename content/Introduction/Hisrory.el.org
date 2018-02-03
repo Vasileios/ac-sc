@@ -89,7 +89,7 @@ Musarithmica= θεωρείται αλγοριθμική σύνθεση σε φυ
 
 
 
-*Υπολογιστική διαδικασία & μηχανές*
+*Υπολογιστική διαδικασία & μηχανές - Calculus*
 
 Η μηχανοποίηση των υπολογιστικών διαδικασιών, 1617 ξεκίνησε από τη Σκωτία
 απο τον μαθηματικό John Napier και Jost Bürgi (1552-1632) πρωτοστάτησαν στο
@@ -153,8 +153,8 @@ X1&or;(X4&and;(X2&and;X3))
 ο Γιάννης Ξενάκης (1922-2001) σε διάφορες συνθέσεις του εφάρμοσε λογικούς συνδυασμούς για τη δημιουργία μουσικής δομής από τη θεωρία των κοσκίνων.
 
 Το φάσμα εφαρμογών της λογικής επεκτέινεται με ένα σύστημα που ειναι ο προπομπός της σημερινής "first-order logic".
-ο βασικός υπολογισμός γίνεται ένας μηχανισμός θεμελιώδους μαθηματικής έρευνας, των οποίων οι στόχοι οδηγούν σε πολώσεις μεταξύ των επιστημόνων. Οι «φορμαλιστές» του David Hilbert (1862-1943) είχαν ως στόχο να θέσουν βασικούς μαθηματικούς χώρους σε μια αξιωματική βάση και να αποδείξουν την συνοχή τους.
-Αντίθετα, οι "Διανοούμενοι" που ιδρύθηκαν από τον Luitzen Egbertus Jan Brouwer (1881-1966), δεν συμφωνούσαν με τους φορμαλιστές και
+ο βασικός υπολογισμός γίνεται ένας μηχανισμός θεμελιώδους μαθηματικής έρευνας, των οποίων οι στόχοι οδηγούν σε πολώσεις μεταξύ των επιστημόνων. Οι «φορμαλιστές» του *David Hilbert* (1862-1943) είχαν ως στόχο να θέσουν βασικούς μαθηματικούς χώρους σε μια αξιωματική βάση και να αποδείξουν την συνοχή τους.
+Αντίθετα, οι "Διανοούμενοι" που ιδρύθηκαν από τον *Luitzen Egbertus Jan Brouwer* (1881-1966), δεν συμφωνούσαν με τους φορμαλιστές και
 προκάλεσαν τον David Hilbert, σε μια επική προσπάθεια, να θέσει την αριθμητική των φυσικών αριθμών σε μια αξιωματική επιβεβαιωμένη βάση και επίσης να αποδείξει τη συνοχή των μαθηματικών πεδίων, όπως η θεωρία των συνόλων.
 
 "Theoretical Logic"
@@ -222,10 +222,7 @@ Computing machinery and Intelligence
 
 Interrogator, Machine and a woman.
 
-
-- Calculus
-
-Computers between 1930s and 50s.
+**** Computers between 1930s and 50s.
 
 Bell Laboratory:
 
@@ -238,7 +235,7 @@ Bell Laboratory:
 
 - ABC
 
-- ENIAC patching - not sequentially programmed.
+
 
 Από το 1934, ο Howard Hathaway Aiken (1900-1973) σχεδίασε, σε συνεργασία με την IBM, το Mark I, το οποίο παρουσιάστηκε για πρώτη φορά στο Harvard το 1944. Η μηχανή του Aiken βασίζεται στο δεκαδικό σύστημα και αποτελείται από μια διασύνδεση των μηχανών του Hollerith τον υπολογισμό των γενικών αριθμητικών εργασιών.
 
@@ -246,5 +243,38 @@ Bell Laboratory:
 
 The Mark I also computed and printed mathematical tables, which had been the initial goal of British inventor Charles Babbage for his "analytical engine".
 
+Ο Grace Murray Hopper (1906-1992) εργάστηκε στον προγραμματισμό του Mark I, υπογράφοντας την έννοια της υπορουτίνας (subroutine) και συνέβαλε σημαντικά στην ανάπτυξη του πρώτου μεταγλωττιστή (compiler), ο οποίος ολοκληρώθηκε το 1952 ως στρατιωτική εφεύρεση. Η Grace Hopper ήταν μαζί με την Ada Lovelace μία από τις γυναίκες πρωτοπόρους της ανάπτυξης ηλεκτρονικών υπολογιστών και μετά το 1945 προήχθη σε ναύαρχο για να γίνει η ανώτατη γυναίκα του αμερικανικού στρατού.
+
+- ABC
+
+Μεταξύ 1937 και 1942, ένας δυαδικός υπολογιστής (binary computer) για την επίλυση συστημάτων εξισώσεων αναπτύχθηκε από τον John Vincent Atanasoff (1903-1995) και από τον υποψήφιο διδάκτορα του Clifford Edward Berry (1918-1963) στο Iowa State College. Ο υπολογιστής Atanasoff-Berry (σύντομος: ABC) εγκατέλειψε εντελώς την περίπλοκη τεχνολογία των μηχανικών ρελέ υπέρ των νέων σωλήνων ηλεκτρονίων και διέθεσε μια δυναμική μνήμη καθώς και ανεξάρτητες μονάδες υπολογισμού.
+- John Mauchly and J. Presper Eckert in 1946 with ENIAC computer. ENIAC used patching and it wasn't sequentially programmed.
+
+- Maurice Wilkes EDSAC 1949 (Electronic Delay Storage Automatic Computer)
+
+"First Draft of a Report on the EDVAC" by John von Neumann 1945.
+
+This report outlines the computer architecture for the next 50 years.
+
+O EDCVAC σε αντίθεση με το ENIAC I, το οποίο βασίζεται στο δεκαδικό σύστημα, η αναπαράσταση δεδομένων είναι δυαδική. Οι εντολές βρόχου και άλματος ήταν δυνατές και αργότερα, με βάση την έννοια του John von Neumann (1903-1957), κατέστη δυνατή η αποθήκευση εντολών προγράμματος πέρα από τα δεδομένα στη μνήμη.
+
+- John Von Neumann - IAS machines (Institute for Advanced Studies at Princeton) (1946-1952).
+
+Using electrostatic storage tube as an alternative to Mercury delay lines.
+This alternative provided random access rather than cyclic access - read in parallel rather than serially.
+
+Von Neumann machines (parallel binary machines)
+
+- UNIVAC
+
+- MANIAC (Los Alamos) 1952
+
 
 [[https://www.youtube.com/watch?v=qundvme1Tik][Computer Pioneers]]
+
+
+**** Αλγοριθμική σύνθεση τον 20ο αιώνα
+
+*Iannis Xenakis* και αλγοριθμική σύνθεση.
+
+*Formalised Music* ("aesthetic efficiency")
