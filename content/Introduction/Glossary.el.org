@@ -34,3 +34,7 @@ second.
 =SC Stream= Streams represent sequences of values that are obtained one at a time.
 
 =SC Pbind= The pattern Pbind connects specific patterns with specific names. Consult its help page for details.
+
+*Music*
+
+=motet= Form of polyphonic vocal music (12th century)
