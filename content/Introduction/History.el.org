@@ -231,7 +231,7 @@ Turing's Thesis was that:
 Any "algorithm" can be carried out by one of his machines.
 
  *Turing Machine*
-
+#+BEGIN_QUOTE
 Infinte tape
 
 Symbols 0, 1 and blank ""
@@ -244,10 +244,11 @@ Leave it unchanged or edit the symbol by writing another symbol.
 
 Move the tape left or right by one square so that the machine can read
 and edit the symbol on a neghbouring square.
+#+END_QUOTE
 
  *Enigma Machine*
 
-Poly alphabetic machine.
+Polyalphabetic machine.
 
  *The Imitation Game*
 
@@ -255,8 +256,6 @@ Mind A Quarterly review of Psychology and Philosophy
 Computing machinery and Intelligence
 
 - The Turing Test
-
-Interrogator, Machine and a woman.
 
  *Computers between 1930s and 50s*
 
