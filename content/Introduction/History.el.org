@@ -42,8 +42,8 @@ weight = 5
 
 Η αρχή του ισόρυθμου (isorhythm), που εφευρέθηκε από τον Philippe de Vitry και εξελίσεται με τον Guillaume de Machaut, αποτελείται από πολλαπλά επαναλαμβανόμενα μελωδικά και ρυθμικά μοντέλα τα οποία αλληλεπιδρούν μεταξύ τους και μπορούν να εμφανιστούν σε διαφορετικές αναλογίες.
 
-[[https://www.youtube.com/watch?v=Ke2BuKG65Sw&t=31s][De Vitry
-]]
+[[https://www.youtube.com/watch?v=Ke2BuKG65Sw&t=31s][De Vitry]]
+
 [[https://www.youtube.com/watch?v=11A4wqv8_wo][Machaut]]
 
 To motet μαζι με τη ανάπτυξη της μουσικής σημειογραφίας είχαν μεγάλη σημασία για την ανάπτυξη της αλγοριθμικής σύνθεσης.
