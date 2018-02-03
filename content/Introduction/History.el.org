@@ -29,22 +29,22 @@ weight = 5
 Για παράδειγμα, τα φωνήεντα στο κείμενο μπορούν να χαρτογραφηθούν σε
 διαφορετικές θέσεις τονισμού.
 
-- Πολυφωνία, Motet 12-13ος αιώνα 
+- Πολυφωνία, Motet 12-13ος αιώνα
 
 Ο Leonin με το "Magnus liber organi de gradali et antiphonario", μια συλλογή από
 χωρικά (chorales), είναι απο τους πρώτους που ασχολήθηκε με την
-πολυφωνία και το μοτετ. 
+πολυφωνία και το μοτετ.
 
  Απο τις αρχές του 12ου αιώνα μέχρι τις αρχές του 13ου αιώνα με τους
  Perotin και Petrus de Cruce, το motet εξελίχθηκε από συνθέτες όπως ο
  Philippe de Vitry (γύρω στο 1291-1361), και αργότερα με τον Giovanni
- Pierluigi Palestrina (1525–1594) 
+ Pierluigi Palestrina (1525–1594)
 
 Η αρχή του ισόρυθμου (isorhythm), που εφευρέθηκε από τον Philippe de Vitry και εξελίσεται με τον Guillaume de Machaut, αποτελείται από πολλαπλά επαναλαμβανόμενα μελωδικά και ρυθμικά μοντέλα τα οποία αλληλεπιδρούν μεταξύ τους και μπορούν να εμφανιστούν σε διαφορετικές αναλογίες.
 
-[[https://www.youtube.com/watch?v=Ke2BuKG65Sw&t=31s][De Vitry]]
-[[https://www.youtube.com/watch?v=11A4wqv8_wo][
-Machaut]]
+[[https://www.youtube.com/watch?v=Ke2BuKG65Sw&t=31s][De Vitry
+]]
+[[https://www.youtube.com/watch?v=11A4wqv8_wo][Machaut]]
 
 To motet μαζι με τη ανάπτυξη της μουσικής σημειογραφίας είχαν μεγάλη σημασία για την ανάπτυξη της αλγοριθμικής σύνθεσης.
 

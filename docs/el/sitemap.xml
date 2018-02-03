@@ -31,7 +31,17 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/hisrory/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/history/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://vasileios.github.io/ac-sc/en/introduction/history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="el"
+                href="https://vasileios.github.io/ac-sc/introduction/history/"
+                />
   </url>
   
   <url>
