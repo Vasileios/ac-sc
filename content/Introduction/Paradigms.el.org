@@ -62,7 +62,7 @@ Belar, ανέπτυξε το "Electronic Synthesizer" το 1955, το πρώτο
 *transition probabilities*
 
 Ο Hiller και ο Isaacson το 1955 με 1956 χρησιμοποιούν Markov μοντέλα για την παραγωγή
-της μουσικής δομής με το "Illiac Suite"". 
+της μουσικής δομής με το "Illiac Suite". 
 
 [[https://www.youtube.com/watch?v=n0njBFLQSk8][Hiller & Iaacson: The Illiac Suite]]
 
