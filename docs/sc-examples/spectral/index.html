@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Glossary :: Αλγοριθμική Σύνθεση</title>
+    <title>Spectral :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517773578" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/glossary/">
+  <body class="" data-url="/ac-sc/sc-examples/spectral/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item ">
         <a href="/ac-sc/introduction/glossary/">
         Glossary
         
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -571,7 +571,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/spectral/" title="Spectral" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/spectral/" title="Spectral" class="dd-item active">
         <a href="/ac-sc/sc-examples/spectral/">
         Spectral
         
@@ -634,7 +634,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/glossary/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/spectral/" selected>Ελληνικά</option>
                     
                   
               
@@ -697,7 +697,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Glossary
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Spectral
           
          
           
@@ -720,39 +720,99 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="glossary">Glossary</h4>
+<h4 id="supercollider-spectral">SuperCollider Spectral</h4>
 
-<p><strong>Mathematics</strong></p>
+<p><strong>FFT-PV_Ugens</strong></p>
 
-<p><code>premise</code> a statement that is assumed to be true.</p>
+<p>FFT, IFFT and the phase vocoder ugens.
+FFT calculates the spectrum of a sound, puts it into a buffer, and outputs a trigger each time the buffer is ready to process. The PV UGens process the spectrum when they receive the trigger. IFFT converts the spectrum back into sound.</p>
 
-<p><strong>Physics</strong></p>
+<pre><code class="language-js">// alloc a buffer for the FFT
+b = Buffer.alloc(s,2048,1);
+// read a sound
+c = Buffer.read(s, Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;);
 
-<p><code>frequency</code> the number of times that a wave, especially a light, sound,
-or radio wave, is produced within a particular period, especially one
-second.</p>
 
-<p><code>amplitude</code> the distance between the top and the bottom of a wave.</p>
+(
+// do nothing
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><strong>Computing-SC</strong></p>
+(
+// pass only magnitudes above a threshold
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_MagAbove(chain, MouseX.kr(0.1,512,1));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>function</code> lamda calculus</p>
+(
+// pass only magnitudes below a threshold
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_MagBelow(chain, MouseX.kr(0.1,512,1));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>SC Function</code> a = { [100, 200, 300].choose };</p>
+(
+// brick wall filter.
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_BrickWall(chain, MouseX.kr(-1,1));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>SC Event</code> An Event is a <code>SC Environment</code> with a 'play' method. An Event specifies an action to be taken in response to a <code>-play</code> message.</p>
+(
+// pass random frequencies. Mouse controls how many to pass.
+// trigger changes the frequencies periodically
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_RandComb(chain, MouseX.kr(0,1), Impulse.kr(0.4));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>SC Pattern</code> creates a Stream that iterates an array.</p>
+(
+// rectangular comb filter
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_RectComb(chain, 8, MouseY.kr(0,1), MouseX.kr(0,1));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>SC Stream</code> Streams represent sequences of values that are obtained one at a time.</p>
+(
+// freeze magnitudes
+{
+    var in, chain;
+    in = PlayBuf.ar(1,c, BufRateScale.kr(c), loop:1);
+    chain = FFT(b, in);
+    chain = PV_MagFreeze(chain, LFPulse.kr(1, 0.75));
+    0.5 * IFFT(chain);
+}.scope(1);
+)
 
-<p><code>SC Pbind</code> The pattern Pbind connects specific patterns with specific names. Consult its help page for details.</p>
-
-<p><strong>Music</strong></p>
-
-<p><code>motet</code> Form of polyphonic vocal music (12th century)</p>
+</code></pre>
 
 
 <footer class=" footline" >
@@ -793,20 +853,6 @@ second.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
                     
@@ -817,9 +863,6 @@ second.</p>
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -874,7 +917,6 @@ second.</p>
             
                 
                     
-                    
                 
                 
 
@@ -885,41 +927,6 @@ second.</p>
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -941,6 +948,42 @@ second.</p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1049,6 +1092,23 @@ second.</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1059,10 +1119,10 @@ second.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/granularsynthesis/" title="Granular Synthesis"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/references/" title="References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/supercollider/" title="SuperCollider" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

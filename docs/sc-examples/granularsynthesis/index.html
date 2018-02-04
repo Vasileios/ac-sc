@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Glossary :: Αλγοριθμική Σύνθεση</title>
+    <title>Granular Synthesis :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517773578" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/glossary/">
+  <body class="" data-url="/ac-sc/sc-examples/granularsynthesis/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item ">
         <a href="/ac-sc/introduction/glossary/">
         Glossary
         
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -552,7 +552,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/granularsynthesis/" title="Granular Synthesis" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/granularsynthesis/" title="Granular Synthesis" class="dd-item active">
         <a href="/ac-sc/sc-examples/granularsynthesis/">
         Granular Synthesis
         
@@ -634,7 +634,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/glossary/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/granularsynthesis/" selected>Ελληνικά</option>
                     
                   
               
@@ -697,7 +697,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Glossary
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Granular Synthesis
           
          
           
@@ -720,39 +720,125 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="glossary">Glossary</h4>
+<h4 id="supercollider-granular-synthesis">SuperCollider Granular Synthesis</h4>
 
-<p><strong>Mathematics</strong></p>
+<pre><code class="language-js">//TGrains - granulation of a buffer
+//arguments: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation
 
-<p><code>premise</code> a statement that is assumed to be true.</p>
+// read sound
+b = Buffer.read(s, Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;);
 
-<p><strong>Physics</strong></p>
+(
+{
+    var trate, dur;
+    trate = MouseY.kr(2,200,1);
+    dur = 4 / trate;
+    TGrains.ar(2, Impulse.ar(trate), b, 1, MouseX.kr(0,BufDur.kr(b)), dur, 0, 0.1, 2);
+}.scope(2, zoom: 4);
+)
 
-<p><code>frequency</code> the number of times that a wave, especially a light, sound,
-or radio wave, is produced within a particular period, especially one
-second.</p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = MouseY.kr(8,120,1);
+    dur = 12 / trate;
+    clk = Impulse.kr(trate);
+    pos = MouseX.kr(0,BufDur.kr(b)) + TRand.kr(0, 0.01, clk);
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(2, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><code>amplitude</code> the distance between the top and the bottom of a wave.</p>
+// 4 channels
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = MouseY.kr(8,120,1);
+    dur = 12 / trate;
+    clk = Impulse.kr(trate);
+    pos = MouseX.kr(0,BufDur.kr(b)) + TRand.kr(0, 0.01, clk);
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(4, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(4, zoom: 4);
+)
 
-<p><strong>Computing-SC</strong></p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = MouseY.kr(8,120,1);
+    dur = 4 / trate;
+    clk = Dust.kr(trate);
+    pos = MouseX.kr(0,BufDur.kr(b)) + TRand.kr(0, 0.01, clk);
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(2, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><code>function</code> lamda calculus</p>
 
-<p><code>SC Function</code> a = { [100, 200, 300].choose };</p>
 
-<p><code>SC Event</code> An Event is a <code>SC Environment</code> with a 'play' method. An Event specifies an action to be taken in response to a <code>-play</code> message.</p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = LinExp.kr(LFTri.kr(MouseY.kr(0.1,2,1)),-1,1,8,120);
+    dur = 12 / trate;
+    clk = Impulse.ar(trate);
+    pos = MouseX.kr(0,BufDur.kr(b));
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(2, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><code>SC Pattern</code> creates a Stream that iterates an array.</p>
 
-<p><code>SC Stream</code> Streams represent sequences of values that are obtained one at a time.</p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = 12;
+    dur = MouseY.kr(0.2,24,1) / trate;
+    clk = Impulse.kr(trate);
+    pos = MouseX.kr(0,BufDur.kr(b)) + TRand.kr(0, 0.01, clk);
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(2, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><code>SC Pbind</code> The pattern Pbind connects specific patterns with specific names. Consult its help page for details.</p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = 100;
+    dur = 8 / trate;
+    clk = Impulse.kr(trate);
+    pos = Integrator.kr(BrownNoise.kr(0.001));
+    pan = WhiteNoise.kr(0.6);
+    TGrains.ar(2, clk, b, 1, pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><strong>Music</strong></p>
+(
+{
+    var trate, dur, clk, pos, pan;
+    trate = MouseY.kr(1,400,1);
+    dur = 8 / trate;
+    clk = Impulse.kr(trate);
+    pos = MouseX.kr(0,BufDur.kr(b));
+    pan = WhiteNoise.kr(0.8);
+    TGrains.ar(2, clk, b, 2 ** WhiteNoise.kr(2), pos, dur, pan, 0.1);
+}.scope(2, zoom: 4);
+)
 
-<p><code>motet</code> Form of polyphonic vocal music (12th century)</p>
+(
+{
+    var trate, dur;
+    trate = MouseY.kr(2,120,1);
+    dur = 1.2 / trate;
+    TGrains.ar(2, Impulse.ar(trate), b, (1.2 ** WhiteNoise.kr(3).round(1)), MouseX.kr(0,BufDur.kr(b)), dur, WhiteNoise.kr(0.6), 0.1);
+}.scope(2, zoom: 4);
+)
+
+// free sound
+b.free;
+</code></pre>
 
 
 <footer class=" footline" >
@@ -793,125 +879,8 @@ second.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1017,6 +986,42 @@ second.</p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1049,6 +1054,90 @@ second.</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1059,10 +1148,10 @@ second.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/delays/" title="Delays"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/references/" title="References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/spectral/" title="Spectral" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

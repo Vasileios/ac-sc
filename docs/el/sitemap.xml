@@ -75,11 +75,15 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/filters/</loc>
+    <loc>https://vasileios.github.io/ac-sc/introduction/logicalex/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/logicalex/</loc>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/aperiodicsources/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/filters/</loc>
   </url>
   
   <url>
@@ -87,7 +91,23 @@
   </url>
   
   <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/distortion/</loc>
+  </url>
+  
+  <url>
     <loc>https://vasileios.github.io/ac-sc/introduction/references/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/delays/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/spectral/</loc>
   </url>
   
   <url>

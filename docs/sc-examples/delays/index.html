@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Glossary :: Αλγοριθμική Σύνθεση</title>
+    <title>Delays :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517773578" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/glossary/">
+  <body class="" data-url="/ac-sc/sc-examples/delays/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item ">
         <a href="/ac-sc/introduction/glossary/">
         Glossary
         
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -533,7 +533,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/delays/" title="Delays" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/delays/" title="Delays" class="dd-item active">
         <a href="/ac-sc/sc-examples/delays/">
         Delays
         
@@ -634,7 +634,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/glossary/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/delays/" selected>Ελληνικά</option>
                     
                   
               
@@ -697,7 +697,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Glossary
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Delays
           
          
           
@@ -720,39 +720,66 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="glossary">Glossary</h4>
+<h4 id="supercollider-delays">SuperCollider Delays</h4>
 
-<p><strong>Mathematics</strong></p>
+<pre><code class="language-js">//Delays and Buffer UGens
+DelayN, DelayL, DelayC - simple delays
+N - no interpolation
+L - linear interpolation
+C - cubic interpolation
+arguments: in, maximum delay time, current delay time, mul, add
 
-<p><code>premise</code> a statement that is assumed to be true.</p>
+(
+// Dust randomly triggers Decay to create an exponential
+// decay envelope for the WhiteNoise input source
+{
+z = Decay.ar(Dust.ar(1,0.5), 0.3, WhiteNoise.ar);
+DelayN.ar(z, 0.1, 0.1, 1, z); // input is mixed with delay via the add input
+}.scope(1, zoom: 4)
+)
 
-<p><strong>Physics</strong></p>
+// CombN, CombL, CombC - feedback delays
+//arguments: in, maximum delay time, current delay time, echo decay time, mul, add
 
-<p><code>frequency</code> the number of times that a wave, especially a light, sound,
-or radio wave, is produced within a particular period, especially one
-second.</p>
+// used as an echo.
+{ CombN.ar(Decay.ar(Dust.ar(1,0.5), 0.2, WhiteNoise.ar), 0.2, 0.2, 3) }.scope(1, zoom:4);
 
-<p><code>amplitude</code> the distance between the top and the bottom of a wave.</p>
+// Comb used as a resonator. The resonant fundamental is equal to
+// reciprocal of the delay time.
+{ CombN.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.scope(1);
 
-<p><strong>Computing-SC</strong></p>
+{ CombL.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.scope(1);
 
-<p><code>function</code> lamda calculus</p>
+{ CombC.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), 0.2) }.scope(1);
 
-<p><code>SC Function</code> a = { [100, 200, 300].choose };</p>
+// with negative feedback:
+{ CombN.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.scope(1);
 
-<p><code>SC Event</code> An Event is a <code>SC Environment</code> with a 'play' method. An Event specifies an action to be taken in response to a <code>-play</code> message.</p>
+{ CombL.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.scope(1);
 
-<p><code>SC Pattern</code> creates a Stream that iterates an array.</p>
+{ CombC.ar(WhiteNoise.ar(0.02), 0.01, XLine.kr(0.0001, 0.01, 20), -0.2) }.scope(1);
 
-<p><code>SC Stream</code> Streams represent sequences of values that are obtained one at a time.</p>
+{ CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/100, 1/100, 3) }.play;
+{ CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/200, 1/200, 3) }.play;
+{ CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/300, 1/300, 3) }.play;
+{ CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/400, 1/400, 3) }.scope(1, zoom:4);
 
-<p><code>SC Pbind</code> The pattern Pbind connects specific patterns with specific names. Consult its help page for details.</p>
+//etc
 
-<p><strong>Music</strong></p>
+//PlayBuf - buffer playback
+//arguments: numChannels, buffer number, rate, trigger, start pos, loop
 
-<p><code>motet</code> Form of polyphonic vocal music (12th century)</p>
+// read sound
+b = Buffer.read(s, Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;);
+
+{ SinOsc.ar(800 + (700 * PlayBuf.ar(1,b, BufRateScale.kr(b),  loop:1)),0,0.3) }.scope(1);
+
+// loop is true
+{ PlayBuf.ar(1,b, BufRateScale.kr(b), loop:1) }.scope(1);
+
+</code></pre>
 
 
 <footer class=" footline" >
@@ -793,125 +820,8 @@ second.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1017,6 +927,42 @@ second.</p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1049,6 +995,90 @@ second.</p>
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1059,10 +1089,10 @@ second.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/distortion/" title="Distortion"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/references/" title="References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/granularsynthesis/" title="Granular Synthesis" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

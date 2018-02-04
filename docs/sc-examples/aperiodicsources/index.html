@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Glossary :: Αλγοριθμική Σύνθεση</title>
+    <title>Noise :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517773578" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/glossary/">
+  <body class="" data-url="/ac-sc/sc-examples/aperiodicsources/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item ">
         <a href="/ac-sc/introduction/glossary/">
         Glossary
         
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -476,7 +476,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/aperiodicsources/" title="Noise" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/aperiodicsources/" title="Noise" class="dd-item active">
         <a href="/ac-sc/sc-examples/aperiodicsources/">
         Noise
         
@@ -634,7 +634,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/glossary/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/aperiodicsources/" selected>Ελληνικά</option>
                     
                   
               
@@ -697,7 +697,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Glossary
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Noise
           
          
           
@@ -720,39 +720,41 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="glossary">Glossary</h4>
+<h4 id="supercollider-noise-generators">SuperCollider Noise Generators</h4>
 
-<p><strong>Mathematics</strong></p>
+<p><strong>Aperiodic Sources: Noise</strong></p>
 
-<p><code>premise</code> a statement that is assumed to be true.</p>
+<pre><code class="language-js">/Aperiodic Sources: Noise.
+//LF &quot;Low Frequency&quot; Noise Generators.
+//arguments: frequency, mul, add
+{ LFClipNoise.ar(MouseX.kr(200, 10000, 1), 0.125) }.scope(1);
+{ LFPar.ar(LFClipNoise.kr(MouseX.kr(0.5, 64, 1), 200, 400), 0, 0.2) }.scope(1, zoom:8);
 
-<p><strong>Physics</strong></p>
+//Broad Spectrum Noise Generators
+//arguments: mul, add
+{ ClipNoise.ar(0.2) }.scope(1);
+{ WhiteNoise.ar(0.2) }.scope(1);
+{ PinkNoise.ar(0.4) }.scope(1);
+{ BrownNoise.ar(0.2) }.scope(1);
+{ GrayNoise.ar(0.2) }.scope(1);
 
-<p><code>frequency</code> the number of times that a wave, especially a light, sound,
-or radio wave, is produced within a particular period, especially one
-second.</p>
+// Impulse Noise Generators
+//Dust, Dust2
+//arguments: density, mul, add
 
-<p><code>amplitude</code> the distance between the top and the bottom of a wave.</p>
+{ Dust.ar(MouseX.kr(1,10000,1), 0.4) }.scope(1, zoom:4);
 
-<p><strong>Computing-SC</strong></p>
+//etc
 
-<p><code>function</code> lamda calculus</p>
+//Chaotic Noise Generators
+//Crackle
+//arguments: chaosParam, mul, add
 
-<p><code>SC Function</code> a = { [100, 200, 300].choose };</p>
+{ Crackle.ar(MouseX.kr(1,2), 0.5) }.scope(1);
 
-<p><code>SC Event</code> An Event is a <code>SC Environment</code> with a 'play' method. An Event specifies an action to be taken in response to a <code>-play</code> message.</p>
-
-<p><code>SC Pattern</code> creates a Stream that iterates an array.</p>
-
-<p><code>SC Stream</code> Streams represent sequences of values that are obtained one at a time.</p>
-
-<p><code>SC Pbind</code> The pattern Pbind connects specific patterns with specific names. Consult its help page for details.</p>
-
-<p><strong>Music</strong></p>
-
-<p><code>motet</code> Form of polyphonic vocal music (12th century)</p>
+</code></pre>
 
 
 <footer class=" footline" >
@@ -793,125 +795,8 @@ second.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1017,6 +902,126 @@ second.</p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1059,10 +1064,10 @@ second.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/oscillators/" title="Oscillators"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/references/" title="References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/filters/" title="Filters" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

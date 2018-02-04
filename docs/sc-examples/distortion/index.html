@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Glossary :: Αλγοριθμική Σύνθεση</title>
+    <title>Distortion :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517773578" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/glossary/">
+  <body class="" data-url="/ac-sc/sc-examples/distortion/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -368,7 +368,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/glossary/" title="Glossary" class="dd-item ">
         <a href="/ac-sc/introduction/glossary/">
         Glossary
         
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -514,7 +514,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/distortion/" title="Distortion" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/distortion/" title="Distortion" class="dd-item active">
         <a href="/ac-sc/sc-examples/distortion/">
         Distortion
         
@@ -634,7 +634,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/glossary/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/distortion/" selected>Ελληνικά</option>
                     
                   
               
@@ -697,7 +697,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Glossary
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Distortion
           
          
           
@@ -720,39 +720,50 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="glossary">Glossary</h4>
+<h4 id="supercollider-distorion">SuperCollider Distorion</h4>
 
-<p><strong>Mathematics</strong></p>
+<pre><code class="language-js">
 
-<p><code>premise</code> a statement that is assumed to be true.</p>
+// Distortion
 
-<p><strong>Physics</strong></p>
+{ SinOsc.ar(300, 0, 0.2) }.scope(1);
+{ SinOsc.ar(300, 0, 0.2).abs }.scope(1);
+{ SinOsc.ar(300, 0, 0.2).max(0) }.scope(1);
+{ SinOsc.ar(300, 0).squared * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0).cubed * 0.2 }.scope(1);
 
-<p><code>frequency</code> the number of times that a wave, especially a light, sound,
-or radio wave, is produced within a particular period, especially one
-second.</p>
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).distort * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).softclip * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).clip2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).fold2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.scope(1);
 
-<p><code>amplitude</code> the distance between the top and the bottom of a wave.</p>
+// waveshaping by phase modulating a 0 Hz sine oscillator
 
-<p><strong>Computing-SC</strong></p>
+(
+{
+    var in;
+    in = SinOsc.ar(300, 0, MouseX.kr(0.1,8pi,1));
+    SinOsc.ar(0, in, 0.2); // 0 Hz sine oscillator
+}.scope(1);
+)
 
-<p><code>function</code> lamda calculus</p>
 
-<p><code>SC Function</code> a = { [100, 200, 300].choose };</p>
+//Shaper - input is used to look up a value in a table.
+//Chebyshev polynomials are typically used to fill the table.
 
-<p><code>SC Event</code> An Event is a <code>SC Environment</code> with a 'play' method. An Event specifies an action to be taken in response to a <code>-play</code> message.</p>
+s.sendMsg(\b_alloc, 80, 1024); // allocate table
+// fill with chebyshevs
+s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
 
-<p><code>SC Pattern</code> creates a Stream that iterates an array.</p>
+{ Shaper.ar(80, SinOsc.ar(600, 0, MouseX.kr(0,1))) * 0.3; }.scope(1);
 
-<p><code>SC Stream</code> Streams represent sequences of values that are obtained one at a time.</p>
-
-<p><code>SC Pbind</code> The pattern Pbind connects specific patterns with specific names. Consult its help page for details.</p>
-
-<p><strong>Music</strong></p>
-
-<p><code>motet</code> Form of polyphonic vocal music (12th century)</p>
+s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
+s.listSendMsg([\b_gen, 80, \cheby, 7] ++ {1.0.rand2.squared}.dup(6));
+</code></pre>
 
 
 <footer class=" footline" >
@@ -793,6 +804,121 @@ second.</p>
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -905,118 +1031,6 @@ second.</p>
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1059,10 +1073,10 @@ second.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/filters/" title="Filters"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/references/" title="References" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/delays/" title="Delays" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
