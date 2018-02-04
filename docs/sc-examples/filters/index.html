@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Categories :: Αλγοριθμική Σύνθεση</title>
+    <title>Filters :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517772385" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/categories/">
+  <body class="" data-url="/ac-sc/sc-examples/filters/">
     <nav id="sidebar" class="">
 
 
@@ -414,7 +414,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -476,7 +476,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/filters/" title="Filters" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/filters/" title="Filters" class="dd-item active">
         <a href="/ac-sc/sc-examples/filters/">
         Filters
         
@@ -539,22 +539,10 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/categories/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/filters/" selected>Ελληνικά</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="/ac-sc/en/categories/">English</option>
-                    
                   
               
           
@@ -602,44 +590,123 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
-                  
                   <span class="links">
                     
           
           
-            Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Filters
+          
+         
+          
+         
           
            
                   </span>
                 </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
                 
               </div>
             </div>
             
 
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>Categories</h1>
           
 
         
 
 
+<h3 id="chapter-2">chapter 2</h3>
+
+<h4 id="supercollider-filters">SuperCollider Filters</h4>
+
+<p><strong>Filters in SuperCollider</strong></p>
+
+<pre><code class="language-js">
+
+// Filters
+
+//Low Pass, High Pass
+//arguments: in, freq, mul, add
+
+{ LPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
+{ HPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);
+
+// Resonant Low Pass, High Pass, Band Pass
+//arguments: in, freq, rq, mul, add
+
+{ RLPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
+{ RHPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2, 0.2) }.scope(1);
+
+// Resonz - resonant band pass filter with uniform amplitude
+//arguments:  in, freq, rq, mul, add
+
+// modulate frequency
+{ Resonz.ar(WhiteNoise.ar(0.5), XLine.kr(1000,8000,10), 0.05) }.scope(1);
+
+//Ringz - ringing filter.
+
+//arguments: in, frequency, ring time, mul, add
+
+{ Ringz.ar(Dust.ar(3, 0.3), 2000, 2) }.scope(1, zoom:4);
+
+//NonLinear Filters
+
+// a signal with impulse noise.
+{ Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.scope(1);
+// after applying median filter
+{ Median.ar(3, Saw.ar(500, 0.1) + Dust2.ar(100, 0.9)) }.scope(1);
+
+// a signal with impulse noise.
+{ Saw.ar(500, 0.1) + Dust2.ar(100, 0.9) }.scope(1);
+// after applying slew rate limiter
+{ Slew.ar(Saw.ar(500, 0.1) + Dust2.ar(100, 0.9),1000,1000) }.scope(1);
+
+
+//Formant Filter - Formlet - A filter whose impulse response is similar to a FOF grain.
+
+{ Formlet.ar(Impulse.ar(MouseX.kr(2,300,1), 0, 0.4), 800, 0.01, 0.1) }.scope(1, zoom:4);
+
+// Klank - resonant filter bank
+//arguments: `[ frequencies, amplitudes, ring times ], mul, add
+
+{ Klank.ar([[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Impulse.ar(2, 0, 0.1)) }.play;
+
+// Distortion
+
+{ SinOsc.ar(300, 0, 0.2) }.scope(1);
+{ SinOsc.ar(300, 0, 0.2).abs }.scope(1);
+{ SinOsc.ar(300, 0, 0.2).max(0) }.scope(1);
+{ SinOsc.ar(300, 0).squared * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0).cubed * 0.2 }.scope(1);
+
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).distort * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).softclip * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).clip2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).fold2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.scope(1);
+{ SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.scope(1);
+
+
+</code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
 
+
+        
+            </div> 
         
         </div> 
         
@@ -786,6 +853,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -793,6 +861,25 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -815,21 +902,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -852,8 +924,10 @@
 
 
         
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/oscillators/" title="Oscillators"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/ac-sc/introduction/" title="Εισαγωγή" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/ac-sc/sc-examples/supercollider/" title="SuperCollider" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -883,3 +957,4 @@
 
   </body>
 </html>
+
