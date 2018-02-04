@@ -36,9 +36,11 @@ s.boot;
 {SinOsc.ar([440, 440*6/5, 440*3/2])}.play // Minor third diatoniic
 
 2/1->octave
-3/2->fifth
+3/2->perfect fifth
 9/8->semitone
-4/3->
+4/3-> perfect fourth
+81/64->major third
+
 #+END_SRC
 
 
