@@ -61,22 +61,17 @@ Belar, ανέπτυξε το "Electronic Synthesizer" το 1955, το πρώτο
 
 *transition probabilities*
 
-Ο Hiller και ο Isaacson χρησιμοποιούν Markov μοντέλα για την παραγωγή
-της μουσικής δομής. Μεταξύ άλλων, αυτά τα μοντέλα Markov χρησιμεύουν για την μουσική σύνθεση διαφόρων ειδών μουσική.
-
+Ο Hiller και ο Isaacson το 1955 με 1956 χρησιμοποιούν Markov μοντέλα για την παραγωγή
+της μουσικής δομής με το "Illiac Suite"". 
 
 [[https://www.youtube.com/watch?v=n0njBFLQSk8][Hiller & Iaacson: The Illiac Suite]]
 
-
+Μεταξύ άλλων, αυτά τα μοντέλα Markov χρησιμεύουν για την μουσική σύνθεση διαφόρων ειδών μουσικής.
 Τα μοντέλα Markov χρησιμοποιούνται ως επί το πλείστον στον τομέα της
 μίμησης του στυλ μουσικής. Έχουν χρησιμοποιηθεί και απο τον Ξενάκη, σαν τεχνικές σύνθεσης μουσικής στα έργα του το 1958. Στα "Analogique A" χρησιμοποιούνται μοντέλα Markov για την οργάνωση τμημάτων
 διαφορετικής πυκνότητας.
 
-Περισσότερα στο Κεφάλαιο 3 - Markov Models.
-
 [[https://www.youtube.com/watch?v=mXIJO-af_u8][Xenakis Analogique A]]
-
-
 
 **** Generative grammars
 
@@ -105,6 +100,8 @@ Roads, Steedman, Sundberg, Lerdahl, Jackendoff και άλλων από τη
 και κανόνες σύνθεσης της σονάτας.
 
 [[http://www.computerhistory.org/atchm/algorithmic-music-david-cope-and-emi/][EMI history]]
+
+[[https://www.youtube.com/watch?v=CgG1HipAayU][David Cope music]]
 
 **** chaos and self-similarity
 

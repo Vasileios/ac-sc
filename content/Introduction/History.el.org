@@ -316,6 +316,7 @@ Von Neumann machines (parallel binary machines)
 
 - MANIAC (Los Alamos) 1952
 
+Δείτε παρακάτω ένα ντοκιμαντέρ σχετικά με την ιστορία και τους εφευρέτες των υπολογιστών.
 
 [[https://www.youtube.com/watch?v=qundvme1Tik][Computer Pioneers]]
 
