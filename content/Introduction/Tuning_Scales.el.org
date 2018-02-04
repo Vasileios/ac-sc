@@ -20,7 +20,7 @@ keys.
 
 *Other Tunings and Scales*
 
-- Interval (διαστήματα)
+- Intervals (διαστήματα)
 #+BEGIN_SRC js
 // =====================================================================
 // SuperCollider Workspace
