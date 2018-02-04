@@ -21,7 +21,7 @@ keys.
 *Other Tunings and Scales*
 
 - Interval (διαστήματα)
-#+BEGIN_QUOTE
+#+BEGIN_SRC js
 // =====================================================================
 // SuperCollider Workspace
 // =====================================================================
@@ -39,7 +39,7 @@ s.boot;
 3/2->fifth
 9/8->semitone
 4/3->
-#+END_QUOTE
+#+END_SRC
 
 
 
