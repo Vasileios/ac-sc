@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Κλίμακες και Χορδίσματα :: Αλγοριθμική Σύνθεση</title>
+    <title>Logical Expressions :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1517751436" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/tuning_scales/">
+  <body class="" data-url="/ac-sc/introduction/logicalex/">
     <nav id="sidebar" class="">
 
 
@@ -330,7 +330,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/tuning_scales/" title="Κλίμακες και Χορδίσματα" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/tuning_scales/" title="Κλίμακες και Χορδίσματα" class="dd-item ">
         <a href="/ac-sc/introduction/tuning_scales/">
         Κλίμακες και Χορδίσματα
         
@@ -387,7 +387,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/logicalex/" title="Logical Expressions" class="dd-item ">
+      <li data-nav-id="/ac-sc/introduction/logicalex/" title="Logical Expressions" class="dd-item active">
         <a href="/ac-sc/introduction/logicalex/">
         Logical Expressions
         
@@ -497,7 +497,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/tuning_scales/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/introduction/logicalex/" selected>Ελληνικά</option>
                     
                   
               
@@ -560,7 +560,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Κλίμακες και Χορδίσματα
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Logical Expressions
           
          
           
@@ -585,214 +585,30 @@
 
 <h3 id="chapter-1">chapter 1</h3>
 
-<h1 id="scales">Scales</h1>
+<h4 id="le">LE</h4>
 
-<p><strong>Circle of fiths</strong> is the relationship among the 12 tones of the chromatic scale, their
-corresponding key signatures, and the associated major and minor
-keys.</p>
+<p><strong>Logical Expressions in SuperCollider</strong></p>
 
-<p><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Circle_of_fifths_deluxe_4.svg/400px-Circle_of_fifths_deluxe_4.svg.png" title="Circles of Fifths">Circles of Fifths</a></p>
+<pre><code class="language-js">
 
-<p><strong>Other Tunings and Scales</strong></p>
+Logical expressions
 
-<ul>
-<li>Interval (διαστήματα)</li>
-</ul>
+=true or false=
 
-<blockquote>
-<p>
-2/1->octave
-</p>
-<p>
-3/2->fifth
-</p>
-<p>
-9/8->semitone
-</p>
-<p>
-4/3->
-</p>
-</blockquote>
+10==10 // equal to =&gt;true...
+10 !=15 // not equal to
+10&gt;5 // greater than
+10&lt;14 // less than
+10 &gt;= 10 // greater than or equal to
+10 &lt;= 10 // lees than or equal to
+11.odd // it is odd
+10.even // it is even
+10.isInteger // it is integer
+10.129.isFloat // it is float
+1.odd.and(2.even) // both conditions 
+1.odd.or(1.even) // either condition
 
-<blockquote>
-<p>
-Pythagorian Interval
-</p>
-
-<p>
-Note
-</p>
-<p>
-Interval from D Formula
-</p>
-<p>
-Frequency - ratio
-</p>
-<p>
-Size (cents)
-</p>
-<p>
-ET-dif (cents)
-</p>
-
-<p>
-<code>A♭</code>
-</p>
-<p>
-<em>diminished fifth</em>
-</p>
-<p>
-588.27
-</p>
-<p>
--11.73
-</p>
-<p>
-<code>E♭</code>
-</p>
-<p>
-<em>minor second</em>
-</p>
-<p>
-90.22
-</p>
-<p>
-−9.78
-</p>
-<p>
-<code>B♭</code>
-</p>
-<p>
-<em>minor sixth</em>
-</p>
-<p>
-792.18
-</p>
-<p>
-−7.82
-</p>
-<p>
-<code>F</code>
-</p>
-<p>
-<em>minor third</em>
-</p>
-<p>
-294.13
-</p>
-<p>
-−5.87
-</p>
-<p>
-<code>C</code>
-</p>
-<p>
-<em>minor seventh</em>
-</p>
-<p>
-996.09
-</p>
-<p>
-−3.91
-</p>
-<p>
-<code>G</code>
-</p>
-<p>
-<em>perfect fourth</em>
-</p>
-<p>
-498.04
-</p>
-<p>
--1.96
-</p>
-<p>
-<code>D</code>
-</p>
-<p>
-<em>unison</em>
-</p>
-<p>
-0 .00
-</p>
-<p>
-0.00
-</p>
-<p>
-<code>A</code>
-</p>
-<p>
-<em>perfect fifth</em>
-</p>
-<p>
-701.96
-</p>
-<p>
-1.96
-</p>
-<p>
-<code>E</code>
-</p>
-<p>
-<em>major second</em>
-</p>
-<p>
-203.91
-</p>
-<p>
-3.91
-</p>
-<p>
-<code>B</code>
-</p>
-<p>
-<em>major sixth</em>
-</p>
-<p>
-905.87
-</p>
-<p>
-5.87
-</p>
-<p>
-<code>F♯</code>
-</p>
-<p>
-<em>major third</em>
-</p>
-<p>
-407.82
-</p>
-<p>
-7.82
-</p>
-<p>
-<code>C♯</code>
-</p>
-<p>
-<em>major seventh</em>
-</p>
-<p>
-1109.78
-</p>
-<p>
-9.78
-</p>
-<p>
-<code>G♯</code>
-</p>
-<p>
-<em>augmented fourth</em>
-</p>
-<p>
-611.73
-</p>
-<p>
-11.73
-</p>
-
-</blockquote>
+</code></pre>
 
 
 <footer class=" footline" >
@@ -882,26 +698,6 @@ ET-dif (cents)
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -945,8 +741,41 @@ ET-dif (cents)
             
         
                     
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
                         
             
@@ -961,19 +790,6 @@ ET-dif (cents)
                     
 
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -987,10 +803,10 @@ ET-dif (cents)
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/paradigms/" title="Παραδείγματα"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/introduction/references/" title="References"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/glossary/" title="Glossary" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/" title="Code Examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
