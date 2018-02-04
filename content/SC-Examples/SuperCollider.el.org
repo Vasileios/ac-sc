@@ -157,7 +157,7 @@ b.sine1([1.0/(1,3..12), 0].flop.flat.postln);
 // Klank - resonant filter bank
 //arguments: `[ frequencies, amplitudes, ring times ], mul, add
 
-{ Klank.ar(`[[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Impulse.ar(2, 0, 0.1)) }.play;
+{ Klank.ar([[200, 671, 1153, 1723], nil, [1, 1, 1, 1]], Impulse.ar(2, 0, 0.1)) }.play;
 
 // Distortion
 
