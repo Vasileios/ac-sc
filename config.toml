@@ -40,10 +40,6 @@ weight = 20
 [[Languages.el.menu.shortcuts]]
 name = "<i class='fa fa-fw fa-bullhorn'></i> Credits"
 url = "/"
-toc_footers = [ 
-"License: CC",
-"Contact: agios[dot]mur[at]gmail.com"
-]
 weight = 30
 
 
