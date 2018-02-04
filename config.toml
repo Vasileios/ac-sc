@@ -13,7 +13,7 @@ publishDir= "docs"
 
 [params]
  themeVariant="black"
-
+author = "Vasilis Agiomyrgianakis"
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
