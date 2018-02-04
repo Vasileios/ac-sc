@@ -18,6 +18,99 @@ keys.
 
 
 
+*Other Tunings and Scales*
+
+- Interval (διαστήματα)
+#+BEGIN_QUOTE
+2/1->octave
+3/2->fifth
+9/8->semitone
+4/3->
+#+END_QUOTE
 
 
+#+BEGIN_QUOTE
+Pythagorian Interval
 
+Note
+Interval from D Formula
+Frequency - ratio
+Size (cents)
+ET-dif (cents)
+
+=A♭=
+/diminished fifth/
+588.27
+-11.73
+=E♭=
+/minor second/
+90.22
+−9.78
+=B♭=
+/minor sixth/
+792.18
+−7.82
+=F=
+/minor third/
+294.13
+−5.87
+=C=
+/minor seventh/
+996.09
+−3.91
+=G=
+/perfect fourth/
+498.04
+-1.96
+=D=
+/unison/
+0 .00
+0.00
+=A=
+/perfect fifth/
+701.96
+1.96
+=E=
+/major second/
+203.91
+3.91
+=B=
+/major sixth/
+905.87
+5.87
+=F♯=
+/major third/
+407.82
+7.82
+=C♯=
+/major seventh/
+1109.78
+9.78
+=G♯=
+/augmented fourth/
+611.73
+11.73
+
+#+END_QUOTE
+
+
+*Logical Expressions*
+
+#+BEGIN_QUOTE
+Logical expressions
+
+
+10==10 // equal to
+10 !=15 // not equal to
+10>5 // greater than
+10<14 // less thatn
+10 >= 10 // greater than or equal to
+10 <= 10 // lees than or equal to
+11.odd // it is odd
+10.even // it is even
+10.isInteger // it is integer
+10.129.isFloat // it is float
+1.odd.and(2.even) // both conditions 
+1.odd.or(1.even) // either condition
+
+#+END_QUOTE
