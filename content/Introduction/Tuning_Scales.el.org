@@ -21,6 +21,7 @@ keys.
 *Other Tunings and Scales*
 
 - Intervals (διαστήματα)
+
 #+BEGIN_SRC js
 // =====================================================================
 // SuperCollider Workspace
@@ -53,6 +54,7 @@ Size (cents)
 ET-dif (cents)
 
 #+BEGIN_QUOTE
+
 =A♭=
 /diminished fifth/
 588.27
