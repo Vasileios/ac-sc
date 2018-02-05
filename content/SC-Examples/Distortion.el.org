@@ -1,7 +1,7 @@
 +++
 title = "Distortion"
 chapter = true
-weight = 10
+weight = 35
 +++
 
 *** chapter 2

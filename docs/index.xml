@@ -24,20 +24,6 @@ Guido D&#39;Arrezo
     </item>
     
     <item>
-      <title>SuperCollider</title>
-      <link>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</guid>
-      <description>chapter 2 SuperCollider SuperCollider
-From: SuperCollider
-Basics
-SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
-SuperCollider features three major components
- scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
-    </item>
-    
-    <item>
       <title>Παραδείγματα</title>
       <link>https://vasileios.github.io/ac-sc/introduction/paradigms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,16 +31,6 @@ SuperCollider features three major components
       <guid>https://vasileios.github.io/ac-sc/introduction/paradigms/</guid>
       <description>Chapter 1 Παραδειγματα Μαρκοβιανά Μοντέλα - Markov models time dependent random variables (TDRV)
 Στο πλαίσιο των πειραμάτων και παρατηρήσεων σχετικά με την TDRV έχουν ήδη γίνει από τους Pierre Simon de Laplace και Daniel Bernoulli. Η πρώτη εφαρμογή αυτής της μεθόδου ήταν μια εκτενή ανάλυση κειμένου από τον Markov: &#34;Το 1913 ο Markov είχε δημοσιεύσει την τρίτη έκδοση του εγχειριδίου του. Σε αυτή την έκδοση γράφει: «Ας τελειώσουμε το άρθρο και ολόκληρο το βιβλίο με ένα καλό παράδειγμα TDRV, που μπορούν να θεωρηθούν ως μια απλή αλυσίδα» (chain).</description>
-    </item>
-    
-    <item>
-      <title>Oscillators</title>
-      <link>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</guid>
-      <description>chapter 2 SuperCollider Oscillators SuperCollider Ugens From SC Help
-//Periodic Sources: Oscillators. //LF - &amp;quot;Low Frequency&amp;quot; Unit Generators. //arguments: frequency, phase, mul, add // parabolic approximation of sine { LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); // cubic approximation of sine { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 400,800),0,0.5,0.1) }.scope(1, zoom: 4); //etc //Band Limited Oscillators //arguments: frequency, phase, mul, add SinOsc, FSinOsc, Blip, Saw, Pulse.</description>
     </item>
     
     <item>
@@ -80,6 +56,59 @@ Logical expressions =true or false= 10==10 // equal to =&amp;gt;true... 10 !=15 
     </item>
     
     <item>
+      <title>Glossary</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/glossary/</guid>
+      <description>chapter 1 Glossary Mathematics
+premise a statement that is assumed to be true.
+Physics
+frequency the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
+amplitude the distance between the top and the bottom of a wave.
+Computing-SC
+function lamda calculus
+SC Function a = { [100, 200, 300].choose };
+SC Event An Event is a SC Environment with a &#39;play&#39; method.</description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/references/</guid>
+      <description>Chapter 1 References Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
+Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
+Holtzman, Steven. 1981. Generative Grammars for Music Composition. Computer Music Journal, Vol.5, No.1, pp. 51-64. The MIT Press.
+Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London.</description>
+    </item>
+    
+    <item>
+      <title>SuperCollider</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</guid>
+      <description>chapter 2 SuperCollider SuperCollider
+From: SuperCollider
+Basics
+SuperCollider is a platform for audio synthesis and algorithmic composition, used by musicians, artists, and researchers working with sound. It is free and open source software available for Windows, macOS, and Linux.
+SuperCollider features three major components
+ scsynth, a real-time audio server, forms the core of the platform. It features 400+ unit generators (&#34;UGens&#34;) for analysis, synthesis, and processing. Its granularity allows the fluid combination of many known and unknown audio techniques, moving between additive and subtractive synthesis, FM, granular synthesis, FFT, and physical modelling.</description>
+    </item>
+    
+    <item>
+      <title>Oscillators</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</guid>
+      <description>chapter 2 SuperCollider Oscillators SuperCollider Ugens From SC Help
+//Periodic Sources: Oscillators. //LF - &amp;quot;Low Frequency&amp;quot; Unit Generators. //arguments: frequency, phase, mul, add // parabolic approximation of sine { LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); // cubic approximation of sine { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 400,800),0,0.5,0.1) }.scope(1, zoom: 4); //etc //Band Limited Oscillators //arguments: frequency, phase, mul, add SinOsc, FSinOsc, Blip, Saw, Pulse.</description>
+    </item>
+    
+    <item>
       <title>Noise</title>
       <link>https://vasileios.github.io/ac-sc/sc-examples/aperiodicsources/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -100,41 +129,12 @@ Logical expressions =true or false= 10==10 // equal to =&amp;gt;true... 10 !=15 
     </item>
     
     <item>
-      <title>Glossary</title>
-      <link>https://vasileios.github.io/ac-sc/introduction/glossary/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/introduction/glossary/</guid>
-      <description>chapter 1 Glossary Mathematics
-premise a statement that is assumed to be true.
-Physics
-frequency the number of times that a wave, especially a light, sound, or radio wave, is produced within a particular period, especially one second.
-amplitude the distance between the top and the bottom of a wave.
-Computing-SC
-function lamda calculus
-SC Function a = { [100, 200, 300].choose };
-SC Event An Event is a SC Environment with a &#39;play&#39; method.</description>
-    </item>
-    
-    <item>
       <title>Distortion</title>
       <link>https://vasileios.github.io/ac-sc/sc-examples/distortion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/distortion/</guid>
       <description>chapter 2 SuperCollider Distorion // Distortion { SinOsc.ar(300, 0, 0.2) }.scope(1); { SinOsc.ar(300, 0, 0.2).abs }.scope(1); { SinOsc.ar(300, 0, 0.2).max(0) }.scope(1); { SinOsc.ar(300, 0).squared * 0.2 }.scope(1); { SinOsc.ar(300, 0).cubed * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).distort * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).softclip * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).clip2(1) * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).fold2(1) * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.kr(0.1,80,1)).wrap2(1) * 0.2 }.scope(1); { SinOsc.ar(300, 0, MouseX.</description>
-    </item>
-    
-    <item>
-      <title>References</title>
-      <link>https://vasileios.github.io/ac-sc/introduction/references/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/introduction/references/</guid>
-      <description>Chapter 1 References Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
-Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
-Holtzman, Steven. 1981. Generative Grammars for Music Composition. Computer Music Journal, Vol.5, No.1, pp. 51-64. The MIT Press.
-Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An Introduction to Evolutionary Computing for Musicians’. In Evolutionary Computer Music, 1–27. Springer, London.</description>
     </item>
     
     <item>
@@ -147,15 +147,6 @@ Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An In
     </item>
     
     <item>
-      <title>Granular Synthesis</title>
-      <link>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</guid>
-      <description>chapter 2 SuperCollider Granular Synthesis //TGrains - granulation of a buffer //arguments: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation // read sound b = Buffer.read(s, Platform.resourceDir +/+ &amp;quot;sounds/a11wlk01.wav&amp;quot;); ( { var trate, dur; trate = MouseY.kr(2,200,1); dur = 4 / trate; TGrains.ar(2, Impulse.ar(trate), b, 1, MouseX.kr(0,BufDur.kr(b)), dur, 0, 0.1, 2); }.scope(2, zoom: 4); ) ( { var trate, dur, clk, pos, pan; trate = MouseY.kr(8,120,1); dur = 12 / trate; clk = Impulse.</description>
-    </item>
-    
-    <item>
       <title>Spectral</title>
       <link>https://vasileios.github.io/ac-sc/sc-examples/spectral/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -164,6 +155,15 @@ Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An In
       <description>chapter 2 SuperCollider Spectral FFT-PV_Ugens
 FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, puts it into a buffer, and outputs a trigger each time the buffer is ready to process. The PV UGens process the spectrum when they receive the trigger. IFFT converts the spectrum back into sound.
 // alloc a buffer for the FFT b = Buffer.alloc(s,2048,1); // read a sound c = Buffer.</description>
+    </item>
+    
+    <item>
+      <title>Granular Synthesis</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</guid>
+      <description>chapter 2 SuperCollider Granular Synthesis //TGrains - granulation of a buffer //arguments: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation // read sound b = Buffer.read(s, Platform.resourceDir +/+ &amp;quot;sounds/a11wlk01.wav&amp;quot;); ( { var trate, dur; trate = MouseY.kr(2,200,1); dur = 4 / trate; TGrains.ar(2, Impulse.ar(trate), b, 1, MouseX.kr(0,BufDur.kr(b)), dur, 0, 0.1, 2); }.scope(2, zoom: 4); ) ( { var trate, dur, clk, pos, pan; trate = MouseY.kr(8,120,1); dur = 12 / trate; clk = Impulse.</description>
     </item>
     
   </channel>

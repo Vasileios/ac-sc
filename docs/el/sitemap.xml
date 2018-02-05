@@ -45,14 +45,6 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</loc>
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/introduction/paradigms/</loc>
     <xhtml:link
                 rel="alternate"
@@ -67,15 +59,31 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</loc>
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/introduction/tuning_scales/</loc>
   </url>
   
   <url>
     <loc>https://vasileios.github.io/ac-sc/introduction/logicalex/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/introduction/glossary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/introduction/references/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/supercollider/</loc>
+  </url>
+  
+  <url>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</loc>
   </url>
   
   <url>
@@ -87,15 +95,7 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/glossary/</loc>
-  </url>
-  
-  <url>
     <loc>https://vasileios.github.io/ac-sc/sc-examples/distortion/</loc>
-  </url>
-  
-  <url>
-    <loc>https://vasileios.github.io/ac-sc/introduction/references/</loc>
   </url>
   
   <url>
@@ -103,11 +103,11 @@
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</loc>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/spectral/</loc>
   </url>
   
   <url>
-    <loc>https://vasileios.github.io/ac-sc/sc-examples/spectral/</loc>
+    <loc>https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/</loc>
   </url>
   
   <url>

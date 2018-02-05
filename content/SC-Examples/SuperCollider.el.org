@@ -1,7 +1,7 @@
 +++
 title = "SuperCollider"
 chapter = true
-weight = 6
+weight = 15
 +++
 
 *** chapter 2
