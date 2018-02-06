@@ -247,3 +247,21 @@ test" εγείρουν το ζήτημα του ορισμού του όρου "
 
 Περιλαμβάνει: computer synthesis techniques, hardware and software
 interface design.
+
+
+Listening: [[https://www.youtube.com/watch?v=dzxLoCwiEy0][Musica Elettronica Viva (MEV)]]
+
+Listening: [[https://www.youtube.com/watch?v=xJSMf8hRWtA&t=604s][Boris & Merzbow Boiler Room Tokyo Live Set]]
+
+Listening: [[https://www.youtube.com/watch?v=oYEa80Ol8Ps&t=284s][AMM The Great Hall Laminal, 1982]]
+
+
+*Musical Interfaces*
+
+- Midi Keybords or instruments
+- GUIs
+- Microcontrolers
+- Sensors
+- Microcomputers
+
+
