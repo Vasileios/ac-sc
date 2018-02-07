@@ -9,6 +9,8 @@ pre = "<b>1. </b>"
 
 
 * Αλγοριθμικη Συνθεση
+Αποσπάσματα απο το βιβλίο "Algorithmic Composition: Paradigms of
+Automated Music Generation" (Nierhaus 2009).
 
 Ο αλγόριθμος είναι:
 
