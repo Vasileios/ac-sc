@@ -31,6 +31,12 @@ Markov Models
  ακολουθείται απο σύμφωνο είναι p2 = 0.663. (στοχατική διαδικασία)
 
 #+BEGIN_QUOTE
+Stochastic (/πιθανοκρατική/)
+vs
+Deterministic (/αιτιοκρατική/)
+#+END_QUOTE
+
+#+BEGIN_QUOTE
 Stochastic processes are used to describe a sequence of random events dependent on the time parameter (t).
 #+END_QUOTE
 
