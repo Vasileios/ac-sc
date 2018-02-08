@@ -271,7 +271,7 @@ Listening: [[https://www.youtube.com/watch?v=oYEa80Ol8Ps&t=284s][AMM The Great H
 
 *Musical Interfaces*
 
-- Midi Keybords or instruments
+- Midi Keyboards/instruments
 - GUIs
 - Microcontrolers
 - Sensors
