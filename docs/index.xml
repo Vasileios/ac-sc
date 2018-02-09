@@ -42,7 +42,8 @@ Guido D&#39;Arrezo
       <description>chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.
 Circles of Fifths
 Other Tunings and Scales
- Intervals (διαστήματα)  // ===================================================================== // SuperCollider Workspace // ===================================================================== s.boot s = Server.internal; s.boot; //choose X/Y in the up right menu {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth {SinOsc.</description>
+ Intervals (διαστήματα)  Pythagorian set
+Τα σφυριά του Πυθαγόρα περιέχουν μια σειρά απο τόνικότητες που σχετίζονται μεταξύ τους. Σε αυτή τη σειράό κυριαρχούν οι οκτάβες (2/1), οι πέμπτες (3/2) και οι τέταρτες (4/3). Η πέμπτη και η τέταρτη αν συνδυάστουν μεταξύ τους θα φτιάξουν την οκτάβα (3/2*4/3=2/1), και αν διαιρεθούν ((3/2)/(4/3)=9/8) τον τόνο (9/8).</description>
     </item>
     
     <item>

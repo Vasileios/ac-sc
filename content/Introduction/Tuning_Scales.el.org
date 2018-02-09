@@ -22,6 +22,22 @@ keys.
 
 - Intervals (διαστήματα)
 
+*Pythagorian set*
+
+/Τα σφυριά του Πυθαγόρα/ περιέχουν μια σειρά απο τόνικότητες που σχετίζονται μεταξύ τους. Σε
+αυτή τη σειράό κυριαρχούν οι οκτάβες (2/1), οι
+πέμπτες (3/2) και οι τέταρτες (4/3). Η πέμπτη και η τέταρτη αν
+συνδυάστουν μεταξύ τους θα φτιάξουν την οκτάβα (3/2*4/3=2/1), και αν
+διαιρεθούν ((3/2)/(4/3)=9/8) τον /τόνο/ (9/8). 
+
+
+
+
+see more here:
+
+[[https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned][Harmonograph-AVisual Guide to The Mathematics of Music]]
+
+
 #+BEGIN_SRC js
 // =====================================================================
 // SuperCollider Workspace
@@ -31,7 +47,8 @@ s = Server.internal;
 s.boot;
 //choose X/Y in the up right menu
 
-{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth 
+
+{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third (81/64) and the perfect fourth (4/3) (E to F and B to C)
 
 {SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // Diatonic tuning
 
@@ -45,17 +62,12 @@ s.boot;
 3/2->perfect fifth
 4/3-> perfect fourth
 5/4->major third diatonic
-5/3->magor sixth
+5/3->magor sixth diatonic
 6/5->minor third diatonic
 9/8->semitone
+15/8->diatonic seventh
 81/64->major third pythagorean
 #+END_SRC
-
-*Pythagorian Interval*
-
-see more here:
-
-[[https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned][Harmonograph-AVisual Guide to The Mathematics of Music]]
 
 *Scales in SuperCollider*
 
