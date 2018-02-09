@@ -48,7 +48,7 @@ s.boot;
 //In the Stethoscope's up right menu choose X/Y 
 
 
-{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third (81/64) and the perfect fourth (4/3) as well as between major seventh and the domintan (E to F and B to C)
+{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third (81/64) and the perfect fourth (4/3) as well as between major seventh and the dominant (E to F and B to C)
 
 {SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // (1,3M,5) Diatonic tuning
 
