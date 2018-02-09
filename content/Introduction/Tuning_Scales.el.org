@@ -50,10 +50,10 @@ s.boot;
 
 {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third (81/64) and the perfect fourth (4/3) as well as between major seventh and the domintan (E to F and B to C)
 
-{SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // Diatonic tuning
+{SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // (1,3M,5) Diatonic tuning
 
 
-{SinOsc.ar([440, 440*6/5, 440*3/2])}.play // Minor third diatoniic
+{SinOsc.ar([440, 440*6/5, 440*3/2])}.play // (1,3m,5) Minor third diatoniic
 
 {SinOsc,ar([440, 440*5/3])}.scope // magor sixth
 
