@@ -38,8 +38,8 @@ s.boot;
 
 2/1->octave
 3/2->perfect fifth
-9/8->semitone
 4/3-> perfect fourth
+9/8->semitone
 81/64->major third
 
 #+END_SRC
