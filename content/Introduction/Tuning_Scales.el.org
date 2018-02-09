@@ -29,7 +29,7 @@ keys.
 s.boot
 s = Server.internal;
 s.boot;
-{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorian tuning: see leimma halftome of 256/243 between its major third and the perfect fourth (Harmonograph-A Visual Guide to The Mathematics of Music)
+{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth (Harmonograph-A Visual Guide to The Mathematics of Music)
 
 {SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // Diatonic tuning
 
@@ -40,7 +40,9 @@ s.boot;
 3/2->perfect fifth
 4/3-> perfect fourth
 9/8->semitone
-81/64->major third
+81/64->major third pythagorean
+5/4->major third diatonic
+6/5->minor third diatonic
 
 #+END_SRC
 
