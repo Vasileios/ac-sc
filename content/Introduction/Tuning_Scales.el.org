@@ -45,7 +45,7 @@ see more here:
 s.boot
 s = Server.internal;
 s.boot;
-//choose X/Y in the up right menu
+//In the Stethoscope's up right menu choose X/Y 
 
 
 {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third (81/64) and the perfect fourth (4/3) (E to F and B to C)
