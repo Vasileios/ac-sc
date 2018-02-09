@@ -42,7 +42,7 @@ Guido D&#39;Arrezo
       <description>chapter 1 Scales Circle of fiths is the relationship among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.
 Circles of Fifths
 Other Tunings and Scales
- Intervals (διαστήματα)  // ===================================================================== // SuperCollider Workspace // ===================================================================== s.boot s = Server.internal; s.boot; {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth (Harmonograph-A Visual Guide to The Mathematics of Music) {SinOsc.</description>
+ Intervals (διαστήματα)  // ===================================================================== // SuperCollider Workspace // ===================================================================== s.boot s = Server.internal; s.boot; //choose X/Y in the up right menu {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth {SinOsc.</description>
     </item>
     
     <item>

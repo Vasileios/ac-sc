@@ -29,89 +29,33 @@ keys.
 s.boot
 s = Server.internal;
 s.boot;
-{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth (Harmonograph-A Visual Guide to The Mathematics of Music)
+//choose X/Y in the up right menu
+
+{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth 
 
 {SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // Diatonic tuning
 
 
 {SinOsc.ar([440, 440*6/5, 440*3/2])}.play // Minor third diatoniic
 
+{SinOsc,ar([440, 440*5/3])}.scope // magor sixth
+
+1/1->unison
 2/1->octave
 3/2->perfect fifth
 4/3-> perfect fourth
+5/4->major third diatonic
+5/3->magor sixth
+6/5->minor third diatonic
 9/8->semitone
 81/64->major third pythagorean
-5/4->major third diatonic
-6/5->minor third diatonic
-
 #+END_SRC
-
-
 
 *Pythagorian Interval*
 
-Interval from D Formula
-Frequency - ratio
-Size (cents)
-ET-dif (cents)
+see more here:
 
-#+BEGIN_QUOTE
-
-=A♭=
-/diminished fifth/
-588.27
--11.73
-=E♭=
-/minor second/
-90.22
-−9.78
-=B♭=
-/minor sixth/
-792.18
-−7.82
-=F=
-/minor third/
-294.13
-−5.87
-=C=
-/minor seventh/
-996.09
-−3.91
-=G=
-/perfect fourth/
-498.04
--1.96
-=D=
-/unison/
-0 .00
-0.00
-=A=
-/perfect fifth/
-701.96
-1.96
-=E=
-/major second/
-203.91
-3.91
-=B=
-/major sixth/
-905.87
-5.87
-=F♯=
-/major third/
-407.82
-7.82
-=C♯=
-/major seventh/
-1109.78
-9.78
-=G♯=
-/augmented fourth/
-611.73
-11.73
-
-#+END_QUOTE
-
+[[https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned][Harmonograph-AVisual Guide to The Mathematics of Music]]
 
 *Scales in SuperCollider*
 

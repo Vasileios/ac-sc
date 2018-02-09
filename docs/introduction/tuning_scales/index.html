@@ -13,19 +13,19 @@
     <title>Κλίμακες και Χορδίσματα :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1518178302" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1518178302" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1518179774" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1518179774" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1518178302" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1518179774" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1518178302"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1518179774"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518178302"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518178302"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518179774"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518179774"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1518178302"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1518179774"></script>
 
     
   </div>
@@ -742,190 +742,33 @@ keys.</p>
 s.boot
 s = Server.internal;
 s.boot;
-{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth (Harmonograph-A Visual Guide to The Mathematics of Music)
+//choose X/Y in the up right menu
+
+{SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftome of 256/243 between its major third and the perfect fourth 
 
 {SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // Diatonic tuning
 
 
 {SinOsc.ar([440, 440*6/5, 440*3/2])}.play // Minor third diatoniic
 
+{SinOsc,ar([440, 440*5/3])}.scope // magor sixth
+
+1/1-&gt;unison
 2/1-&gt;octave
 3/2-&gt;perfect fifth
 4/3-&gt; perfect fourth
+5/4-&gt;major third diatonic
+5/3-&gt;magor sixth
+6/5-&gt;minor third diatonic
 9/8-&gt;semitone
 81/64-&gt;major third pythagorean
-5/4-&gt;major third diatonic
-6/5-&gt;minor third diatonic
-
 </code></pre>
 
 <p><strong>Pythagorian Interval</strong></p>
 
-<p>Interval from D Formula
-Frequency - ratio
-Size (cents)
-ET-dif (cents)</p>
+<p>see more here:</p>
 
-<blockquote>
-
-<p>
-<code>A♭</code>
-</p>
-<p>
-<em>diminished fifth</em>
-</p>
-<p>
-588.27
-</p>
-<p>
--11.73
-</p>
-<p>
-<code>E♭</code>
-</p>
-<p>
-<em>minor second</em>
-</p>
-<p>
-90.22
-</p>
-<p>
-−9.78
-</p>
-<p>
-<code>B♭</code>
-</p>
-<p>
-<em>minor sixth</em>
-</p>
-<p>
-792.18
-</p>
-<p>
-−7.82
-</p>
-<p>
-<code>F</code>
-</p>
-<p>
-<em>minor third</em>
-</p>
-<p>
-294.13
-</p>
-<p>
-−5.87
-</p>
-<p>
-<code>C</code>
-</p>
-<p>
-<em>minor seventh</em>
-</p>
-<p>
-996.09
-</p>
-<p>
-−3.91
-</p>
-<p>
-<code>G</code>
-</p>
-<p>
-<em>perfect fourth</em>
-</p>
-<p>
-498.04
-</p>
-<p>
--1.96
-</p>
-<p>
-<code>D</code>
-</p>
-<p>
-<em>unison</em>
-</p>
-<p>
-0 .00
-</p>
-<p>
-0.00
-</p>
-<p>
-<code>A</code>
-</p>
-<p>
-<em>perfect fifth</em>
-</p>
-<p>
-701.96
-</p>
-<p>
-1.96
-</p>
-<p>
-<code>E</code>
-</p>
-<p>
-<em>major second</em>
-</p>
-<p>
-203.91
-</p>
-<p>
-3.91
-</p>
-<p>
-<code>B</code>
-</p>
-<p>
-<em>major sixth</em>
-</p>
-<p>
-905.87
-</p>
-<p>
-5.87
-</p>
-<p>
-<code>F♯</code>
-</p>
-<p>
-<em>major third</em>
-</p>
-<p>
-407.82
-</p>
-<p>
-7.82
-</p>
-<p>
-<code>C♯</code>
-</p>
-<p>
-<em>major seventh</em>
-</p>
-<p>
-1109.78
-</p>
-<p>
-9.78
-</p>
-<p>
-<code>G♯</code>
-</p>
-<p>
-<em>augmented fourth</em>
-</p>
-<p>
-611.73
-</p>
-<p>
-11.73
-</p>
-
-</blockquote>
+<p><a href="https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned" title="Harmonograph-AVisual Guide to The Mathematics of Music">Harmonograph-AVisual Guide to The Mathematics of Music</a></p>
 
 <p><strong>Scales in SuperCollider</strong></p>
 
@@ -1648,20 +1491,20 @@ Pbind(\scale, a, \degree, Pseq((0..7) ++ (6..0) ++ [\rest], 1), \dur, 0.25).play
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1518178302"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518178302"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518178302"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1518178302"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1518178302"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518178302"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1518178302"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1518179774"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518179774"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518179774"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1518179774"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1518179774"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518179774"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1518179774"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1518178302"></script>
-    <script src="/ac-sc/js/learn.js?1518178302"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1518178302"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1518179774"></script>
+    <script src="/ac-sc/js/learn.js?1518179774"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1518179774"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1518178302" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1518178302"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1518179774" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1518179774"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
