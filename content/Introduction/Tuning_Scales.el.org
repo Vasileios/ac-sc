@@ -50,7 +50,11 @@ and here:
 s.boot
 s = Server.internal;
 s.boot;
-//In the Stethoscope's GUI up right menu choose X/Y ("Lissajous curve" frequencies of the vertical and horizontal sinusoidal inputs, respectively) (left and right channels).
+
+/*
+In the Stethoscope's GUI up right menu choose X/Y ("Lissajous curve" frequencies of the vertical and horizontal sinusoidal inputs, respectively) (left and right channels). See more on
+SC-Help: Classes |GUI->Views->ScopeView
+*/
 
 //440 = A (La)
 {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftone of 256/243 between its major third (81/64) and the perfect fourth (4/3) as well as between major seventh and the dominant.
@@ -77,9 +81,6 @@ s.boot;
 15/8->diatonic seventh
 81/64->major third pythagorean
 #+END_SRC
-
-see Signal Visualisation
-SC-Help: Classes |GUI->Views->ScopeView
 
 *Scales in SuperCollider*
 
