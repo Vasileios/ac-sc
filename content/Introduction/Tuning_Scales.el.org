@@ -78,6 +78,9 @@ s.boot;
 81/64->major third pythagorean
 #+END_SRC
 
+see Signal Visualisation
+SC-Help: Classes |GUI->Views->ScopeView
+
 *Scales in SuperCollider*
 
 #+BEGIN_SRC js
