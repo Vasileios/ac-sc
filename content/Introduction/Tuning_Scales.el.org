@@ -35,7 +35,7 @@ keys.
 
 see more here:
 
-[[https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned][Harmonograph-AVisual Guide to The Mathematics of Music]]
+[[https://www.scribd.com/doc/147969892/Anthony-Ashton-Harmonograph-A-Visual-Guide-to-the-Mathematics-of-Music-cleaned][Harmonograph-A Visual Guide to The Mathematics of Music]]
 
 
 #+BEGIN_SRC js
