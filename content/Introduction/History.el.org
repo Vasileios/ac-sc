@@ -53,6 +53,8 @@ To motet μαζι με τη ανάπτυξη της μουσικής σημει�
 Ο Fux κωδικοποίησε κάποιους κανόνες οι οποίοι περιγράφουν βασικές
 αντιστικτικές τεχνικές της τονικής μουσικής.(Cope 2000)
 
+Η γέννηση του *κανόνα* στα τέλη του 15ου αιώνα.
+
 'Αλλα γνωστά παραδείγματα, στην εποχή του Μπαρόκ όπως η τεχνική των δώδεκα τόνων του Bach "The Art
 of Fugue" καθώς και τεχνική του Schönberg τον 20ο αιώνα, οδηγούν συχνά στην ανάπτυξη της
 πολυπλοκότητας αποκλειστικά στο πλαίσιο της ευρωπαϊκής ή δυτικής μουσικής τέχνης.
@@ -375,6 +377,8 @@ Von Neumann machines (parallel binary machines)
 [[https://www.youtube.com/watch?v=mXIJO-af_u8][Xenakis Analogique A]]
 
 *Hiller and Isaacson* [[https://www.youtube.com/watch?v=n0njBFLQSk8][Illiac Suite]]
+
+*Ligeti*  [[https://www.youtube.com/watch?v=1AJoyqbMv_I][Continuum]] 1968
 
 *Herbert Brün* /SAWDUST/
 [[https://www.youtube.com/watch?v=4JZRBZF2scI][Dust]] (1976), More Dust (1977), Dustiny (1978), A Mere Ripple (1979)
