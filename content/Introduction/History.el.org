@@ -361,6 +361,8 @@ Von Neumann machines (parallel binary machines)
 
 **** Αλγοριθμική σύνθεση τον 20ο αιώνα
 
+*Serialism*
+
 *John Cage*
 /Reunion/ (σκάκι) 
 
@@ -377,3 +379,5 @@ Von Neumann machines (parallel binary machines)
 *Herbert Brün* /SAWDUST/
 [[https://www.youtube.com/watch?v=4JZRBZF2scI][Dust]] (1976), More Dust (1977), Dustiny (1978), A Mere Ripple (1979)
 
+*Gottfried Michael Koenig* SSP (Sound Synthesis Program)
+ 

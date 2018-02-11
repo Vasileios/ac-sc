@@ -142,11 +142,17 @@ systems" μια κατηγορία αλγορίθμων (βιολογία) γι�
 απομακρυσμένες περιοχές.
 #+END_QUOTE
 
+
+*Gary Lee Nelson*
+*Charles Wuorinen*
+
+
 *Fractals, Lindenmayer systems*
 
 - Fractal geometry (Fragmented): Mandelbrot, Random walk, brown noise, etc
 - L-systems: biology - Growth of living organisms such as
 algea and plants.
+
 
 **** Γενετικοί αλγόριθμοι-Genetic algorithms
 
