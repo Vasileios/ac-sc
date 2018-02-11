@@ -6,6 +6,8 @@ weight = 10
 *** Chapter 1
 * References
 
+Cope, David. 2000. The Algorithmic Composer. Madison, Wis: A-R Editions.
+
 Dean, Roger. and McLean, Alex (eds.) 2018. The Oxford Handbook of Algorithmic Music. Oxford University Press.
 
 Farnell, Andy. 2010. Designing Sound. Cambridge, Mass: The MIT Press.
