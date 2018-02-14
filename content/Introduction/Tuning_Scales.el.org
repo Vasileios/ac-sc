@@ -58,6 +58,14 @@ SC-Help: Classes |GUI->Views->ScopeView
 
 //440 = A (La)
 {SinOsc.ar([440, 440*81/64, 440*3/2])}.scope // pythagorean tuning: see leimma halftone of 256/243 between its major third (81/64) and the perfect fourth (4/3) as well as between major seventh and the dominant.
+// C to Ab = 261.6 * 8/5 (8:5 minor sixth) = 418.56
+// C to G# = 261.6 * 5/4 * 5/4 (2 major thirds) = 408.75
+//The point is, A-flat and G-sharp are different pitches.
+//261.6*9/8*9/8*9/8*9/8*9/8*9/8 (6 major second) (octave) = 530.338156...
+
+//Bach's master work "The Well-Tempered Clavier"
+//261.6*2/1 (octave) = 523.2
+
 
 
 
@@ -73,12 +81,13 @@ SC-Help: Classes |GUI->Views->ScopeView
 1/1->unison
 2/1->octave
 3/2->perfect fifth
-4/3-> perfect fourth
+4/3->perfect fourth
 5/4->major third diatonic
 5/3->magor sixth diatonic
 6/5->minor third diatonic
-9/8->semitone
+9/8->tone
 15/8->diatonic seventh
+16/15->semitone
 81/64->major third pythagorean
 #+END_SRC
 

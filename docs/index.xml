@@ -57,6 +57,19 @@ Logical expressions =true or false= 10==10 // equal to =&amp;gt;true... 10 !=15 
     </item>
     
     <item>
+      <title>Notation</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/notation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/notation/</guid>
+      <description>chapter 1 Notation MIDI
+The lowest note musicians use is C-1, which has the MIDI number 0. The number 12 = C0, 24 = C1, 36 = C2, 48 = C3, 60 = C4 (which is middle C on the piano, remember this one), and so on. A 440 is above middle C so it is 69.
+60, 62, 63, 60, 66
+Frequencies
+It is the number of cycles (per second) of a periodic wave.</description>
+    </item>
+    
+    <item>
       <title>Glossary</title>
       <link>https://vasileios.github.io/ac-sc/introduction/glossary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
