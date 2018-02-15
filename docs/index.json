@@ -130,7 +130,7 @@
 	"title": "Algorithmic Composition Examples",
 	"tags": [],
 	"description": "",
-	"content": "chapter 2 Examples with Routines and Loops\n( /* Algorithmic composition paradigms BA 181502 Objective: create a Routine and repeat it 10 times */ fork{//this alternative syntax goes for Routine 10.do({//here goes the repetition a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play; 4.wait; a.release; b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play; 4.wait; b.release; });//loop closes here }//fork (Routine) closes here ) )  "
+	"content": "chapter 2 Examples with Routines and Loops\n( /* Algorithmic composition paradigms BA 181502 Objective: create a Routine and repeat it 10 times */ fork{//this alternative syntax goes for Routine 10.do({//here goes the repetition a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play; 4.wait; a.release; b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play; 4.wait; b.release; });//loop closes here }//fork (Routine) closes here )  "
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/categories/",
