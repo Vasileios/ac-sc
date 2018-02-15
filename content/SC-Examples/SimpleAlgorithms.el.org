@@ -55,7 +55,7 @@ fork{
 	"rolling a dice".postln;
 	"one sound is going to die".postln;
 	
-	~k = 
+	~die = 
 	{
 
 	fork{
