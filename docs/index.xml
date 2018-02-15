@@ -120,7 +120,7 @@ SuperCollider features three major components
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/oscillators/</guid>
       <description>chapter 2 SuperCollider Oscillators SuperCollider Ugens From SC Help
-//Periodic Sources: Oscillators. //LF - &amp;quot;Low Frequency&amp;quot; Unit Generators. //arguments: frequency, phase, mul, add // parabolic approximation of sine { LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); // cubic approximation of sine { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFSaw.ar(LFSaw.kr(LFSaw.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { Impulse.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFPulse.ar(LFPulse.kr(LFPulse.kr(0.2,0,0.5,8,10),0,0.5, 400,800),0,0.5,0.1) }.scope(1, zoom: 4); //etc //Band Limited Oscillators //arguments: frequency, phase, mul, add SinOsc, FSinOsc, Blip, Saw, Pulse.</description>
+//Periodic Sources: Oscillators. //LF - &amp;quot;Low Frequency&amp;quot; Unit Generators. //arguments: frequency, phase, mul, add // *Stethoscope* s.boot a = Stethoscope(s,2); // 2 tracks //a = Stethoscope(s,2, 2); // change in i.e (Mic) // parabolic approximation of sine { LFPar.ar(LFPar.kr(LFPar.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); // cubic approximation of sine { LFCub.ar(LFCub.kr(LFCub.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFTri.ar(LFTri.kr(LFTri.kr(0.2,0,8,10),0, 400,800),0,0.1) }.scope(1, zoom: 4); { LFSaw.</description>
     </item>
     
     <item>

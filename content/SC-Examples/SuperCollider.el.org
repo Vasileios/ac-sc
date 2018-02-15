@@ -55,7 +55,10 @@ Subtractive synthesis
 #+END_QUOTE
 
 #+BEGIN_SRC js
-{LPF.ar(Saw.ar(440, 0.4), [3520, 4400, 5280], 0.3)}.play;
+(
+{LPF.ar(Mix.fill(8, { SinOsc.ar(500 + 500.0.rand, 0, 0.05)}), 2900, 0.5);
+}.play
+)
 #+END_SRC
 
 #+BEGIN_QUOTE
