@@ -52,3 +52,38 @@ a = {Pan2.ar(Resonz.ar(SinOsc.ar(Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), X
 )
 
 #+END_SRC
+
+ *probability-stochastic*
+
+#+BEGIN_SRC js
+/*
+BA 181502
+Stochastic synthesis example
+*/
+
+(
+fork{
+	"1".postln;
+~a = {Pan2.ar(Resonz.ar(SinOsc.ar(Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0.1.rand, LFNoise1.kr(20)), 440.rand, 0.7)*Saw.ar(XLine.kr(44, 20, 44, 20, 4)).dup, XLine.kr(-1, 1, 1, -1, 4))}.play;
+	12.wait;
+	"2".postln;
+	~b = {Pan2.ar(Resonz.ar(SinOsc.ar(SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)), 0, LFNoise1.kr(20)*0.6), 240.rand, 0.7)*Saw.ar(XLine.kr(44, 20, 440, 20, 4)).dup, XLine.kr(-1, 1, 1, -1, 4))}.play;
+	12.wait;
+
+	"probability".postln;
+	
+~k = {	
+	var x = [1, 6].choose;
+	if(x<5,{~a.release},{~b.release})
+}.value;
+	
+	12.wait;
+
+	~a.release;
+	~b.release;
+};
+)
+
+
+#+END_SRC
+
