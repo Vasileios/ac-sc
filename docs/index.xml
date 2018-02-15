@@ -181,5 +181,15 @@ FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, p
       <description>chapter 2 SuperCollider Granular Synthesis //TGrains - granulation of a buffer //arguments: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation // read sound b = Buffer.read(s, Platform.resourceDir +/+ &amp;quot;sounds/a11wlk01.wav&amp;quot;); ( { var trate, dur; trate = MouseY.kr(2,200,1); dur = 4 / trate; TGrains.ar(2, Impulse.ar(trate), b, 1, MouseX.kr(0,BufDur.kr(b)), dur, 0, 0.1, 2); }.scope(2, zoom: 4); ) ( { var trate, dur, clk, pos, pan; trate = MouseY.kr(8,120,1); dur = 12 / trate; clk = Impulse.</description>
     </item>
     
+    <item>
+      <title>Algorithmic Composition Examples</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/simplealgorithms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/simplealgorithms/</guid>
+      <description>chapter 2 Examples with Routines and Loops
+( /* Algorithmic composition paradigms BA 181502 create a Routine and loop it 10 times */ fork{//this alternative syntax goes for Routine 10.do({//here goes the repetition a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play; 6.wait; a.release; b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play; 6.wait; b.release; });//loop closes here }//fork (Routine) closes here ) )  </description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,37 @@
++++
+title="Algorithmic Composition Examples"
+chapter=true
+weight=55
++++
+
+
+*** chapter 2
+
+*Examples with Routines and Loops*
+
+#+BEGIN_SRC js
+(
+/*
+Algorithmic composition paradigms
+BA 181502
+ create a Routine and loop it 10 times
+*/
+fork{//this alternative syntax goes for Routine
+
+10.do({//here goes the repetition
+
+a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play;
+6.wait;
+a.release;
+b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
+6.wait;
+b.release;
+
+});//loop closes here 
+}//fork (Routine) closes here
+)
+
+
+
+)
+#+END_SRC
