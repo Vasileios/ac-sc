@@ -188,7 +188,8 @@ FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, p
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/simplealgorithms/</guid>
       <description>chapter 2 Examples with Routines and Loops
-( /* Algorithmic composition paradigms BA 181502 Objective: create a Routine and repeat it n times */ fork{//this alternative syntax goes for Routine 10.do({//here goes the repetition (10 times) a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play; 4.wait; a.release; b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play; 4.wait; b.release; });//loop closes here }//fork (Routine) closes here )  </description>
+( /* Algorithmic composition paradigms BA 181502 Objective: create a Routine and repeat it n times */ fork{//this alternative syntax goes for Routine 10.do({//here goes the repetition (10 times) a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play; 4.wait; a.release; b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play; 4.wait; b.release; });//loop closes here }//fork (Routine) closes here )  Complex sound
+/* BA 181502 Modulation synthesis Routine */ ( fork{ a = {Pan2.</description>
     </item>
     
   </channel>
