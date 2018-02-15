@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1518716085" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1518716085" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1518718319" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1518718319" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1518716085" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1518718319" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1518716085"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1518718319"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518716085"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518716085"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518718319"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518718319"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1518716085"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1518718319"></script>
 
     
   </div>
@@ -806,7 +806,44 @@ a = {Pan2.ar(Resonz.ar(SinOsc.ar(Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), X
 
 <p><strong>probability-stochastic</strong></p>
 
-<pre><code class="language-js">/*
+<pre><code class="language-js">// BA 181502
+// Stochastic example 1
+(
+fork{
+	&quot;1&quot;.postln;
+~a = {Out.ar(0, SinOsc.ar(440, 0, 0.5))}.play;
+	4.wait;
+	&quot;2&quot;.postln;
+	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
+	4.wait;
+
+	&quot;propability&quot;.postln;
+
+~k = {	
+	var x = [1, 6].choose;
+	if(x&lt;5,{~a.free},{~b.free})
+}.value;
+	2.wait;
+
+	if(~a.isRunning, {&quot;a is running&quot;.postln},{&quot;b is running&quot;.postln}
+	 );
+	//	~a.play;
+
+	4.wait;
+	if(~a.isRunning, {~a.free}, {~b.free});
+
+
+};
+)
+</code></pre>
+
+<p><strong>With a complex sound</strong></p>
+
+<pre><code class="language-js">
+
+
+
+/*
 BA 181502
 Stochastic synthesis example
 */
@@ -827,10 +864,14 @@ fork{
 	if(x&lt;5,{~a.release},{~b.release})
 }.value;
 
-	12.wait;
+	2.wait;
 
-	~a.release;
-	~b.release;
+	if(~a.isRunning, {&quot;a is running&quot;.postln},{&quot;b is running&quot;.postln}
+	 );
+
+	4.wait;
+	if(~a.isRunning, {~a.release}, {~b.release});
+
 };
 )
 
@@ -1186,20 +1227,20 @@ fork{
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1518716085"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518716085"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518716085"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1518716085"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1518716085"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518716085"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1518716085"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1518718319"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518718319"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518718319"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1518718319"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1518718319"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518718319"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1518718319"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1518716085"></script>
-    <script src="/ac-sc/js/learn.js?1518716085"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1518716085"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1518718319"></script>
+    <script src="/ac-sc/js/learn.js?1518718319"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1518718319"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1518716085" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1518716085"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1518718319" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1518718319"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
