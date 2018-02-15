@@ -28,8 +28,8 @@ b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
 4.wait;
 b.release;
 
-});//loop closes here 
-}//fork (Routine) closes here
+});//loop ends here 
+}//fork (Routine) ends here
 )
 #+END_SRC
 
