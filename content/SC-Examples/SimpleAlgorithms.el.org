@@ -52,8 +52,8 @@ fork{
 	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
 	4.wait;
 
-	"rolling a dice".postln;
-	"one sound is going to die".postln;
+	"dice game".postln;
+	"one sound is going to 'die'".postln;
 	
 	~die = 
 	{
@@ -107,8 +107,8 @@ SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)),
 	~b.postln;
 	4.wait;
 
-	"rolling a dice".postln;
-	"one sound is going to die".postln;
+	"dice game".postln;
+	"one sound is going to 'die'".postln;
 	
         ~die = 
 	{
