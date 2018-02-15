@@ -45,31 +45,35 @@ Objective: Create two sounds one after the other and after a couple of seconds f
 
 (
 fork{
-	"1".postln;
+	"sound 1".postln;
 ~a = {Out.ar(0, SinOsc.ar(440, 0, 0.5))}.play;
 	4.wait;
-	"2".postln;
+	"sound 2".postln;
 	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
 	4.wait;
 
-	"probability".postln;
+	"rolling a dice".postln;
+	"one sound is going to die".postln;
 	
-~k = 
+	~k = 
 	{
 		fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln;
 	if(x>3,{~a.free},{~b.free});
 
-	"a or b is running?".postln;
+	"sound 1 or sound 2 is dead?".postln;
 	
-		if(x>3, {"b is running".postln},{"a is running".postln}
+		if(x>3, {"sound 2 is dead".postln},{"sound 1 is dead".postln}
 		);
-4.wait;
+			4.wait;
+
+			"free the remain sound_n".postln;
 			if(~a.isRunning, {~a.free}, {~b.free});
-			if(~b.isRunning, {~b.free}, {~a.free});
+				if(~b.isRunning, {~b.free}, {~a.free});
 			
 		};			
 }.value;
+
 	
 	
 };
@@ -102,6 +106,7 @@ fork{
 	4.wait;
 
 	"rolling a dice".postln;
+	"one sound is going to die".postln;
 	
 	~k = 
 	{
@@ -109,16 +114,19 @@ fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln;
 	if(x>3,{~a.free},{~b.free});
 
-	"a or b is running?".postln;
+	"sound 1 or sound 2 is dead?".postln;
 	
-		if(x>3, {"b is running".postln},{"a is running".postln}
+		if(x>3, {"sound 2 is dead".postln},{"sound 1 is dead".postln}
 		);
-4.wait;
+			4.wait;
+
+			"free the remain sound_n".postln;
 			if(~a.isRunning, {~a.free}, {~b.free});
-			if(~b.isRunning, {~b.free}, {~a.free});
+				if(~b.isRunning, {~b.free}, {~a.free});
 			
 		};			
 }.value;
+
 
 	
 };

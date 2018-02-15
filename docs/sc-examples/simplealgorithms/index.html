@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1518724935" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1518724935" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1518725917" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1518725917" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1518724935" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1518725917" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1518724935"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1518725917"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518724935"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518724935"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518725917"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518725917"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1518724935"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1518725917"></script>
 
     
   </div>
@@ -794,31 +794,35 @@ Objective: Create two sounds one after the other and after a couple of seconds f
 
 (
 fork{
-	&quot;1&quot;.postln;
+	&quot;sound 1&quot;.postln;
 ~a = {Out.ar(0, SinOsc.ar(440, 0, 0.5))}.play;
 	4.wait;
-	&quot;2&quot;.postln;
+	&quot;sound 2&quot;.postln;
 	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
 	4.wait;
 
-	&quot;probability&quot;.postln;
+	&quot;rolling a dice&quot;.postln;
+	&quot;one sound is going to die&quot;.postln;
 
-~k = 
+	~k = 
 	{
 		fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln;
 	if(x&gt;3,{~a.free},{~b.free});
 
-	&quot;a or b is running?&quot;.postln;
+	&quot;sound 1 or sound 2 is dead?&quot;.postln;
 
-		if(x&gt;3, {&quot;b is running&quot;.postln},{&quot;a is running&quot;.postln}
+		if(x&gt;3, {&quot;sound 2 is dead&quot;.postln},{&quot;sound 1 is dead&quot;.postln}
 		);
-4.wait;
+			4.wait;
+
+			&quot;free the remain sound_n&quot;.postln;
 			if(~a.isRunning, {~a.free}, {~b.free});
-			if(~b.isRunning, {~b.free}, {~a.free});
+				if(~b.isRunning, {~b.free}, {~a.free});
 
 		};			
 }.value;
+
 
 
 };
@@ -851,6 +855,7 @@ fork{
 	4.wait;
 
 	&quot;rolling a dice&quot;.postln;
+	&quot;one sound is going to die&quot;.postln;
 
 	~k = 
 	{
@@ -858,16 +863,19 @@ fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln;
 	if(x&gt;3,{~a.free},{~b.free});
 
-	&quot;a or b is running?&quot;.postln;
+	&quot;sound 1 or sound 2 is dead?&quot;.postln;
 
-		if(x&gt;3, {&quot;b is running&quot;.postln},{&quot;a is running&quot;.postln}
+		if(x&gt;3, {&quot;sound 2 is dead&quot;.postln},{&quot;sound 1 is dead&quot;.postln}
 		);
-4.wait;
+			4.wait;
+
+			&quot;free the remain sound_n&quot;.postln;
 			if(~a.isRunning, {~a.free}, {~b.free});
-			if(~b.isRunning, {~b.free}, {~a.free});
+				if(~b.isRunning, {~b.free}, {~a.free});
 
 		};			
 }.value;
+
 
 
 };
@@ -1224,20 +1232,20 @@ fork{
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1518724935"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518724935"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518724935"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1518724935"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1518724935"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518724935"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1518724935"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1518725917"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518725917"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518725917"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1518725917"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1518725917"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518725917"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1518725917"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1518724935"></script>
-    <script src="/ac-sc/js/learn.js?1518724935"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1518724935"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1518725917"></script>
+    <script src="/ac-sc/js/learn.js?1518725917"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1518725917"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1518724935" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1518724935"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1518725917" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1518725917"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
