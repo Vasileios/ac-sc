@@ -79,7 +79,7 @@ fork{
 
 /*
 BA 181502
-Stochastic synthesis example
+Stochastic example 2
 Objective: Create two sounds and free one of them using probability. (Rolling a Dice)
 */
 
