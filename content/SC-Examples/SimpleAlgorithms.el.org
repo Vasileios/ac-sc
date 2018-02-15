@@ -22,10 +22,10 @@ fork{//this alternative syntax goes for Routine
 10.do({//here goes the repetition
 
 a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play;
-6.wait;
+4.wait;
 a.release;
 b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
-6.wait;
+4.wait;
 b.release;
 
 });//loop closes here 
