@@ -38,8 +38,11 @@ b.release;
 
 
 #+BEGIN_SRC js
-// BA 181502
-// Stochastic example 1
+/* BA 181502
+ Stochastic example 1
+Objective: Create two sounds one after the other and after a couple of seconds free one of them using probability. (Rolling a Dice)
+*/
+
 (
 fork{
 	"1".postln;
@@ -77,6 +80,7 @@ fork{
 /*
 BA 181502
 Stochastic synthesis example
+Objective: Create two sounds and free one of them using probability. (Rolling a Dice)
 */
 
 (
