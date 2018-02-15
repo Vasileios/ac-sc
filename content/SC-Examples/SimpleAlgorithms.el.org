@@ -59,7 +59,6 @@ fork{
 
 	if(~a.isRunning, {"a is running".postln},{"b is running".postln}
 	 );
-	//	~a.play;
 	
 	4.wait;
 	if(~a.isRunning, {~a.free}, {~b.free});
