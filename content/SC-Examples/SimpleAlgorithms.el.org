@@ -14,8 +14,9 @@ weight=55
 /*
 Algorithmic composition paradigms
 BA 181502
- create a Routine and loop it 10 times
+ create a Routine and repeat it 10 times
 */
+
 fork{//this alternative syntax goes for Routine
 
 10.do({//here goes the repetition
