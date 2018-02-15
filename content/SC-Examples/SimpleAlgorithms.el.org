@@ -52,7 +52,7 @@ fork{
 	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
 	4.wait;
 
-	"propability".postln;
+	"probability".postln;
 	
 ~k = 
 	{
