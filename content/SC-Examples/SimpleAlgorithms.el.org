@@ -199,11 +199,13 @@ fork{
 ~scaleS = Scale.bartok;
 
 ~pattP = Prand((0..17)++ [\rest] ++ (16..0)++[\rest], inf);
-	~pattD = Pn(Pgeom(0.25, 1, inf), Pgeom(1, 0.25, inf), inf);
 	
-	~pattD2 = Pn(Prand([0.025, 0.34, 0.16, 1], inf), Pseq([1, 0.34, 0.56, 0.25], inf), inf);
+~pattD = Pn(Pgeom(0.25, 1, inf), Pgeom(1, 0.25, inf), inf);
 	
-Pdef(\first_mov1, Pbind(\scale, ~scaleS,
+~pattD2 = Pn(Prand([0.025, 0.34, 0.16, 1], inf), Pseq([1, 0.34, 0.56, 0.25], inf), inf);
+	
+Pdef(\first_mov1,
+ Pbind(\scale, ~scaleS,
 	\degree, ~pattP,
 	\dur, ~pattD)).play;
 
@@ -217,7 +219,8 @@ Pdef(\first_mov1, Pbind(\scale, ~scaleS,
 	
 ~scaleS = Scale.dorian;	
 
-Pdef(\first_mov2, Pbind(\scale, ~scaleS,
+Pdef(\first_mov2,
+ Pbind(\scale, ~scaleS,
 	\degree, ~pattP,
 	\dur, ~pattD2)).play;
 	
@@ -225,8 +228,10 @@ Pdef(\first_mov2, Pbind(\scale, ~scaleS,
 	"now both".postln;
 	
 	Pdef(\first_mov1).play;
+
 	3.wait;
-"8s to close".postln;
+        "8s to close".postln;
+
 	8.wait;
 
 	Pdef(\first_mov1).stop;
