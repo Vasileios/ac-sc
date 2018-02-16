@@ -100,9 +100,7 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 	~a.postln;
 	4.wait;
 	"sound 2".postln;
-	~b = {Out.ar([0,1], Resonz.ar(SinOsc.ar(
-SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)), 0, LFNoise1.kr(20)*0.6)
-, 240.rand, 0.7)*Saw.ar(XLine.kr(44, 20, 440, 20, 4)).dup)}.play;
+	~b = {Out.ar([0,1], SinOsc.ar(SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)), 0, LFNoise1.kr(20)*0.6)*Saw.ar(XLine.kr(44, 20, 440, 20, 4)).dup)}.play;
 	0.1.wait;
 	~b.postln;
 	4.wait;
