@@ -166,22 +166,23 @@ SynthDef(\synth01, {|out = 0, gate = 1, freq = 220, amp = 0.4, pan = 0, mod = 44
 
 }).add;
 
-~pattP = Prand((0..14)++(13..0)++[\rest], inf);
+~pattPm1 = Pseq((60..80)++(79..60)++[\rest], 2);
 
-~pattPm  = Pseq((60..80)++(79..60)++[\rest], 8);
+// Prand((0..14)++(13..0)++[\rest], 2);
 
-~pattD = 0.25;
+~pattPm2  =  Pseq((0..14)++(13..0)++[\rest], 2);
+
+~pattPm3  = Pseq((1..18000), inf);
 
 Pbind(
 	\instrument, \synth01,
-	\freq, ~pattPm, //try also ~pattP
-	\dur, ~pattD,
-	\mod, Pseq((40..20000), 8),//change the values here as well
-	\ind, Pseq((30..10000), 8),//and here
+	\freq, Pseq([~pattPm1, ~pattPm2], 2),
+	\dur, 0.25,
+	\mod, ~pattPm3,
+	\ind, ~pattPm3,
 	\amp, Pseq((0.4..0.7), inf)
 ).play;
 )
-
 #+END_SRC
 
 *Example 2 Patterns*
