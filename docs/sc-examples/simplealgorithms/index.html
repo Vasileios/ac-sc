@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1518776455" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1518776455" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1518786902" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1518786902" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1518776455" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1518786902" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1518776455"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1518786902"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518776455"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518776455"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518786902"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518786902"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1518776455"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1518786902"></script>
 
     
   </div>
@@ -883,6 +883,105 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 
 </code></pre>
 
+<p><strong>Using Patterns</strong></p>
+
+<p>Scales and Patterns examples</p>
+
+<p>Midi</p>
+
+<pre><code class="language-js">/*
+BA 181602
+Composing music with patterns paradigms
+Objective: Create sound textures while you playing a scale. 
+Synthesis technique: (FM synthesis) 
+*/
+
+s.boot
+
+~scaleS = Scale.bartok; //experiment with other scales as well. See Scale.directory
+
+//midicps convert MIDI note to cycles per second
+(
+SynthDef(\synth01, {|out = 0, gate = 1, freq = 220, amp = 0.4, pan = 0, mod = 440, ind = 1|
+
+	var env, source;
+
+	env = EnvGen.kr(Env.adsr(0.01, 0.4, 0.001, 0.0, 1), gate, doneAction: 2);
+	source = SinOsc.ar(SinOsc.ar(freq.midicps, mod*freq, ind*freq), 0, amp*env);
+	Out.ar(out, source)
+
+}).add;
+
+~pattP = Prand((0..14)++(13..0)++[\rest], inf);
+
+~pattPm  = Pseq((60..80)++(79..60)++[\rest], 8);
+
+~pattD = 0.25;
+
+Pbind(
+	\instrument, \synth01,
+	\freq, ~pattPm, //try also ~pattP
+	\dur, ~pattD,
+	\mod, Pseq((40..20000), 8),//change the values here as well
+	\ind, Pseq((30..10000), 8),//and here
+	\amp, Pseq((0.4..0.7), inf)
+).play;
+)
+
+</code></pre>
+
+<p><strong>Example 2 Patterns</strong></p>
+
+<pre><code class="language-js">/*
+BA 181602
+Composing music with patterns paradigms.
+Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music 
+*/
+
+(
+fork{
+
+~scaleS = Scale.bartok;
+
+~pattP = Prand((0..17)++ [\rest] ++ (16..0)++[\rest], inf);
+	~pattD = Pn(Pgeom(0.25, 1, inf), Pgeom(1, 0.25, inf), inf);
+
+	~pattD2 = Pn(Prand([0.025, 0.34, 0.16, 1], inf), Pseq([1, 0.34, 0.56, 0.25], inf), inf);
+
+Pdef(\first_mov1, Pbind(\scale, ~scaleS,
+	\degree, ~pattP,
+	\dur, ~pattD)).play;
+
+	&quot;start with Bartok scale&quot;.postln;
+
+	15.wait;
+
+	Pdef(\first_mov1).stop;
+
+	&quot;change to Dorian&quot;.postln;
+
+~scaleS = Scale.dorian;	
+
+Pdef(\first_mov2, Pbind(\scale, ~scaleS,
+	\degree, ~pattP,
+	\dur, ~pattD2)).play;
+
+	14.wait;
+	&quot;now both&quot;.postln;
+
+	Pdef(\first_mov1).play;
+	3.wait;
+&quot;8s to close&quot;.postln;
+	8.wait;
+
+	Pdef(\first_mov1).stop;
+	Pdef(\first_mov2).stop;
+
+	&quot;thats it&quot;.postln;
+};
+)
+</code></pre>
+
 
 <footer class=" footline" >
 	
@@ -1232,20 +1331,20 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1518776455"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518776455"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518776455"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1518776455"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1518776455"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518776455"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1518776455"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1518786902"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518786902"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518786902"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1518786902"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1518786902"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518786902"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1518786902"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1518776455"></script>
-    <script src="/ac-sc/js/learn.js?1518776455"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1518776455"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1518786902"></script>
+    <script src="/ac-sc/js/learn.js?1518786902"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1518786902"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1518776455" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1518776455"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1518786902" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1518786902"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
