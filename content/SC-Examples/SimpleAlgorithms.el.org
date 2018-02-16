@@ -119,7 +119,7 @@ SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)),
 
 	"sound 1 or sound 2 is dead?".postln;
 	
-	if(x>3, {"sound 2 is dead".postln},{"sound 1 is dead".postln});
+	if(x>3, {"sound 1 is dead".postln},{"sound 2 is dead".postln});
 			
         4.wait;
 
