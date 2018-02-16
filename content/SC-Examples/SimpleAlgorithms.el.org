@@ -40,7 +40,7 @@ b.release;
 #+BEGIN_SRC js
 /* BA 181502
  Stochastic example 1
-Objective: Create two sounds one after the other and after a couple of seconds free one of them using probability. (Rolling a Dice)
+Objective: Create two sounds one after the other then free one them (probability), wait a couple of sceonds to free also the remain sounds (probability). (Rolling a Dice)
 */
 
 (
@@ -87,7 +87,7 @@ fork{
 /*
 BA 181502
 Stochastic example 2
-Objective: Create two sounds and free one of them using probability. (Rolling a Dice)
+Objective: Create two sounds one after the other, then free one of them and after a while free also the remain sounds using probability. (Rolling a Dice)
 */
 
 (
