@@ -232,7 +232,7 @@ Pdef(\first_mov2,
 	3.wait;
         "8s to close".postln;
 
-	8.wait;
+	8.wait;// change this to a bigger number in case you want more
 
 	Pdef(\first_mov1).stop;
 	Pdef(\first_mov2).stop;
