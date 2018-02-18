@@ -250,7 +250,7 @@ Pdef(\first_mov2,
 /*
 BA 181802
 Playing with Patterns
-Objective: Creating Chord progressions
+Objective: Creating Chord progressions with random duration
 */
 s.boot;
 
