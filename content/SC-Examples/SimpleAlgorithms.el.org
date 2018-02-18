@@ -265,7 +265,7 @@ s.boot;
 
 "n movement".postln;
 
-Pdef(\secondmove,
+Pdef(\nmove,
 	Pbind(\scale, ~scalem,
 		\note, Pn([~soprano, ~alto, ~tenor, ~bass], inf),
 		\dur, Pxrand([0.5, 0.75, 1, 2, 0.25, 0.15], inf))).play;
