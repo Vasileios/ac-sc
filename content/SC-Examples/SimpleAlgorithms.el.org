@@ -139,9 +139,6 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 
 Scales and Patterns examples
 
- Midi
-
-
 #+BEGIN_SRC js
 /*
 BA 181602
@@ -149,6 +146,8 @@ Composing music with patterns paradigms
 Objective: Create sound textures while you playing a scale. 
 Synthesis technique: (FM synthesis) 
 */
+
+//Midi notation
 
 s.boot
 
