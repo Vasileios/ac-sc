@@ -261,11 +261,11 @@ s.boot;
 ~soprano= Pseq([Pseq([5, 2, 1, 7], 1), Pseq([3, 1, 5, 4], 1)], inf).asStream;
 ~alto = Pseq([Pseq([3, 11, 9, 7], 1), Pseq([0, 7, 5, 7], 1)], inf).asStream;
 ~tenor = Pseq([Pseq([4, 2, 0, 9], 1), Pseq([2, 3, 5,  9], 1)], 1).asStream;
-	~bass = Pseq([Pseq([0, 7, 5,  7], 1), Pseq([0, 3, 6,  7], 1)], 1).asStream;
-
+~bass = Pseq([Pseq([0, 7, 5,  7], 1), Pseq([0, 3, 6,  7], 1)], 1).asStream;
 
 "n movement".postln;
-	Pdef(\secondmove,
+
+Pdef(\secondmove,
 	Pbind(\scale, ~scalem,
 		\note, Pn([~soprano, ~alto, ~tenor, ~bass], inf),
 		\dur, Pxrand([0.5, 0.75, 1, 2, 0.25, 0.15], inf))).play;
