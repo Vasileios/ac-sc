@@ -9,14 +9,12 @@ weight = 60
 **** Additive synthesis
 
 #+BEGIN_SRC js
-/// Sound Synthesis techniques
-
-// additive Synthesis
-
-/*
+/* Sound Synthesis techniques
+BA 181902
+Objective: create complex sounds using additive synthesis technique
+// Additive Synthesis
 a+b+c+d
-
-a to d  may be frequencies or other obects such as waveforms
+where a to d  can be frequencies or any other obect such as a waveform
 */
 
 // firts boot the internal server and open Freqscope and Stethoscope
@@ -26,7 +24,7 @@ s.boot
 Stethoscope.new
 FreqScope.new
 
-//harmonics
+//create harmonics with the dominant to  
 
 {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.08, 0.09])}.play//or .scope
 
