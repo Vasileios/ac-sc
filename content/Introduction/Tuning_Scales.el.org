@@ -492,3 +492,38 @@ Pbind(\scale, a, \degree, Pseq((0..7) ++ (6..0) ++ [\rest], 1), \dur, 0.25).play
 )
 
 #+END_SRC
+
+*Tunings*
+
+#+BEGIN_SRC js
+// =====================================================================
+// SuperCollider Workspace
+// =====================================================================
+/*
+BA 181802
+Tunings
+*/
+Tuning.directory
+Scale.directory
+t = Tuning.pythagorean;
+t = Tuning.et12;
+t = Tuning.lu;
+t = Tuning.vallotti
+t = Tuning.young
+t = Tuning.perret
+t = Tuning.choose;
+//choose from tunings stored in the library
+//~scale = Scale.major(t).tuning.name;
+
+t.semitones;        // [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 ]
+t.ratios;        // [ 1, 1.0594630943591, 1.1224620483089, 1.1892071150019, etc. ]
+
+Pbind(\scale,  Scale.harmonicMinor(t), \degree, Pseq((0..7) ++ (6..0) ++ [\rest], 1), \dur, 0.25).play;
+
+//Create new Tuning
+
+Tuning.new((0..11).collect(_ * (2.61803398875 ** (1/12))), 2.061803398875, "GlodenRatio ET12");
+
+Pbind(\scale,  Scale.major(t), \degree, Pseq((0..7) ++ (6..0) ++ [\rest], 1), \dur, 0.25).play;
+
+#+END_SRC

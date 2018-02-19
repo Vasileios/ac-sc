@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1518980982" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1518980982" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1519043007" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1519043007" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1518980982" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1519043007" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1518980982"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1519043007"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1518980982"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1518980982"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1519043007"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1519043007"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1518980982"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1519043007"></script>
 
     
   </div>
@@ -995,13 +995,26 @@ Pdef(\first_mov2,
 /*
 BA 181802
 Playing with Patterns
-Objective: Creating Chord progressions with random duration
+Objective: Creating Chord progressions
 */
 s.boot;
 
-//Example with \note notation
+//Example with \note notation simple major chords: I-V-IV-V
+(
+~soprano = Pbind(\scale, Scale.major, \note,  Pseq([7, 11, 9, 11], inf)).play;
+
+~alto = Pbind(\scale, Scale.major, \note,  Pseq([0, 7, 5, 7], inf)).play;
+
+~tenor = Pbind(\scale, Scale.major, \note,  Pseq([4, 2, 5, 2], inf)).play;
+
+~bass = Pbind(\scale, Scale.major, \note,  Pseq([0, 7, 0, 7], inf)).play;
+)
+
+//another example free minor
+//Objective: Creating Chord progressions with random delta time
 
 (
+~scalem = Scale.minor;
 ~soprano= Pseq([Pseq([5, 2, 1, 7], 1), Pseq([3, 1, 5, 4], 1)], inf).asStream;
 ~alto = Pseq([Pseq([3, 11, 9, 7], 1), Pseq([0, 7, 5, 7], 1)], inf).asStream;
 ~tenor = Pseq([Pseq([4, 2, 0, 9], 1), Pseq([2, 3, 5,  9], 1)], 1).asStream;
@@ -1016,6 +1029,16 @@ Pdef(\nmove,
 )
 
 //play forever
+
+
+// see also interval ratios i.e I-V-I-V7
+
+~bassoContinuo = Pbind(\freq,  Pseq([440, 440*3/2, 440, 440*15/8], inf)).play
+//create the rest voices
+~tenor = ...
+~alto = ...
+~soprano = ...
+
 </code></pre>
 
 
@@ -1367,20 +1390,20 @@ Pdef(\nmove,
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1518980982"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1518980982"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1518980982"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1518980982"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1518980982"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1518980982"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1518980982"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1519043007"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1519043007"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1519043007"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1519043007"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1519043007"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1519043007"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1519043007"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1518980982"></script>
-    <script src="/ac-sc/js/learn.js?1518980982"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1518980982"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1519043007"></script>
+    <script src="/ac-sc/js/learn.js?1519043007"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1519043007"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1518980982" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1518980982"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1519043007" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1519043007"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
