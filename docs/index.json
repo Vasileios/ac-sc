@@ -137,7 +137,7 @@
 	"title": "Sound synthesis techniques",
 	"tags": [],
 	"description": "",
-	"content": "chapter 2 Additive synthesis /// Sound Synthesis techniques // additive Synthesis /* a+b+c+d a to d may be frequencies or other obects such as waveforms */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.internal; s.boot Stethoscope.new FreqScope.new //harmonics {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.08, 0.09])}.play//or .scope //add frequencies using Mix Ugen {Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)})}.play; //Add also different waveforms i.e sawtooth waveforms {Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)}, {Saw.ar(440+440.rand, 0.01)})}.play; // more complex sound {Mix.fill(10, {SinOsc.ar(440+640.rand, 0, 0.03)+Saw.ar(440+460.rand, 0.01)}, {Saw.ar(440+880.rand, 0.01)})}.play;  "
+	"content": "chapter 2 Additive synthesis /// Sound Synthesis techniques // additive Synthesis /* a+b+c+d a to d may be frequencies or other obects such as waveforms */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.internal; s.boot Stethoscope.new FreqScope.new //harmonics {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.08, 0.09])}.play//or .scope //add frequencies using the Mix Ugen {Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)})}.play; //Add also different waveforms i.e sawtooth waveforms {Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)}, {Saw.ar(440+440.rand, 0.01)})}.play; // more complex sound {Mix.fill(10, {SinOsc.ar(440+640.rand, 0, 0.03)+Saw.ar(440+460.rand, 0.01)}, {Saw.ar(440+880.rand, 0.01)})}.play;  "
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/categories/",

@@ -30,7 +30,7 @@ FreqScope.new
 
 {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.08, 0.09])}.play//or .scope
 
-//add frequencies using Mix Ugen
+//add frequencies using the Mix Ugen
 
 {Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)})}.play;
 
