@@ -16,7 +16,7 @@ weight = 60
 /*
 a+b+c+d
 
-a to d  may be frequencyies or other obects such as waveforms
+a to d  may be frequencies or other obects such as waveforms
 */
 
 // firts boot the internal server and open Freqscope and Stethoscope
