@@ -293,3 +293,9 @@ Pdef(\nmove,
 ~soprano = ...
 
 #+END_SRC
+
+
+
+see more on /Streams-Patterns-Events/
+
+[[http://doc.sccode.org/Overviews/Streams.html][Streams]]
