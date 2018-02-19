@@ -14,7 +14,7 @@ weight = 30
 
 // Filters
 
-//Low Pass, High Pass
+//Low Pass, High Pass, Band Pass see more on Help
 //arguments: in, freq, mul, add
 
 { LPF.ar(WhiteNoise.ar, MouseX.kr(1e2,2e4,1), 0.2) }.scope(1);

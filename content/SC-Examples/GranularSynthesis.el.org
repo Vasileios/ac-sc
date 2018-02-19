@@ -10,6 +10,7 @@ weight = 50
 #+BEGIN_SRC js
 //TGrains - granulation of a buffer
 //arguments: numChannels, trigger, buffer number, rate, center pos, dur, pan, amp, interpolation
+//see more about Granular synthesis on Help
 
 // read sound
 b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
