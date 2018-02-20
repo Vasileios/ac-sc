@@ -51,9 +51,9 @@ FreqScope.new
 /*
 BA102002
 Physical Modeling
-modal synthesis
-delay line
-mass-spring models
+modal synthesis (models of vibration of acoustic systems)
+delay line (Using delays and filters to model the propagation of sound wave)
+mass-spring models (signals based on masses and springs)
 */
 
 /*
