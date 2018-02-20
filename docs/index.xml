@@ -198,7 +198,7 @@ FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/synthesistec/</guid>
-      <description>chapter 2 Additive synthesis /* Sound Synthesis techniques BA 181902 Objective: create complex sounds using additive synthesis technique // Additive Synthesis a+b+c+d where a to d can be frequencies or any other obect such as a waveform */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.internal; s.boot Stethoscope.new FreqScope.new //create harmonics with the dominant to {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.</description>
+      <description>chapter 2 Additive synthesis /* Sound Synthesis techniques BA 181902 Objective: create complex sounds using additive synthesis technique // Additive Synthesis a+b+c+d where a to d can be frequencies or any other obect such as a waveform */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.internal; s.boot Stethoscope.new FreqScope.new //create harmonics of a 440Hz A note {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.</description>
     </item>
     
   </channel>
