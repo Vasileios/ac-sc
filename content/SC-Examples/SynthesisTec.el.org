@@ -55,7 +55,7 @@ modal synthesis (resonant modes of vibration of acoustic systems)(vibrating syst
 delay line (Using delays and filters to model the propagation of sound wave)
 mass-spring models (signals based on masses and springs)
 
-See more on: JA Laird., 2011. The Physical Modelling of Drums Using Digital Waveguides. University of Bristol
+See more on: JA Laird., 2001. The Physical Modelling of Drums Using Digital Waveguides. University of Bristol
 */
 
 /*
