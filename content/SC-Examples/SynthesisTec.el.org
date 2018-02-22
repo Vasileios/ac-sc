@@ -124,3 +124,23 @@ b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
 
 b.free;
 #+END_SRC
+
+*Creating textures with wavetables*
+
+#+BEGIN_SRC js
+
+/*
+BA 182202
+Sound Textures examples
+Objective: Experiment with table oscilators to create sound textures
+*/
+
+// COsc wavetable example 1:
+
+(
+b = Buffer.alloc(s, 512, 1, {| buf | buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
+{ LPF.ar(COsc.ar(b.bufnum, [200.rand.postln, 1000.rand], 0.7, 0.25)*Saw.ar(440+444.rand, WhiteNoise.kr(0.7)), 4000) }.play;
+)
+
+
+#+END_SRC
