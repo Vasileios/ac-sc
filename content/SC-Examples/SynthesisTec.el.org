@@ -51,15 +51,29 @@ FreqScope.new
 /*
 BA102002
 Physical Modeling
-modal synthesis (models of vibration of acoustic systems)
+modal synthesis (resonant modes of vibration of acoustic systems)(vibrating systems)
 delay line (Using delays and filters to model the propagation of sound wave)
 mass-spring models (signals based on masses and springs)
+
+See more on: JA Laird., 2011. The Physical Modelling of Drums Using Digital Waveguides. University of Bristol
 */
 
 /*
 Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture), CombL (delay line)
 */
+//see Ball, TBall, Spring Ugens on Help
 
+//Example:1 
+// mouse x controls switch of level
+// mouse y controls gravity
+(
+{
+    var t, sf;
+    sf = K2A.ar(MouseX.kr > 0.5) > 0;
+    t = TBall.ar(sf, MouseY.kr(0.01, 1.0, 1), 0.01);
+    Pan2.ar(Ringz.ar(t * 10, 1200, 0.1), MouseX.kr(-1,1));
+}.play;
+)
 
 #+END_SRC
 
@@ -73,7 +87,7 @@ Objective: create a wavetable and shape the waveform
 */
 
 s.boot;
-//Fill this buffer with a series of Chebyshev polynomials,
+//Fill this buffer with a series of Chebyshev polynomials, see more on Help->Buffer
 b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
 
 (
@@ -88,7 +102,7 @@ b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
 
 b.free;
 
-//another example with sine series
+//another example with sine wave series
 //Fill this buffer with a series of sine wave partials using specified frequencies, amplitudes, and initial phases.
 b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
 //see also sine2 and 3
@@ -110,7 +124,6 @@ b.free;
 
 //b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
 b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
-//see also sine2 and 3
 
 (
 {
