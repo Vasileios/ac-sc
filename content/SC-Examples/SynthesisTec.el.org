@@ -62,3 +62,65 @@ Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture),
 
 
 #+END_SRC
+
+*Wave shaping*
+
+#+BEGIN_SRC js
+/*
+BA 182202
+Waveshaping examples
+Objective: create a wavetable and shape the waveform
+*/
+
+s.boot;
+//Fill this buffer with a series of Chebyshev polynomials,
+b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300, 0, Line.kr(0,1,6)+Saw.ar(304, Line.kr(0, 1, 6))),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
+
+//another example with sine series
+//Fill this buffer with a series of sine wave partials using specified frequencies, amplitudes, and initial phases.
+b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
+//see also sine2 and 3
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15)+Saw.ar(304+30.7.rand, LFNoise2.kr(0.15))),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
+
+//another example
+
+
+//b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
+b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
+//see also sine2 and 3
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15.rand)+Saw.ar(304+30.7.rand, LFNoise2.kr(0.15.rand))),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
+#+END_SRC
