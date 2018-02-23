@@ -30,7 +30,7 @@ FreqScope.new
 
 //add frequencies using the Mix Ugen
 
-{Mix.fill(10, {SinOsc.ar(440+440.rand, 0, 0.03)})}.play;
+{Mix.fill(10, {SinOsc.ar(440+460.rand, 0, 0.03)})}.play;
 
 //Add also different waveforms i.e sawtooth waveforms 
 
