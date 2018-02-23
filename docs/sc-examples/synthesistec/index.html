@@ -13,19 +13,19 @@
     <title>Sound synthesis techniques :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1519406026" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1519406026" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1519410978" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1519410978" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1519406026" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1519410978" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1519406026"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1519410978"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1519406026"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1519406026"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1519410978"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1519410978"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1519406026"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1519410978"></script>
 
     
   </div>
@@ -1007,6 +1007,99 @@ b = Buffer.alloc(s, 512, 1, {| buf | buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
 
 </code></pre>
 
+<h4 id="modulation-synthesis">Modulation synthesis</h4>
+
+<pre><code class="language-js">/*
+Modulation synthesis
+Obective: modulate the frequency,the phase and the amplitude of a simple waveform using other waveforms as the modulators
+*/
+
+/*From Collins Modulation Synthesis Examples
+//Use MouseX and MouseY to control the modulation 
+
+//Ring Modulation
+
+A straight multiplication of two signals. 
+
+carrier * modulator
+*/
+
+{
+var carrier, modulator, carrfreq, modfreq;
+
+carrfreq= MouseX.kr(440,5000,'exponential');
+modfreq= MouseY.kr(1,5000,'exponential');
+
+carrier= SinOsc.ar(carrfreq,0,0.5);
+modulator= SinOsc.ar(modfreq,0,0.5);
+
+carrier*modulator;
+}.scope
+
+
+/*
+AM synthesis
+The modulation is Unipolar
+Always possitive (0, 1)
+SinOsc.ar(440, 0, 0.4) (-0.5, 0.5) bipolar
+SinOsc.ar(440, 0.5, 0.4) (0, 1) unipolar
+*/
+(
+{
+var carrier, modulator, carrfreq, modfreq;
+
+carrfreq= MouseX.kr(440,5000,'exponential');
+modfreq= MouseY.kr(1,5000,'exponential');
+
+carrier= SinOsc.ar(carrfreq,0,0.5);
+modulator= SinOsc.ar(modfreq,0,0.25, 0.25);
+
+carrier*modulator;
+}.scope
+)
+
+
+
+/*
+Fm synthesis (frequency modulation) is a technique of changing the timbre 
+of a waveform by modulating its frequency.
+*/
+
+//Create a window with sliders to control the frequency modulation
+
+(
+var w, carrfreqslider, modfreqslider, moddepthslider, synth;
+
+w=Window(&quot;frequency modulation&quot;, Rect(100, 400, 400, 300));
+w.view.decorator = FlowLayout(w.view.bounds);
+
+synth= {arg carrfreq=440, modfreq=1, moddepth=0.01; 
+SinOsc.ar(carrfreq + (moddepth*SinOsc.ar(modfreq)),0,0.25)
+}.scope;
+
+carrfreqslider= EZSlider(w, 300@50, &quot;carrfreq&quot;, ControlSpec(20, 5000, 'exponential', 10, 440), {|ez|  synth.set(\carrfreq, ez.value)});
+w.view.decorator.nextLine;
+
+modfreqslider= EZSlider(w, 300@50, &quot;modfreq&quot;, ControlSpec(1, 5000, 'exponential', 1, 1), {|ez|  synth.set(\modfreq, ez.value)});
+w.view.decorator.nextLine;
+moddepthslider= EZSlider(w, 300@50, &quot;moddepth&quot;, ControlSpec(0.01, 5000, 'exponential', 0.01, 0.01), {|ez|  synth.set(\moddepth, ez.value)});
+
+w.front;
+)
+
+//Phase Modulation
+(
+{
+var modf, ind;
+
+modf= MouseX.kr(1,440, 'exponential');
+ind=MouseY.kr(0.0,10.0);
+
+SinOsc.ar(440, SinOsc.ar(modf,0,modf*ind),0.25)
+}.scope
+)
+</code></pre>
+
 
 <footer class=" footline" >
 	
@@ -1372,20 +1465,20 @@ b = Buffer.alloc(s, 512, 1, {| buf | buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1519406026"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1519406026"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1519406026"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1519406026"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1519406026"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1519406026"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1519406026"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1519410978"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1519410978"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1519410978"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1519410978"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1519410978"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1519410978"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1519410978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1519406026"></script>
-    <script src="/ac-sc/js/learn.js?1519406026"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1519406026"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1519410978"></script>
+    <script src="/ac-sc/js/learn.js?1519410978"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1519410978"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1519406026" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1519406026"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1519410978" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1519410978"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
