@@ -384,3 +384,4 @@ Von Neumann machines (parallel binary machines)
 
 *Gottfried Michael Koenig* SSP (Sound Synthesis Program)
  
+and more...
