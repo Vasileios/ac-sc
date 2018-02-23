@@ -65,6 +65,62 @@ See more on: JA Laird., 2001. The Physical Modelling of Drums Using Digital Wave
 Instruction:
 Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture), CombL (delay line)
 */
+
+
+///WaveTables
+
+a = Wavetable.sineFill(512, 1.0/[1, 2, 3, 4, 5, 6]);
+a = Wavetable.chebyFill(513, [0, 0, 1]);
+a = Wavetable.chebyFill(513, [0.3, -0.8, 1.1]);
+a = Wavetable.sineFill(512, [0.5]);
+
+a = a.resamp1(256); 
+a = a.as(Signal);
+a = a.asWavetable; 
+// Server side 
+s.boot; 
+b = Buffer.loadCollection(s, a); 
+x = b.play(loop: true); // ok sounds 
+x.free; 
+
+/// more on wavetables
+//load a wavetable and open the collection to a SoundFile
+w = SoundFile.openRead("~/wavetables/WT01.aif".standardizePath); 
+
+
+// Create an array to load the data 
+a = FloatArray.newClear(w.numFrames); 
+w.readData(a); 
+w.close; 
+a.size; 
+
+// resamp the table to have a pow of 2 (bigger to avoid aliassing) 
+// in case of many diff samples choose a bigger pow of 2 is needed
+ 
+a = a.resamp1(256); 
+
+// Convert the array to a Signal 
+a = a.as(Signal); 
+a.size;  
+
+// Convert it to a Wavetable 
+a = a.asWavetable; 
+a.size; //wavetable format is signal.size * 2 
+
+// load the collection into a buffer 
+ 
+b = Buffer.loadCollection(s, a); 
+//play the buffer and loop
+x = b.play(loop: true); 
+x.free; 
+//use Osc interpolating wavetable oscillator. see also VOsc3 and more on Help->UGens>Generators>Deterministic
+//Osc.ar(table, freq, phase, mul, add)
+x = { LPF.ar(Osc.ar(b, MouseX.kr(440, 880)), SampleRate.ir/2-1000) }.play; 
+
+s.freqscope 
+
+x.free; 
+
 //see Ball, TBall, Spring Ugens on Help
 //TBall
 //Example:1 
