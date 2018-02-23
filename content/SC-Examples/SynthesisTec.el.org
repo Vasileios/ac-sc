@@ -95,7 +95,7 @@ w.close;
 a.size; 
 
 // resamp the table to have a pow of 2 (bigger to avoid aliassing) 
-// in case of many diff samples choose a bigger pow of 2 is needed
+// in case of many diff samples choose a bigger pow of 2 
  
 a = a.resamp1(256); 
 
