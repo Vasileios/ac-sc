@@ -44,22 +44,25 @@ FreqScope.new
 
 #+END_SRC
 
-*Physical Modeling*
+**** Physical Modeling*
+
+*Digital waveguide synthesis*
 
 #+BEGIN_SRC js
 
 /*
 BA102002
 Physical Modeling
-Digital waveguide synthesis
+Digital waveguide synthesis: superposition of 2 waves (right going and left going waves) 
 modal synthesis (resonant modes of vibration of acoustic systems)(vibrating systems)
-delay line (Using delays and filters to model the propagation of sound wave)
+delay line (Using delays and filters to model the propagation of sound wave - geometry of the waveguide)
 mass-spring models (signals based on masses and springs)
 
 See more on: JA Laird., 2001. The Physical Modelling of Drums Using Digital Waveguides. University of Bristol
 */
 
 /*
+Instruction:
 Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture), CombL (delay line)
 */
 //see Ball, TBall, Spring Ugens on Help
