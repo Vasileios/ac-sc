@@ -20,7 +20,7 @@ second.
 
 =amplitude= the distance between the top and the bottom of a wave.
 
-=wave superposition= (systems theory) /superposition principle/, is
+=wave superposition= (systems theory) - /superposition principle/, see also Rolling motion,- is
 when a wave traversing the same space with other waves. (the sum of
 the amplitudes of any individual wave) 
 
