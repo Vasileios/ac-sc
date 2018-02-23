@@ -66,7 +66,7 @@ Instruction:
 Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture), CombL (delay line)
 */
 //see Ball, TBall, Spring Ugens on Help
-
+//TBall
 //Example:1 
 // mouse x controls switch of level
 // mouse y controls gravity
