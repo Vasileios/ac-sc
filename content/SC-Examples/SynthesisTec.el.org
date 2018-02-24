@@ -68,7 +68,8 @@ Envelope (sound behaviour - time domain), Impulse (trigger), NoiseGen (texture),
 
 
 ///WaveTables
-
+//Create a table with size 512 and the amplitudes which shape the waveform. Use Sine or Chebyshev polynomial function.
+ 
 a = Wavetable.sineFill(512, 1.0/[1, 2, 3, 4, 5, 6]);
 a = Wavetable.chebyFill(513, [0, 0, 1]);
 a = Wavetable.chebyFill(513, [0.3, -0.8, 1.1]);
