@@ -70,6 +70,19 @@ It is the number of cycles (per second) of a periodic wave.</description>
     </item>
     
     <item>
+      <title>Sound theory basics</title>
+      <link>https://vasileios.github.io/ac-sc/introduction/soundtheory/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/introduction/soundtheory/</guid>
+      <description>chapter 1 Sound maths and physics Simple intercace of a synth
+ source: A waveform (simple or complex) envelope: the shape of the sound intensity i.e attack time (the starting point of an envelope measured in milliseconds),  sustain level(intesity, measured in deciBels)  arguments of a source i.e periodic oscillators
+frequency: (the cycles per second (Hz)),
+phase: starts at 0 means sine, starts at 1 means cosine
+amplitude: the distance between the top and the bottom of a wave.</description>
+    </item>
+    
+    <item>
       <title>Glossary</title>
       <link>https://vasileios.github.io/ac-sc/introduction/glossary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

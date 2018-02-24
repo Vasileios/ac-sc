@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
+    <title>Sound theory basics :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1519489697" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/sc-examples/simplealgorithms/">
+  <body class="" data-url="/ac-sc/introduction/soundtheory/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        
+        parent
         
         
         ">
@@ -387,7 +387,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/soundtheory/" title="Sound theory basics" class="dd-item ">
+      <li data-nav-id="/ac-sc/introduction/soundtheory/" title="Sound theory basics" class="dd-item active">
         <a href="/ac-sc/introduction/soundtheory/">
         Sound theory basics
         
@@ -452,7 +452,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        parent
+        
         
         
         ">
@@ -628,7 +628,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/simplealgorithms/" title="Algorithmic Composition Examples" class="dd-item active">
+      <li data-nav-id="/ac-sc/sc-examples/simplealgorithms/" title="Algorithmic Composition Examples" class="dd-item ">
         <a href="/ac-sc/sc-examples/simplealgorithms/">
         Algorithmic Composition Examples
         
@@ -710,7 +710,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/sc-examples/simplealgorithms/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/introduction/soundtheory/" selected>Ελληνικά</option>
                     
                   
               
@@ -773,7 +773,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Algorithmic Composition Examples
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Sound theory basics
           
          
           
@@ -796,290 +796,60 @@
         
 
 
-<h3 id="chapter-2">chapter 2</h3>
+<h3 id="chapter-1">chapter 1</h3>
 
-<p><strong>Examples with Routines and Loops</strong></p>
+<h4 id="sound-maths-and-physics">Sound maths and physics</h4>
 
-<pre><code class="language-js">(
-/*
-Algorithmic composition paradigms
-BA 181502
-Objective: create a Routine and repeat it n times
-*/
+<p><strong>Simple intercace of a synth</strong></p>
 
-fork{//this alternative syntax goes for Routine
+<ul>
+source: A waveform (simple or complex)
+envelope: the shape of the sound intensity i.e
+<li>attack time (the starting point of an envelope measured in milliseconds), </li>
+<li>sustain level(intesity, measured in deciBels)</li>
+</ul>
 
-10.do({//here goes the repetition (10 times)
+<p>arguments of a source i.e periodic oscillators</p>
 
-a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play;
-4.wait;
-a.release;
-b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
-4.wait;
-b.release;
+<p>frequency: (the cycles per second (Hz)),</p>
 
-});//loop ends here 
-}//fork (Routine) ends here
-)
-</code></pre>
+<p>phase: starts at 0 means sine, starts at 1 means cosine</p>
 
-<p><strong>probability-stochastic</strong></p>
+<p>amplitude: the distance between the top and the bottom of a wave.</p>
 
-<pre><code class="language-js">/* BA 181502
- Stochastic example 1
-Objective: Create two sounds one after the other then free one them (probability), wait a couple of seconds to free also the remain sounds (probability). (Rolling a Dice)
-*/
+<p>To generate a sound in your computer you can do this using
+the SuperCollider environment.</p>
 
-(
-fork{
-	&quot;sound 1&quot;.postln;
-        ~a = {Out.ar(0, SinOsc.ar(440, 0, 0.5))}.play;
-	2.wait;
-	&quot;sound 2&quot;.postln;
-	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
-	6.wait;
+<p>On SuperCollider you can call SinOsc as audio rate which is a sine
+wavetable oscillator.
+SinOsc uses the same implementation as Osc except that its table is
+fixed to be a sine wave made of 8192 samples.</p>
 
-	&quot;dice game&quot;.postln;
-	&quot;one sound is going to 'die'&quot;.postln;
+<p>Example:</p>
 
-	~die = 
-	{
+<pre><code class="language-js">//SuperCollider WorkSpace
 
-	fork{
-	var x = [1,2, 3, 4, 5, 6].choose.postln;
-	if(x&gt;3,{~a.free},{~b.free});
-
-	&quot;sound 1 or sound 2 is dead?&quot;.postln;
-
-	if(x&gt;3, {&quot;sound 1 is dead&quot;.postln},{&quot;sound 2 is dead&quot;.postln});
-	4.wait;
-
-	&quot;free the remain sound_n&quot;.postln;
-	if(~a.isRunning, {~a.free}, {~b.free});
-	if(~b.isRunning, {~b.free}, {~a.free});
-
-
-};//Sub-routine ends here			
-}.value;// ~die ends here	
-};//Routine ends here
-)
-</code></pre>
-
-<p><strong>With complex sounds</strong></p>
-
-<pre><code class="language-js">
-
-
-
-/*
-BA 181502
-Stochastic example 2
-Objective: Create two sounds one after the other, then free one of them and after a while free also the remain sounds using probability. (Rolling a Dice)
-*/
-
-(
-fork{
-	&quot;sound 1&quot;.postln;
-	~a = {Out.ar([0,1], Resonz.ar(SinOsc.ar(
-Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, LFNoise1.kr(20))
-, 440.rand, 0.7)*Saw.ar(XLine.kr(44, 20, 44, 20, 4)).dup)}.play;
-	0.1.wait;
-	~a.postln;
-	4.wait;
-	&quot;sound 2&quot;.postln;
-	~b = {Out.ar([0,1], SinOsc.ar(SinOsc.ar(XLine.kr(10, 1500, 150, 10, 40, 4), 10, XLine.kr(100, 400, 400, 200)), 0, LFNoise1.kr(20)*0.6)*Saw.ar(XLine.kr(44, 20, 440, 20, 4)).dup)}.play;
-	0.1.wait;
-	~b.postln;
-	4.wait;
-
-	&quot;dice game&quot;.postln;
-	&quot;one sound is going to 'die'&quot;.postln;
-
-        ~die = 
-	{
-
-	fork{
-	var x = [1,2, 3, 4, 5, 6].choose.postln;
-	if(x&gt;3,{~a.free},{~b.free});
-
-	&quot;sound 1 or sound 2 is dead?&quot;.postln;
-
-	if(x&gt;3, {&quot;sound 1 is dead&quot;.postln},{&quot;sound 2 is dead&quot;.postln});
-
-        4.wait;
-
-	&quot;free the remain sound_n&quot;.postln;
-
-	if(~a.isRunning, {~a.free}, {~b.free});
-	if(~b.isRunning, {~b.free}, {~a.free});
-
-
-};//Sub-routine ends here						
-}.value;// ~die ends here
-};//Routine ends here
-)
+SinOsc.ar(freq, phase, amplitude)
 
 </code></pre>
 
-<p><strong>Using Patterns</strong></p>
+<p><strong>Simple engineering tools</strong></p>
 
-<p>Scales and Patterns examples</p>
+<ul>
+<li>delay (temporal shift on the order of ms),</li>
+<li>eq (frequency spicific amplifier),</li>
+<li>compressor (automatic gain control)</li>
+</ul>
 
-<pre><code class="language-js">/*
-BA 181602
-Composing music with patterns paradigms
-Objective: Create sound textures while you playing a scale. 
-Synthesis technique: (FM synthesis) 
-*/
+<p>Example SC:</p>
 
-//Midi notation
+<pre><code class="language-js">DelayL.ar(in: 0, maxdelaytime: 0.2, delaytime: 0.2, mul: 1, add: 0)//Simple delay line with linear interpolation
 
-s.boot
+Compander.ar(in: 0, control: 0, thresh: 0.5, slopeBelow: 1, slopeAbove: 1, clampTime: 0.01, relaxTime: 0.1, mul: 1, add: 0)//Compressor, expander, limiter, gate, ducker
 
-(
-SynthDef(\synth01, {|out = 0, gate = 1, freq = 220, amp = 0.4, pan = 0, mod = 440, ind = 1|
-
-	var env, source;
-
-	env = EnvGen.kr(Env.adsr(0.01, 0.4, 0.001, 0.0, 1), gate, doneAction: 2);
-	source = SinOsc.ar(SinOsc.ar(freq.midicps, mod*freq, ind*freq), 0, amp*env);
-	Out.ar(out, source)
-
-//midicps convert MIDI note to cycles per second
-
-}).add;
-
-~pattPm1 = Pseq((60..80)++(79..60)++[\rest], 2);
-
-// Prand((0..14)++(13..0)++[\rest], 2);
-
-~pattPm2  =  Pseq((0..14)++(13..0)++[\rest], 2);
-
-~pattPm3  = Pseq((1..18000), inf);
-
-Pbind(
-	\instrument, \synth01,
-	\freq, Pseq([~pattPm1, ~pattPm2], 2),
-	\dur, 0.25,
-	\mod, ~pattPm3,
-	\ind, ~pattPm3,
-	\amp, Pseq((0.4..0.7), inf)
-).play;
-)
-</code></pre>
-
-<p><strong>Example 2 Patterns</strong></p>
-
-<pre><code class="language-js">/*
-BA 181602
-Composing music with patterns paradigms.
-Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music 
-*/
-
-(
-fork{
-
-~scaleS = Scale.bartok;//experiment with other scales as well. See Scale.directory
-
-
-~pattP = Prand((0..17)++ [\rest] ++ (16..0)++[\rest], inf);
-
-~pattD = Pn(Pgeom(0.25, 1, inf), Pgeom(1, 0.25, inf), inf);
-
-~pattD2 = Pn(Prand([0.025, 0.34, 0.16, 1], inf), Pseq([1, 0.34, 0.56, 0.25], inf), inf);
-
-Pdef(\first_mov1,
- Pbind(\scale, ~scaleS,
-	\degree, ~pattP,
-	\dur, ~pattD)).play;
-
-	&quot;start with Bartok scale&quot;.postln;
-
-	15.wait;
-
-	Pdef(\first_mov1).stop;
-
-	&quot;change to Dorian&quot;.postln;
-
-~scaleS = Scale.dorian;	
-
-Pdef(\first_mov2,
- Pbind(\scale, ~scaleS,
-	\degree, ~pattP,
-	\dur, ~pattD2)).play;
-
-	14.wait;
-	&quot;now both&quot;.postln;
-
-	Pdef(\first_mov1).play;
-
-	3.wait;
-        &quot;8s to close&quot;.postln;
-
-	8.wait;// change this to a bigger number in case you want more
-
-	Pdef(\first_mov1).stop;
-	Pdef(\first_mov2).stop;
-
-	&quot;thats it&quot;.postln;
-};
-)
-</code></pre>
-
-<p><strong>Playing with Patterns more</strong></p>
-
-<pre><code class="language-js">
-
-/*
-BA 181802
-Playing with Patterns Harmony
-Objective: Create Chord progressions
-*/
-s.boot;
-
-//Example with \note notation simple major chords: I-V-IV-V
-(
-~soprano = Pbind(\scale, Scale.major, \note,  Pseq([7, 11, 9, 11], inf)).play;
-
-~alto = Pbind(\scale, Scale.major, \note,  Pseq([0, 7, 5, 7], inf)).play;
-
-~tenor = Pbind(\scale, Scale.major, \note,  Pseq([4, 2, 5, 2], inf)).play;
-
-~bass = Pbind(\scale, Scale.major, \note,  Pseq([0, 7, 0, 7], inf)).play;
-)
-
-//another example free style minor
-//Objective: Create Chord progressions with random delta time
-
-(
-~scalem = Scale.minor;
-~soprano= Pseq([Pseq([5, 2, 1, 7], 1), Pseq([3, 1, 5, 4], 1)], inf).asStream;
-~alto = Pseq([Pseq([3, 11, 9, 7], 1), Pseq([0, 7, 5, 7], 1)], inf).asStream;
-~tenor = Pseq([Pseq([4, 2, 0, 9], 1), Pseq([2, 3, 5,  9], 1)], 1).asStream;
-~bass = Pseq([Pseq([0, 7, 5,  7], 1), Pseq([0, 3, 6,  7], 1)], 1).asStream;
-
-&quot;n movement&quot;.postln;
-
-Pdef(\nmove,
-	Pbind(\scale, ~scalem,
-		\note, Pn([~soprano, ~alto, ~tenor, ~bass], inf),
-		\dur, Pxrand([0.5, 0.75, 1, 2, 0.25, 0.15], inf))).play;
-//play forever
-)
-
-// see also interval ratios i.e I-V-I-V7: 1/1, 3/2 etc.
-
-~bassoContinuo = Pbind(\freq,  Pseq([440, 440*3/2, 440, 440*15/8], inf)).play
-//create the rest voices
-~tenor = ...
-~alto = ...
-~soprano = ...
+BPeakEQ.ar(in, freq: 1200, rq: 1, db: 0, mul: 1, add: 0)//Parametric equalizer
 
 </code></pre>
-
-<p>see more on <em>Streams-Patterns-Events</em></p>
-
-<p><a href="http://doc.sccode.org/Overviews/Streams.html" title="Streams">Streams</a></p>
 
 
 <footer class=" footline" >
@@ -1120,6 +890,20 @@ Pdef(\nmove,
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1130,6 +914,9 @@ Pdef(\nmove,
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -1200,6 +987,26 @@ Pdef(\nmove,
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1227,19 +1034,6 @@ Pdef(\nmove,
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1255,45 +1049,6 @@ Pdef(\nmove,
                     
                     
 
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1412,6 +1167,21 @@ Pdef(\nmove,
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1429,9 +1199,6 @@ Pdef(\nmove,
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -1453,10 +1220,10 @@ Pdef(\nmove,
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/sc-examples/granularsynthesis/" title="Granular Synthesis"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/introduction/notation/" title="Notation"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/sc-examples/synthesistec/" title="Sound synthesis techniques" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/introduction/glossary/" title="Glossary" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

@@ -56,6 +56,13 @@
 	"content": "Chapter 2 SuperCollider examples of Sound Synthesis techniques and Algorithmic Composition.\n"
 },
 {
+	"uri": "https://vasileios.github.io/ac-sc/introduction/soundtheory/",
+	"title": "Sound theory basics",
+	"tags": [],
+	"description": "",
+	"content": "chapter 1 Sound maths and physics Simple intercace of a synth\n source: A waveform (simple or complex) envelope: the shape of the sound intensity i.e attack time (the starting point of an envelope measured in milliseconds),  sustain level(intesity, measured in deciBels)  arguments of a source i.e periodic oscillators\nfrequency: (the cycles per second (Hz)),\nphase: starts at 0 means sine, starts at 1 means cosine\namplitude: the distance between the top and the bottom of a wave.\nTo generate a sound in your computer you can do this using the SuperCollider environment.\nOn SuperCollider you can call SinOsc as audio rate which is a sine wavetable oscillator. SinOsc uses the same implementation as Osc except that its table is fixed to be a sine wave made of 8192 samples.\nExample:\n//SuperCollider WorkSpace SinOsc.ar(freq, phase, amplitude)  Simple engineering tools\n delay (temporal shift on the order of ms), eq (frequency spicific amplifier), compressor (automatic gain control)  Example SC:\nDelayL.ar(in: 0, maxdelaytime: 0.2, delaytime: 0.2, mul: 1, add: 0)//Simple delay line with linear interpolation Compander.ar(in: 0, control: 0, thresh: 0.5, slopeBelow: 1, slopeAbove: 1, clampTime: 0.01, relaxTime: 0.1, mul: 1, add: 0)//Compressor, expander, limiter, gate, ducker BPeakEQ.ar(in, freq: 1200, rq: 1, db: 0, mul: 1, add: 0)//Parametric equalizer  "
+},
+{
 	"uri": "https://vasileios.github.io/ac-sc/introduction/glossary/",
 	"title": "Glossary",
 	"tags": [],
