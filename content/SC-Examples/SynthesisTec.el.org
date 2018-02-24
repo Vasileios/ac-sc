@@ -256,6 +256,7 @@ carrier * modulator
 */
 
 {
+//2009 Collins et al.
 var carrier, modulator, carrfreq, modfreq;
 
 carrfreq= MouseX.kr(440,5000,'exponential');
@@ -277,6 +278,7 @@ SinOsc.ar(440, 0, 0.5, 0.5) (0, 1) unipolar
 */
 (
 {
+//2009 Collins et al.
 var carrier, modulator, carrfreq, modfreq;
 
 carrfreq= MouseX.kr(440,5000,'exponential');
@@ -316,8 +318,25 @@ carrier*modulator;
 Fm synthesis (frequency modulation) is a technique of changing the timbre 
 of a waveform by modulating its frequency.
 */
+(
+var synth;
+synth= {| carrfreq=440, modfreq=1, moddepth=0.01| 
+SinOsc.ar(carrfreq + MouseX.kr(moddepth, 5000, 'exponential')*SinOsc.ar(MouseY.kr(modfreq, 10000, 'exponential')),0,0.25)
+}.scope;
+)
 
-//Create a window with sliders to control the frequency modulation
+
+// control the carrfreq as well
+
+(
+var synth;
+synth= {| carrfreq=440, modfreq=1, moddepth=0.01| 
+SinOsc.ar(MouseX.kr(carrfreq, 10000, 'exponential') + MouseX.kr(moddepth, 5000, 'exponential')*SinOsc.ar(MouseY.kr(modfreq, 10000, 'exponential')),0,0.25)
+}.scope;
+)
+
+
+//Create a window with sliders to control the frequency modulation (Collins 2009 et al. sc_tutorials)
 
 (
 var w, carrfreqslider, modfreqslider, moddepthslider, synth;
@@ -342,6 +361,7 @@ w.front;
 //Phase Modulation
 (
 {
+//2009 Collins et al.
 var modf, ind;
 
 modf= MouseX.kr(1,440, 'exponential');
