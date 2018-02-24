@@ -9,7 +9,7 @@ weight = 10
 
 **** Sound maths and physics
 
-*Simple intercace of a synth*
+*Simple interface of a synth*
 
 source: A waveform (simple or complex)
 envelope: the shape of the sound intensity i.e
@@ -32,12 +32,15 @@ wavetable oscillator.
 SinOsc uses the same implementation as Osc except that its table is
 fixed to be a sine wave made of 8192 samples.
 
-Example:
+Example source and envelope:
 #+BEGIN_SRC js
 //SuperCollider WorkSpace
-
-SinOsc.ar(freq, phase, amplitude)
-
+(
+{
+    var env = Env([0, 1, 0.5, 1, 0], [0.01, 0.5, 0.02, 0.5]);
+    SinOsc.ar(470) * EnvGen.kr(env, doneAction: 2)
+}.play
+)
 #+END_SRC
 
 *Simple engineering tools*
