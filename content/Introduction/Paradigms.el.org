@@ -243,7 +243,7 @@ test" εγείρουν το ζήτημα του ορισμού του όρου "
 
 [[http://www.cleveralgorithms.com/nature-inspired/swarm.html][Αλγόριθμοι ελέγχου]]
 
-[[http://igor.gold.ac.uk/~mas01tb/SwarmMusic/swarmmusic.html%250A][Swarm Music]]
+[[http://igor.gold.ac.uk/~mas01tb/SwarmMusic/swarmmusic.html][Swarm Music]]
 
 [[http://swarms.cc/downloads/][Εκπαιδευτικά σεμινάρια]]
 
