@@ -88,10 +88,10 @@ Musarithmica]] θεωρείται αλγοριθμική σύνθεση σε φ�
 [[http://special.lib.gla.ac.uk/exhibns/month/nov2002.html][δείτε εδω περισσότερα]]
 
 
- *Leibniz (1646-1716)*
+ *Leibnitz (1646-1716)*
 
 
-[[https://upload.wikimedia.org/wikipedia/commons/3/3b/Gottfried_Wilhelm_Leibniz.jpg][Leibniz]]
+[[https://upload.wikimedia.org/wikipedia/commons/3/3b/Gottfried_Wilhelm_Leibniz.jpg][Leibnitz]]
 
 "Καθολική γλώσσα"
 
@@ -218,7 +218,7 @@ Automatic processing of Logical Calculus.
 Ο Hilbert μίλησε για τα μαθηματικά προβλήματα είναι άλυτα και έθεσε
 κάποια απο αυτά όπως να
 αποδειχθει η πληρότητα και μη αντιφατικοτητα των αξιωματων της
-αριθμητικης. 
+αριθμητικης.
 
 The idea that there could be an algorithm being able to decide for any first order logical expression if its statement is true or false.
 
@@ -240,10 +240,10 @@ o Kurt Gödel το 1931 καθόρισε σαφή όρια στις προσπά
 συνεπές.
 
 Αυτά τα αποτελέσματα είχαν μεγάλη επίδραση στη φιλοσοφία των
-μαθηματικών και της λογικής. 
+μαθηματικών και της λογικής.
 
 Παρόλα αυτά, οι επιτυχίες του Hilbert και των
-φορμαλιστών έθεσε τις βασεις για την ανάπτυξη της μαθηματικής λογικής. 
+φορμαλιστών έθεσε τις βασεις για την ανάπτυξη της μαθηματικής λογικής.
 
 *John von Neumann*
 
@@ -365,7 +365,7 @@ Von Neumann machines (parallel binary machines)
 
 *Serialism*
 
-*John Cage* "Reunion" (σκάκι) 
+*John Cage* "Reunion" (σκάκι)
 
 *Edgard Varèse* [[https://www.youtube.com/watch?v=R-R3F3ZVbi8][Poème électronique]] στο Philips Pavilion.
 
@@ -383,5 +383,5 @@ Von Neumann machines (parallel binary machines)
 [[https://www.youtube.com/watch?v=4JZRBZF2scI][Dust]] (1976), More Dust (1977) etc.
 
 *Gottfried Michael Koenig* SSP (Sound Synthesis Program)
- 
+
 and more...
