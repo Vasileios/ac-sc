@@ -13,19 +13,19 @@
     <title>Κλίμακες και Χορδίσματα :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1520201345" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1520201345" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1520201582" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1520201582" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1520201345" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1520201582" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1520201345"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1520201582"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520201345"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520201345"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520201582"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520201582"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1520201345"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1520201582"></script>
 
     
   </div>
@@ -854,13 +854,15 @@ SC-Help: Classes |GUI-&gt;Views-&gt;ScopeView
 
 // A chord with 3 notes (1, 3, 5)
 
-{SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // (1,3M,5) Diatonic tuning
+{SinOsc.ar([440, 440*5/4, 440*3/2])}.scope // (1,3M,5) with Major third
 
 
-{SinOsc.ar([440, 440*6/5, 440*3/2])}.play // (1,3m,5) Minor third 
+{SinOsc.ar([440, 440*6/5, 440*3/2])}.play // (1,3m,5) with Minor third 
 
-{SinOsc,ar([440, 440*5/3])}.scope // magor sixth
+//
+{SinOsc,ar([440, 440*5/3])}.scope // magor sixth internal
 
+//other ratios
 1/1-&gt;unison
 2/1-&gt;octave
 3/2-&gt;perfect fifth
@@ -1693,20 +1695,20 @@ Pbind(\scale,  Scale.major(t), \degree, Pseq((0..7) ++ (6..0) ++ [\rest], 1), \d
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1520201345"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520201345"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520201345"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1520201345"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1520201345"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520201345"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1520201345"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1520201582"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520201582"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520201582"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1520201582"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1520201582"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520201582"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1520201582"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1520201345"></script>
-    <script src="/ac-sc/js/learn.js?1520201345"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1520201345"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1520201582"></script>
+    <script src="/ac-sc/js/learn.js?1520201582"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1520201582"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1520201345" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1520201345"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1520201582" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1520201582"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
