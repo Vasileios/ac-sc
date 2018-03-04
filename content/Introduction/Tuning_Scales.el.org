@@ -74,7 +74,7 @@ SC-Help: Classes |GUI->Views->ScopeView
 {SinOsc.ar([440, 440*6/5, 440*3/2])}.play // (1,3m,5) with Minor third 
 
 //
-{SinOsc,ar([440, 440*5/3])}.scope // magor sixth interval
+{SinOsc,ar([440, 440*5/3])}.scope // major sixth interval
 
 //other ratios
 1/1->unison
