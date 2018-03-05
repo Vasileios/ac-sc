@@ -6,7 +6,7 @@ weight = 9
 
 *** chapter 1
 
-**** SE
+**** SN
 
  *Symbolic notations in SuperCollider*
 
