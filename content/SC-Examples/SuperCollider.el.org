@@ -23,6 +23,14 @@ SuperCollider is a platform for audio synthesis and algorithmic composition, use
 
 **** Variables and Functions
 
+*Variables*
+
+Assign values to variables.
+
+ Data type of variables.
+ data types: integer, float, string, symbol, etc...
+
+#+BEGIN_SRC js
 /*
 180503 Algorithmic Composition
 Variables, functions
@@ -30,9 +38,6 @@ Variables, functions
 */
 Server.default=s=Server.local;
 s.boot;
-//// SuperCollider is not strongly typed so there is no need to declare the data type of variables.
-// (data types (in other languages) include : integer, float, double, string, custom objects, etc...
-
 //Global variables
 //a-z
 a = 10;
@@ -47,17 +52,6 @@ a = [1, 34, 55, 0.1, "string in a list", \symbol, pi]; // or an array with mixed
 a //hit this line to see the container of a
 
 //local variables
-
-(
-//You cant evaluate local variables out of their scope of the brackets or a function.
-var number9;
-
-number9=9;	//sets local vars, NOT global
-
-)
-number9;//error
-
-//outside of the scope of the brackets doesnt work.
 (
 var v, a;
 v = 22;
@@ -67,13 +61,22 @@ a = 33;
 v // hit this line and watch the post window 
 a // hit this line and watch the post window - still our old "a" from above
 
-//~ (tilde) global (Environmental variables) 
+(
+//You cannot evaluate local variables out of their scope of the brackets or a function.
+var number9;
+
+number9=9;//sets local vars, NOT global
+
+)
+number9;//error: this doesnt work outside of the scope of the brackets 
+
+/*
+~ (tilde) global (Environmental variables) 
 An Environment is an IdentityDictionary with additional features that allow it to serve as a 'name space' within which functions can be defined and/or evaluated.
 
-// currentEnvironment.
 The compiler provides a shortcut syntax where ~ is a placeholder for .currentEnvironment. This makes the expression ~myvariable; equivalent to currentEnvironment.at(\myvariable); and the expression ~myvariable = 888; equivalent to currentEnvironment.put(\myvariable, 888);
+*/
 
-#+BEGIN_SRC js
 currentEnvironment; //run this line to the current state of the currentEnvironment
 
 //You use the currentEnvironment via the ~ sign
@@ -88,7 +91,7 @@ currentEnvironment.put(\myvariable, 888);
 
 ~myvariable
 
-
+//environmental variable: sound example
 (
 ~variable1 = {SinOsc.ar(MouseX.kr(400, 800, 1))};
 ~variable2 = {Saw.ar(MouseY.kr(400, 800, 1))};
@@ -103,7 +106,7 @@ currentEnvironment.put(\myvariable, 888);
 currentEnvironment; //run this line to the current state of the currentEnvironment
 #+END_SRC
 
-Functions
+*Functions*
 
 A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.
 
@@ -123,9 +126,11 @@ f = {44.postln};
 
 f.value // to call the function we need to get its .value
 
-////////////////////////////////////////
+
 #+END_SRC
-**** Code examples 
+
+**** General tips 
+
 *Find recordings folder*
 
 #+BEGIN_SRC js

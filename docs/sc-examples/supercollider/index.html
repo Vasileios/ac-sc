@@ -13,19 +13,19 @@
     <title>SuperCollider :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1520249042" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1520249042" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1520250051" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1520250051" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1520249042" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1520250051" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1520249042"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1520250051"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520249042"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520249042"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520250051"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520250051"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1520249042"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1520250051"></script>
 
     
   </div>
@@ -837,57 +837,60 @@
 
 <h4 id="variables-and-functions">Variables and Functions</h4>
 
-<p>/*
-180503 Algorithmic Composition
-Variables, functions</p>
+<p><strong>Variables</strong></p>
 
-<p>*/
+<p>Assign values to variables.</p>
+
+<p>Data type of variables.
+ data types: integer, float, string, symbol, etc...</p>
+
+<pre><code class="language-js">/*
+180503 Algorithmic Composition
+Variables, functions
+
+*/
 Server.default=s=Server.local;
 s.boot;
-//// SuperCollider is not strongly typed so there is no need to declare the data type of variables.
-// (data types (in other languages) include : integer, float, double, string, custom objects, etc...</p>
-
-<p>//Global variables
+//Global variables
 //a-z
 a = 10;
 b = 20;
 c = 0.234521;
-a+b+c;</p>
+a+b+c;
 
-<p>d = "hello";</p>
+d = &quot;hello&quot;;
 
-<p>a = [1, 34, 55, 0.1, "string in a list", \symbol, pi]; // or an array with mixed types</p>
+a = [1, 34, 55, 0.1, &quot;string in a list&quot;, \symbol, pi]; // or an array with mixed types
 
-<p>a //hit this line to see the container of a</p>
+a //hit this line to see the container of a
 
-<p>//local variables</p>
-
-<p>(
-//You cant evaluate local variables out of their scope of the brackets or a function.
-var number9;</p>
-
-<p>number9=9;	//sets local vars, NOT global</p>
-
-<p>)
-number9;//error</p>
-
-<p>//outside of the scope of the brackets doesnt work.
+//local variables
 (
 var v, a;
 v = 22;
 a = 33;
-)</p>
+)
 
-<p>v // hit this line and watch the post window 
-a // hit this line and watch the post window - still our old "a" from above</p>
+v // hit this line and watch the post window 
+a // hit this line and watch the post window - still our old &quot;a&quot; from above
 
-<p>//~ (tilde) global (Environmental variables) 
-An Environment is an IdentityDictionary with additional features that allow it to serve as a 'name space' within which functions can be defined and/or evaluated.</p>
+(
+//You cannot evaluate local variables out of their scope of the brackets or a function.
+var number9;
 
-<p>// currentEnvironment.
-The compiler provides a shortcut syntax where ~ is a placeholder for .currentEnvironment. This makes the expression ~myvariable; equivalent to currentEnvironment.at(\myvariable); and the expression ~myvariable = 888; equivalent to currentEnvironment.put(\myvariable, 888);</p>
+number9=9;//sets local vars, NOT global
 
-<pre><code class="language-js">currentEnvironment; //run this line to the current state of the currentEnvironment
+)
+number9;//error: this doesnt work outside of the scope of the brackets 
+
+/*
+~ (tilde) global (Environmental variables) 
+An Environment is an IdentityDictionary with additional features that allow it to serve as a 'name space' within which functions can be defined and/or evaluated.
+
+The compiler provides a shortcut syntax where ~ is a placeholder for .currentEnvironment. This makes the expression ~myvariable; equivalent to currentEnvironment.at(\myvariable); and the expression ~myvariable = 888; equivalent to currentEnvironment.put(\myvariable, 888);
+*/
+
+currentEnvironment; //run this line to the current state of the currentEnvironment
 
 //You use the currentEnvironment via the ~ sign
 
@@ -901,7 +904,7 @@ currentEnvironment.put(\myvariable, 888);
 
 ~myvariable
 
-
+//environmental variable: sound example
 (
 ~variable1 = {SinOsc.ar(MouseX.kr(400, 800, 1))};
 ~variable2 = {Saw.ar(MouseY.kr(400, 800, 1))};
@@ -916,7 +919,7 @@ currentEnvironment.put(\myvariable, 888);
 currentEnvironment; //run this line to the current state of the currentEnvironment
 </code></pre>
 
-<p>Functions</p>
+<p><strong>Functions</strong></p>
 
 <p>A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.</p>
 
@@ -936,10 +939,10 @@ f = {44.postln};
 
 f.value // to call the function we need to get its .value
 
-////////////////////////////////////////
+
 </code></pre>
 
-<h4 id="code-examples">Code examples</h4>
+<h4 id="general-tips">General tips</h4>
 
 <p><strong>Find recordings folder</strong></p>
 
@@ -1442,20 +1445,20 @@ To be continued...
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1520249042"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520249042"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520249042"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1520249042"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1520249042"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520249042"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1520249042"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1520250051"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520250051"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520250051"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1520250051"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1520250051"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520250051"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1520250051"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1520249042"></script>
-    <script src="/ac-sc/js/learn.js?1520249042"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1520249042"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1520250051"></script>
+    <script src="/ac-sc/js/learn.js?1520250051"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1520250051"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1520249042" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1520249042"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1520250051" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1520250051"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
