@@ -27,8 +27,7 @@ SuperCollider is a platform for audio synthesis and algorithmic composition, use
 
 Assign values to variables.
 
- Data type of variables.
- data types: integer, float, string, symbol, etc...
+ Data type of variables: integer, float, string, symbol, etc...
 
 #+BEGIN_SRC js
 /*
