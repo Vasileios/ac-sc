@@ -21,7 +21,30 @@ SuperCollider is a platform for audio synthesis and algorithmic composition, use
 - *sclang*, an interpreted programming language. It is focused on sound, but not limited to any specific domain. sclang controls scsynth via Open Sound Control. You can use it for algorithmic composition and sequencing, finding new sound synthesis methods, connecting your app to external hardware including MIDI controllers, network music, writing GUIs and visual displays, or for your daily programming experiments. It has a stock of user-contributed extensions called Quarks.
 - *scide* is an editor for sclang with an integrated help system.
 
-**** Variables and Functions
+**** Functions, arguments,  variables
+
+*Functions*
+
+A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.
+
+#+BEGIN_SRC js
+
+// Functions in SuperCollider are within curly brackets {}
+
+{ arg a, b, c;  var d;   d = a * b; c + d }
+
+//When evaluated, the function returns the value of its expression.
+
+f = { arg a, b; a + b };
+f.value(4, 5).postln;
+f.value(10, 200).postln;
+
+f = {44.postln};
+
+f.value // to call the function we need to get its .value
+
+
+#+END_SRC
 
 *Variables*
 
@@ -103,29 +126,6 @@ currentEnvironment.put(\myvariable, 888);
 )
 
 currentEnvironment; //run this line to the current state of the currentEnvironment
-#+END_SRC
-
-*Functions*
-
-A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.
-
-#+BEGIN_SRC js
-
-// Functions in SuperCollider are within curly brackets {}
-
-{ arg a, b, c;  var d;   d = a * b; c + d }
-
-//When evaluated, the function returns the value of its expression.
-
-f = { arg a, b; a + b };
-f.value(4, 5).postln;
-f.value(10, 200).postln;
-
-f = {44.postln};
-
-f.value // to call the function we need to get its .value
-
-
 #+END_SRC
 
 **** General tips 

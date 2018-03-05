@@ -13,19 +13,19 @@
     <title>SuperCollider :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1520250140" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1520250140" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1520251545" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1520251545" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1520250140" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1520251545" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1520250140"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1520251545"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520250140"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520250140"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520251545"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520251545"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1520250140"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1520251545"></script>
 
     
   </div>
@@ -835,7 +835,30 @@
 <li><strong>scide</strong> is an editor for sclang with an integrated help system.</li>
 </ul>
 
-<h4 id="variables-and-functions">Variables and Functions</h4>
+<h4 id="functions-arguments-variables">Functions, arguments,  variables</h4>
+
+<p><strong>Functions</strong></p>
+
+<p>A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.</p>
+
+<pre><code class="language-js">
+
+// Functions in SuperCollider are within curly brackets {}
+
+{ arg a, b, c;  var d;   d = a * b; c + d }
+
+//When evaluated, the function returns the value of its expression.
+
+f = { arg a, b; a + b };
+f.value(4, 5).postln;
+f.value(10, 200).postln;
+
+f = {44.postln};
+
+f.value // to call the function we need to get its .value
+
+
+</code></pre>
 
 <p><strong>Variables</strong></p>
 
@@ -916,29 +939,6 @@ currentEnvironment.put(\myvariable, 888);
 )
 
 currentEnvironment; //run this line to the current state of the currentEnvironment
-</code></pre>
-
-<p><strong>Functions</strong></p>
-
-<p>A Function is an expression which defines operations to be performed when it is sent the value message. In functional languages, a function would be known as a lambda expression. Function definitions are enclosed in curly brackets {}. Argument declarations, if any, follow the open bracket. Variable declarations follow argument declarations. An expression follows the declarations.</p>
-
-<pre><code class="language-js">
-
-// Functions in SuperCollider are within curly brackets {}
-
-{ arg a, b, c;  var d;   d = a * b; c + d }
-
-//When evaluated, the function returns the value of its expression.
-
-f = { arg a, b; a + b };
-f.value(4, 5).postln;
-f.value(10, 200).postln;
-
-f = {44.postln};
-
-f.value // to call the function we need to get its .value
-
-
 </code></pre>
 
 <h4 id="general-tips">General tips</h4>
@@ -1444,20 +1444,20 @@ To be continued...
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1520250140"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520250140"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520250140"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1520250140"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1520250140"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520250140"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1520250140"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1520251545"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520251545"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520251545"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1520251545"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1520251545"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520251545"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1520251545"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1520250140"></script>
-    <script src="/ac-sc/js/learn.js?1520250140"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1520250140"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1520251545"></script>
+    <script src="/ac-sc/js/learn.js?1520251545"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1520251545"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1520250140" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1520250140"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1520251545" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1520251545"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
