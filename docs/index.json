@@ -46,7 +46,7 @@
 	"title": "Logical Expressions",
 	"tags": [],
 	"description": "",
-	"content": "chapter 1 SE Symbolic Expressions in SuperCollider\nLogical/boolean expressions =true or false= 10==10 // equal to =\u0026gt;true... 10 !=15 // not equal to 10\u0026gt;5 // greater than 10\u0026lt;14 // less than 10 \u0026gt;= 10 // greater than or equal to 10 \u0026lt;= 10 // lees than or equal to 11.odd // it is odd 10.even // it is even 10.isInteger // it is integer 10.129.isFloat // it is float 1.odd.and(2.even) // both conditions 1.odd.or(1.even) // either condition  see more here\n"
+	"content": "chapter 1 SE Symbolic notations in SuperCollider\nLogical/boolean notations =true or false= 10==10 // equal to =\u0026gt;true... 10 !=15 // not equal to 10\u0026gt;5 // greater than 10\u0026lt;14 // less than 10 \u0026gt;= 10 // greater than or equal to 10 \u0026lt;= 10 // lees than or equal to 11.odd // it is odd 10.even // it is even 10.isInteger // it is integer 10.129.isFloat // it is float 1.odd.and(2.even) // both conditions 1.odd.or(1.even) // either condition  see more here\n"
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/sc-examples/",

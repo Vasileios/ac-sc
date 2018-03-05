@@ -8,11 +8,11 @@ weight = 9
 
 **** SE
 
- *Symbolic Expressions in SuperCollider*
+ *Symbolic notations in SuperCollider*
 
 #+BEGIN_SRC js
 
-Logical/boolean expressions
+Logical/boolean notations
 
 =true or false=
 
