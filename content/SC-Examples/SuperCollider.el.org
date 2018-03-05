@@ -46,6 +46,16 @@ f.value // to call the function we need to get its .value
 
 #+END_SRC
 
+*Arguments*
+
+An argument list immediately follows the open curly bracket of a
+function definition. An argument list either begins with the reserved
+word arg, or is contained between two vertical bars.
+
+"arg" style: { arg x = 1; .... } 
+
+Pipe style: { |x = 1| ... } 
+
 *Variables*
 
 Assign values to variables.
