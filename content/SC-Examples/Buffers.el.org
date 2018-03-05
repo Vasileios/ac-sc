@@ -23,11 +23,13 @@ Allocate a buffer and immediately read a soundfile into it.
 
 // read sound
 b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
-
-{ SinOsc.ar(800 + (700 * PlayBuf.ar(1,b, BufRateScale.kr(b),  loop:1)),0,0.3) }.scope(1);
-
 // loop is true
 { PlayBuf.ar(1,b, BufRateScale.kr(b), loop:1) }.scope(1);
+
+
+//add a Sine oscillator
+
+{ SinOsc.ar(800 + (700 * PlayBuf.ar(1,b, BufRateScale.kr(b),  loop:1)),0,0.3) }.scope(1);
 
 #+END_SRC
 
