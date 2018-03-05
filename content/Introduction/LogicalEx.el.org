@@ -6,13 +6,13 @@ weight = 9
 
 *** chapter 1
 
-**** LE
+**** SE
 
-*Logical Expressions in SuperCollider*
+ *Symbolic Expressions in SuperCollider*
 
 #+BEGIN_SRC js
 
-Logical expressions
+Logical/boolean expressions
 
 =true or false=
 
@@ -30,3 +30,5 @@ Logical expressions
 1.odd.or(1.even) // either condition
 
 #+END_SRC
+
+see more [[http://danielnouri.org/docs/SuperColliderHelp/Language/SymbolicNotations.html][here]]
