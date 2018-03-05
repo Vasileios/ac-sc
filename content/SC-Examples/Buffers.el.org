@@ -62,7 +62,31 @@ x = Synth(\bufferC, [\out, 0, \bufnum, buffer.bufnum, \rate, 0.5]);
 
 #+END_SRC
 
+//another example
 
+#+BEGIN_SRC js
+
+
+(
+
+p =  Platform.resourceDir +/+ "sounds/a11wlk01.wav";
+b = Buffer.read(s, p);
+
+SynthDef(\bufferC,{ | out=0,bufnum=0, rate=1, trigger=1, startPos=0, loop=1|
+	Out.ar(out,
+		Pan2.ar(PlayBuf.ar(1,bufnum, BufRateScale.kr(bufnum)*rate, trigger, BufFrames.ir(bufnum)*startPos, loop),0.0)
+	)
+}).send(s); 
+)
+
+
+Synth(\bufferC, [\out, 0, \bufnum, b.bufnum]);
+ 
+ //play at half rate
+Synth(\bufferC, [\out, 0, \bufnum, b.bufnum, \rate, 0.5]);
+
+
+#+END_SRC
 Example with GUI
 
 #+BEGIN_SRC js
@@ -70,7 +94,7 @@ Example with GUI
 (
 var w, rateslid, trigslid, startposslid, loopslid, a; 
 
-a=Synth(\playbuf, [\out, 0, \bufnum, b.bufnum]);
+a=Synth(\bufferC, [\out, 0, \bufnum, b.bufnum]);
 
 w=Window("PlayBuf Example",Rect(10,200,300,150));
 

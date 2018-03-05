@@ -13,19 +13,19 @@
     <title>Buffers :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1520251724" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1520251724" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1520252302" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1520252302" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1520251724" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1520252302" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1520251724"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1520252302"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520251724"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520251724"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520252302"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520252302"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1520251724"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1520252302"></script>
 
     
   </div>
@@ -870,13 +870,39 @@ x = Synth(\bufferC, [\out, 0, \bufnum, buffer.bufnum, \rate, 0.5]);
 
 </code></pre>
 
+<p>//another example</p>
+
+<pre><code class="language-js">
+
+
+(
+
+p =  Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;;
+b = Buffer.read(s, p);
+
+SynthDef(\bufferC,{ | out=0,bufnum=0, rate=1, trigger=1, startPos=0, loop=1|
+	Out.ar(out,
+		Pan2.ar(PlayBuf.ar(1,bufnum, BufRateScale.kr(bufnum)*rate, trigger, BufFrames.ir(bufnum)*startPos, loop),0.0)
+	)
+}).send(s); 
+)
+
+
+Synth(\bufferC, [\out, 0, \bufnum, b.bufnum]);
+
+ //play at half rate
+Synth(\bufferC, [\out, 0, \bufnum, b.bufnum, \rate, 0.5]);
+
+
+</code></pre>
+
 <p>Example with GUI</p>
 
 <pre><code class="language-js">//Example with GUI controlling Synth 
 (
 var w, rateslid, trigslid, startposslid, loopslid, a; 
 
-a=Synth(\playbuf, [\out, 0, \bufnum, b.bufnum]);
+a=Synth(\bufferC, [\out, 0, \bufnum, b.bufnum]);
 
 w=Window(&quot;PlayBuf Example&quot;,Rect(10,200,300,150));
 
@@ -1302,20 +1328,20 @@ w.onClose_({a.free;});
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1520251724"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520251724"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520251724"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1520251724"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1520251724"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520251724"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1520251724"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1520252302"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520252302"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520252302"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1520252302"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1520252302"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520252302"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1520252302"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1520251724"></script>
-    <script src="/ac-sc/js/learn.js?1520251724"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1520251724"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1520252302"></script>
+    <script src="/ac-sc/js/learn.js?1520252302"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1520252302"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1520251724" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1520251724"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1520252302" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1520252302"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
