@@ -52,17 +52,3 @@ DelayN.ar(z, 0.1, 0.1, 1, z); // input is mixed with delay via the add input
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/400, 1/400, 3) }.scope(1, zoom:4);
 
 //etc
-
-//PlayBuf - buffer playback
-//arguments: numChannels, buffer number, rate, trigger, start pos, loop
-
-// read sound
-b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
-
-{ SinOsc.ar(800 + (700 * PlayBuf.ar(1,b, BufRateScale.kr(b),  loop:1)),0,0.3) }.scope(1);
-
-// loop is true
-{ PlayBuf.ar(1,b, BufRateScale.kr(b), loop:1) }.scope(1);
-
-#+END_SRC
-

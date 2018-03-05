@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
 
-    <title>Notation :: Αλγοριθμική Σύνθεση</title>
+    <title>Buffers :: Αλγοριθμική Σύνθεση</title>
     
     
     <link href="/ac-sc/css/nucleus.css?1520248101" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/ac-sc/introduction/notation/">
+  <body class="" data-url="/ac-sc/sc-examples/buffers/">
     <nav id="sidebar" class="">
 
 
@@ -268,7 +268,7 @@
   
     
     <li data-nav-id="/ac-sc/introduction/" title="Εισαγωγή" class="dd-item 
-        parent
+        
         
         
         ">
@@ -387,7 +387,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/introduction/notation/" title="Notation" class="dd-item active">
+      <li data-nav-id="/ac-sc/introduction/notation/" title="Notation" class="dd-item ">
         <a href="/ac-sc/introduction/notation/">
         Notation
         
@@ -452,7 +452,7 @@
   
     
     <li data-nav-id="/ac-sc/sc-examples/" title="Code Examples" class="dd-item 
-        
+        parent
         
         
         ">
@@ -590,7 +590,7 @@
  
   
     
-      <li data-nav-id="/ac-sc/sc-examples/buffers/" title="Buffers" class="dd-item ">
+      <li data-nav-id="/ac-sc/sc-examples/buffers/" title="Buffers" class="dd-item active">
         <a href="/ac-sc/sc-examples/buffers/">
         Buffers
         
@@ -729,7 +729,7 @@
                   
                     
                     
-                      <option id="el" value="/ac-sc/introduction/notation/" selected>Ελληνικά</option>
+                      <option id="el" value="/ac-sc/sc-examples/buffers/" selected>Ελληνικά</option>
                     
                   
               
@@ -792,7 +792,7 @@
             
           
           
-            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/introduction/'>Εισαγωγή</a> > Notation
+            <a href='/ac-sc/'>Αλγοριθμική Σύνθεση</a> > <a href='/ac-sc/sc-examples/'>Code Examples</a> > Buffers
           
          
           
@@ -815,44 +815,90 @@
         
 
 
-<h3 id="chapter-1">chapter 1</h3>
+<h3 id="chapter-2">chapter 2</h3>
 
-<h4 id="notation">Notation</h4>
+<h4 id="buffers-playback">Buffers/playback</h4>
 
-<p><strong>MIDI</strong></p>
+<p>Buffers and Sound Files</p>
 
-<p>The lowest note musicians use is C-1, which has the MIDI number 0. The
-number 12 = C0, 24 = C1, 36 = C2, 48 = C3, 60 = C4 (which is middle C
-on the piano, remember this one), and so on. A 440 is above middle C
-so it is 69.</p>
+<p>To do sample playback and manipulation, for streaming files off disk, for recording and wavetables and many other processes, it is necessary to handle memory buffers on the Server.</p>
 
-<p>60, 62, 63, 60, 66</p>
+<p>Buffer
+read (server, path, startFrame: 0, numFrames: -1, action, bufnum)
+Allocate a buffer and immediately read a soundfile into it.</p>
 
-<p><strong>Frequencies</strong></p>
+<pre><code class="language-js">//PlayBuf - buffer playback
+//arguments: numChannels, buffer number, rate, trigger, start pos, loop
 
-<p>It is the number of cycles (per second) of a periodic wave.</p>
+// read sound
+b = Buffer.read(s, Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;);
 
-<p>0-20000Hz</p>
+{ SinOsc.ar(800 + (700 * PlayBuf.ar(1,b, BufRateScale.kr(b),  loop:1)),0,0.3) }.scope(1);
 
-<p>261.62, 293.66, 311.13, 261.62, 370;</p>
+// loop is true
+{ PlayBuf.ar(1,b, BufRateScale.kr(b), loop:1) }.scope(1);
 
-<p><strong>Hexadecimal</strong></p>
+</code></pre>
 
-<p>16 symbols</p>
+<p>//Use of local variables inside scope</p>
 
-<p>(0-9, A-F)</p>
+<pre><code class="language-js">//another way to read and play a sound
+(
 
-<p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</p>
+	var path, buffer;
 
-<p>0000003C, 0000003E, 0000003F, 0000003C, 00000042</p>
+	path = &quot;/Users/vasilis/Documents/Projects/My_Lectures/AVARTS/SCCode/sounds/pianosample1.wav&quot;;
 
-<p><strong>Binary</strong></p>
+	buffer = Buffer.read(s, path);
 
-<p>00111100, 00111110, 00111111, 00111100 01000010</p>
 
-<p><strong>Pitch class method</strong></p>
 
-<p>C4, D4, Eb4, C4, F#4</p>
+ SynthDef(\bufferC, { | out = 0, bufnum|
+    Out.ar( out,
+        PlayBuf.ar(1, bufnum, BufRateScale.kr(bufnum), loop:1.0)
+  )
+}).add;
+
+	x = Synth(\bufferC, [\out, 0, \bufnum, buffer]);
+
+ //play at half rate
+x = Synth(\bufferC, [\out, 0, \bufnum, buffer.bufnum, \rate, 0.5]);
+
+)
+
+</code></pre>
+
+<p>Example with GUI</p>
+
+<pre><code class="language-js">//Example with GUI controlling Synth 
+(
+var w, rateslid, trigslid, startposslid, loopslid, a; 
+
+a=Synth(\playbuf, [\out, 0, \bufnum, b.bufnum]);
+
+w=Window(&quot;PlayBuf Example&quot;,Rect(10,200,300,150));
+
+w.front;
+
+//control positioning of new GUI elements so I don't have to think too hard about it
+w.view.decorator= FlowLayout(w.view.bounds);
+
+//James' shortcut slider class
+//100@24 means a Point of size 100 by 24
+//|ez| is the same as arg ez;  - the slider object is being passed into the callback action function
+rateslid= EZSlider(w, 250@24, &quot;Rate&quot;, ControlSpec(0.5, 10, 'exponential', 0.1), {|ez| a.set(\rate,ez.value)}, 1);
+
+trigslid= EZSlider(w, 250@24, &quot;Trigger&quot;, ControlSpec(0, 1, 'lin', 1), {|ez| a.set(\trigger,ez.value)}, 1);
+
+startposslid= EZSlider(w, 250@24, &quot;StartPos&quot;, ControlSpec(0.0, 1.0, 'lin', 0.01), {|ez| a.set(\startPos,ez.value)}, 0);
+
+loopslid= EZSlider(w, 250@24, &quot;Loop&quot;, ControlSpec(0, 1, 'lin', 0.1), {|ez| a.set(\loop,ez.value)}, 1);
+
+w.onClose_({a.free;});
+)
+
+
+</code></pre>
 
 
 <footer class=" footline" >
@@ -893,157 +939,8 @@ so it is 69.</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1181,6 +1078,158 @@ so it is 69.</p>
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1239,10 +1288,10 @@ so it is 69.</p>
 
 
         
-            <a class="nav nav-prev" href="/ac-sc/introduction/logicalex/" title="Logical Expressions"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/ac-sc/sc-examples/delays/" title="Delays"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/ac-sc/introduction/glossary/" title="Glossary" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/ac-sc/sc-examples/spectral/" title="Spectral" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

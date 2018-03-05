@@ -166,7 +166,19 @@ SuperCollider features three major components
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/delays/</guid>
-      <description>chapter 2 SuperCollider Delays //Delays and Buffer UGens DelayN, DelayL, DelayC - simple delays N - no interpolation L - linear interpolation C - cubic interpolation arguments: in, maximum delay time, current delay time, mul, add ( // Dust randomly triggers Decay to create an exponential // decay envelope for the WhiteNoise input source { z = Decay.ar(Dust.ar(1,0.5), 0.3, WhiteNoise.ar); DelayN.ar(z, 0.1, 0.1, 1, z); // input is mixed with delay via the add input }.</description>
+      <description>chapter 2 SuperCollider Delays </description>
+    </item>
+    
+    <item>
+      <title>Buffers</title>
+      <link>https://vasileios.github.io/ac-sc/sc-examples/buffers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://vasileios.github.io/ac-sc/sc-examples/buffers/</guid>
+      <description>chapter 2 Buffers/playback Buffers and Sound Files
+To do sample playback and manipulation, for streaming files off disk, for recording and wavetables and many other processes, it is necessary to handle memory buffers on the Server.
+Buffer read (server, path, startFrame: 0, numFrames: -1, action, bufnum) Allocate a buffer and immediately read a soundfile into it.
+//PlayBuf - buffer playback //arguments: numChannels, buffer number, rate, trigger, start pos, loop // read sound b = Buffer.</description>
     </item>
     
     <item>
