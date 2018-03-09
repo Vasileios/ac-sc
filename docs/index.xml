@@ -188,7 +188,7 @@ Buffer read (server, path, startFrame: 0, numFrames: -1, action, bufnum) Allocat
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/spectral/</guid>
       <description>chapter 2 SuperCollider Spectral FFT-PV_Ugens
-FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, puts it into a buffer, and outputs a trigger each time the buffer is ready to process. The PV UGens process the spectrum when they receive the trigger. IFFT converts the spectrum back into sound.
+FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, puts it into a buffer, and outputs a trigger each time the buffer is ready to process. The PV (Phase Vocoder) UGens process the spectrum when they receive the trigger. IFFT converts the spectrum back into sound.
 // alloc a buffer for the FFT b = Buffer.alloc(s,2048,1); // read a sound c = Buffer.</description>
     </item>
     
@@ -218,7 +218,11 @@ FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/synthesistec/</guid>
-      <description>chapter 2 Additive synthesis /* Sound Synthesis techniques BA 181902 Objective: create complex sounds using additive synthesis technique // Additive Synthesis a+b+c+d where a to d can be frequencies or any other object such as a waveform */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.internal; s.boot Stethoscope.new FreqScope.new //create harmonics of a 440Hz A note {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.</description>
+      <description>chapter 2 Spectral
+ Additive Phase Vocoder FFT  Abstract
+ FM Waveshaping  Sampling
+ Sampling Granular  Physical
+ Modal Waveguide  Additive synthesis /* Sound Synthesis techniques BA 181902 Objective: create complex sounds using additive synthesis technique // Additive Synthesis a+b+c+d where a to d can be frequencies or any other object such as a waveform */ // firts boot the internal server and open Freqscope and Stethoscope s = Server.</description>
     </item>
     
   </channel>
