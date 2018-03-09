@@ -13,19 +13,19 @@
     <title>Sound synthesis techniques :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1520594429" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1520594429" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1520595027" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1520595027" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1520594429" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1520595027" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1520594429"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1520595027"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520594429"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520594429"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1520595027"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1520595027"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1520594429"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1520595027"></script>
 
     
   </div>
@@ -923,6 +923,8 @@ c = Buffer.read(s, Platform.resourceDir +/+ &quot;sounds/a11wlk01.wav&quot;);
 
 <h4 id="modulation-synthesis">Modulation synthesis</h4>
 
+<p>FM synthesis (frequency modulation) is a fundamental digital sound synthesis technique employing a nonlinear oscillating function. The theory of FM was well established by the mid-twentieth century for radio frequencies. The use of FM in audio frequencies for the purpose of sound synthesis was not studied until late 60's. John Chowing at Stanford University was the first to study systematically FM synthesis. Chowing observed that complex audio spectra can be achieved with just two sinusoidal oscillators (Tolonen et al. 1998).</p>
+
 <pre><code class="language-js">
 
 /*
@@ -1055,6 +1057,74 @@ ind=MouseY.kr(0.0,10.0);
 SinOsc.ar(440, SinOsc.ar(modf,0,modf*ind),0.25)
 }.scope
 )
+</code></pre>
+
+<h4 id="waveshaping-synthesis">Waveshaping synthesis</h4>
+
+<p><strong>Waveshaping synthesis - nonlinear distortion</strong></p>
+
+<p>Waveshaping synthesis is a simple sound synthesis method using a
+nonlinear shaping function to modify the input signal (Tolonen et
+al. 1998)</p>
+
+<pre><code class="language-js">/*
+BA 182202
+Waveshaping examples
+Objective: create a wavetable and shape the waveform
+*/
+
+s.boot;
+//Fill this buffer with a series of Chebyshev polynomials, see more on Help-&gt;Buffer
+b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300, 0, Line.kr(0,1,6)+Saw.ar(304, Line.kr(0, 1, 6))),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
+
+//another example with sine wave series
+//Fill this buffer with a series of sine wave partials using specified frequencies, amplitudes, and initial phases.
+b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
+//see also sine2 and 3
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15)+Saw.ar(304+30.7.rand, LFNoise2.kr(0.15))),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
+
+//another example
+
+b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
+//check also with other tables.
+//Combine tables
+//b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
+//b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
+
+(
+{
+    Shaper.ar(
+        b,
+        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15.rand)+Saw.ar(304+307.rand, LFNoise2.kr(0.15.rand)))+PinkNoise.ar(0.1.rand),
+        0.5
+    )
+}.scope;
+)
+
+b.free;
 </code></pre>
 
 <h4 id="sampling">Sampling</h4>
@@ -1239,72 +1309,6 @@ x.free;
 }.play;
 )
 
-</code></pre>
-
-<p><strong>Waveshaping synthesis - nonlinear distortion</strong></p>
-
-<p>Waveshaping synthesis is a simple sound synthesis method using a
-nonlinear shaping function to modify the input signal (Tolonen et
-al. 1998)</p>
-
-<pre><code class="language-js">/*
-BA 182202
-Waveshaping examples
-Objective: create a wavetable and shape the waveform
-*/
-
-s.boot;
-//Fill this buffer with a series of Chebyshev polynomials, see more on Help-&gt;Buffer
-b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
-
-(
-{
-    Shaper.ar(
-        b,
-        SinOsc.ar(300, 0, Line.kr(0,1,6)+Saw.ar(304, Line.kr(0, 1, 6))),
-        0.5
-    )
-}.scope;
-)
-
-b.free;
-
-//another example with sine wave series
-//Fill this buffer with a series of sine wave partials using specified frequencies, amplitudes, and initial phases.
-b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
-//see also sine2 and 3
-
-(
-{
-    Shaper.ar(
-        b,
-        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15)+Saw.ar(304+30.7.rand, LFNoise2.kr(0.15))),
-        0.5
-    )
-}.scope;
-)
-
-b.free;
-
-//another example
-
-b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
-//check also with other tables.
-//Combine tables
-//b = Buffer.alloc(s, 512, 1, { |buf| buf.chebyMsg([1,0,1,1,0,1])});
-//b = Buffer.alloc(s, 512, 1, { |buf| buf.sine1Msg([1,0,1,1,0,1])});
-
-(
-{
-    Shaper.ar(
-        b,
-        SinOsc.ar(300+305.rand, 0, LFNoise2.kr(0+0.15.rand)+Saw.ar(304+307.rand, LFNoise2.kr(0.15.rand)))+PinkNoise.ar(0.1.rand),
-        0.5
-    )
-}.scope;
-)
-
-b.free;
 </code></pre>
 
 <p><strong>Creating textures with wavetables</strong></p>
@@ -1724,20 +1728,20 @@ b = Buffer.alloc(s, 512, 1, {| buf | buf.sine1Msg(1.0/[1,2,3,4,5,6,7,8,9,10])});
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1520594429"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520594429"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520594429"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1520594429"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1520594429"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520594429"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1520594429"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1520595027"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1520595027"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1520595027"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1520595027"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1520595027"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1520595027"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1520595027"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1520594429"></script>
-    <script src="/ac-sc/js/learn.js?1520594429"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1520594429"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1520595027"></script>
+    <script src="/ac-sc/js/learn.js?1520595027"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1520595027"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1520594429" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1520594429"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1520595027" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1520595027"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
