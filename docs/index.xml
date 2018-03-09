@@ -218,7 +218,7 @@ FFT, IFFT and the phase vocoder ugens. FFT calculates the spectrum of a sound, p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://vasileios.github.io/ac-sc/sc-examples/synthesistec/</guid>
-      <description>chapter 2 Spectral
+      <description>chapter 2 Sound synthesis techniques-methods Spectral
  Additive Phase Vocoder FFT  Abstract
  FM Waveshaping  Sampling
  Sampling Granular  Physical
