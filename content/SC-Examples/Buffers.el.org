@@ -41,7 +41,7 @@ b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
 
 	var path, buffer;
 
-	path = "/Users/vasilis/Documents/Projects/My_Lectures/AVARTS/SCCode/sounds/pianosample1.wav";
+	path = Platform.resourceDir +/+ "sounds/a11wlk01.wav";
 	
 	buffer = Buffer.read(s, path);
 
