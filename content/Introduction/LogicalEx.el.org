@@ -8,11 +8,11 @@ weight = 9
 
 **** SN
 
- *Symbolic notations in SuperCollider*
+ *Symbolic notations in SuperCollider Supercollider Book*
 
 #+BEGIN_SRC js
 
-Logical/boolean notations
+// Logical/boolean notations/Expressions
 
 =true or false=
 
@@ -30,5 +30,14 @@ Logical/boolean notations
 1.odd.or(1.even) // either condition
 
 #+END_SRC
+
+
+examples
+
+#+BEGIN_SRC js
+if(10==10, {"10 is equal to 10"}, {"false"});
+if((1<20).and(1.isInteger), {"1 is less than 20"}, {"false"});
+#+END_SRC
+
 
 see more [[http://danielnouri.org/docs/SuperColliderHelp/Language/SymbolicNotations.html][here]]
