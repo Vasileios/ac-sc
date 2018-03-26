@@ -24,7 +24,7 @@ fork{//this alternative syntax goes for Routine
 a = {SinOsc.ar(XLine.kr(100, 500, 4), 0, 0.4)}.play;
 4.wait;
 a.release;
-b = SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
+b = {SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
 4.wait;
 b.release;
 

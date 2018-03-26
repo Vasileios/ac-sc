@@ -13,7 +13,8 @@ weight = 11
 =premise= a statement that is assumed to be true.
 
 =polynomial function= is an expression consisting of variables (also
-called indeterminates) and coefficients, that involves only the
+called indeterminates) and coefficients, that i
+nvolves only the
 operations of addition, subtraction, multiplication, and non-negative
 integer exponents of variables (Wiki, see more [[http://ebooks.edu.gr/modules/ebook/show.php/DSGL-B133/625/4028,18063/index4_1.html][here]])
 
