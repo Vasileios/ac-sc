@@ -58,7 +58,7 @@ fork{
 	0.5.wait;
 	"sound 1 or sound 2 is dead?".postln;
         0.1.wait;
-        "rolling the dice...".postln;
+        "rolling the die...".postln;
 
 	6.wait;
 	~die = 
