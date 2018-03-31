@@ -50,23 +50,52 @@ fork{
 	2.wait;
 	"sound 2".postln;
 	~b = {Out.ar(1, SinOsc.ar(443, 0, 0.5))}.play;
-	6.wait;
+		0.11.wait;
 
 	"dice game".postln;
+	0.1.wait;
 	"one sound is going to 'die'".postln;
-	
+	0.5.wait;
+	"sound 1 or sound 2 is dead?".postln;
+        0.1.wait;
+        "rolling the dice...".postln;
+
+	6.wait;
 	~die = 
 	{
 
 	fork{
-	var x = [1,2, 3, 4, 5, 6].choose.postln;
-	if(x>3,{~a.free},{~b.free});
+	var x = [1,2, 3, 4, 5, 6].choose.postln; // if you use .coin example below comment this line
+	if(x>3,{~a.free},{~b.free}); // if you use .coin example below comment this line
+
+	
+	if(x>3, {"sound 1 is dead".postln},{"sound 2 is dead".postln}); // if you use .coin example below comment this line
+	4.wait; // if you use .coin example below comment this line
+
+	/*
+
+There are other option to cause probability such as .wchoose and .coin as well.
+
+//[440,220,3350,660].wchoose([0.5, 0.25, 0.2, 0.05]) //the second array of .wchoose, weights the options of the first array.
+//0.5.coin //fair coin, equal chance.  true or false as output 
+
+//0.2.coin //unfair coin, 20% chance true
+
+//0.95.coin //unfair coin, 95% chance true
+*/		
+
+//Uncomment the bolow code to use .coin instead and comment the above code
+/*
+		var x = 0.5.coin.postln;
+		if(x = false, {~a.free},{~b.free});
+		//if(x>3,{~a.free},{~b.free});
 
 	"sound 1 or sound 2 is dead?".postln;
-	
-	if(x>3, {"sound 1 is dead".postln},{"sound 2 is dead".postln});
-	4.wait;
 
+		if(x = false, {"sound 1 is dead".postln},{"sound 2 is dead".postln});
+                4.wait;
+
+*/
 	"free the remain sound_n".postln;
 	if(~a.isRunning, {~a.free}, {~b.free});
 	if(~b.isRunning, {~b.free}, {~a.free});
