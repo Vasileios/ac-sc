@@ -116,19 +116,23 @@ There are other options to experiment with probability such as .wchoose and .coi
 
 #+BEGIN_SRC js
 
-[16, 1.7, 38, 4.2, 21].sum //80.9
 
+// first run the array with the message .normalizeSum and see the results
 [16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
 
-//Recreating the method .normalizeSum through an equation
-(
-//Below is the equation of the message .normalizeSum 
+//Doing some maths to demonstrate how the method .normalizeSum works
+
+//Below is the equation of the method .normalizeSum 
+
 //firts find the result of the summation of the array
-//[16, 1.7, 38, 4.2, 21].sum //80.9
+[16, 1.7, 38, 4.2, 21].sum //80.9
+
 //then add each value from the array seperately to the sumation of the array \
 // and divide the result with the result of the summation of the array
 //the last thing to do is to substract the result of each equation by 1 i.e (-1)
 
+(
+//run the code inside parentheses
 n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
 n = n-1;
 o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
@@ -142,7 +146,7 @@ a = a-1;
 [n,o,r,m,a].asStream;
 )
 
-
+// see the results on the post window
 #+END_SRC
 
 *With complex sounds*
