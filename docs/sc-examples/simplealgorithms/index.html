@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1522514307" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1522514307" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1522519718" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1522519718" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1522514307" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1522519718" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1522514307"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1522519718"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1522514307"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1522514307"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1522519718"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1522519718"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1522514307"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1522519718"></script>
 
     
   </div>
@@ -916,6 +916,38 @@ There are other options to experiment with probability such as .wchoose and .coi
 )
 </code></pre>
 
+<p>How to Use equations to decompose methods such as .normalizeSum, etc.</p>
+
+<pre><code class="language-js">
+
+[16, 1.7, 38, 4.2, 21].sum //80.9
+
+[16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
+
+(
+//Below is the equation of the message .normalizeSum 
+//firts find the result of the summation of the array
+//[16, 1.7, 38, 4.2, 21].sum //80.9
+//then add each value from the array seperately to the sumation of the array \
+// and divide the result with the result of the summation of the array
+//the last thing to do is to substract the result of each equation by 1 i.e (-1)
+
+n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
+n = n-1;
+o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
+o = o-1;
+r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
+r = r-1;
+m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+m = m-1;
+a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+a = a-1;
+[n,o,r,m,a].asStream;
+)
+
+
+</code></pre>
+
 <p><strong>With complex sounds</strong></p>
 
 <pre><code class="language-js">
@@ -1532,20 +1564,20 @@ Pdef(\nmove,
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1522514307"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1522514307"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1522514307"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1522514307"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1522514307"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1522514307"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1522514307"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1522519718"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1522519718"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1522519718"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1522519718"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1522519718"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1522519718"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1522519718"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1522514307"></script>
-    <script src="/ac-sc/js/learn.js?1522514307"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1522514307"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1522519718"></script>
+    <script src="/ac-sc/js/learn.js?1522519718"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1522519718"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1522514307" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1522514307"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1522519718" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1522519718"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -110,6 +110,38 @@ There are other options to experiment with probability such as .wchoose and .coi
 )
 #+END_SRC
 
+How to Use equations to decompose methods such as .normalizeSum, etc.
+
+#+BEGIN_SRC js
+
+[16, 1.7, 38, 4.2, 21].sum //80.9
+
+[16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
+
+(
+//Below is the equation of the message .normalizeSum 
+//firts find the result of the summation of the array
+//[16, 1.7, 38, 4.2, 21].sum //80.9
+//then add each value from the array seperately to the sumation of the array \
+// and divide the result with the result of the summation of the array
+//the last thing to do is to substract the result of each equation by 1 i.e (-1)
+
+n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
+n = n-1;
+o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
+o = o-1;
+r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
+r = r-1;
+m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+m = m-1;
+a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+a = a-1;
+[n,o,r,m,a].asStream;
+)
+
+
+#+END_SRC
+
 *With complex sounds*
 
 #+BEGIN_SRC js
@@ -331,3 +363,7 @@ Pdef(\nmove,
 see more on /Streams-Patterns-Events/
 
 [[http://doc.sccode.org/Overviews/Streams.html][Streams]]
+
+
+
+
