@@ -120,6 +120,7 @@ There are other options to experiment with probability such as .wchoose and .coi
 
 [16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
 
+//Recreating the method .normalizeSum through an equation
 (
 //Below is the equation of the message .normalizeSum 
 //firts find the result of the summation of the array
