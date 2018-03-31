@@ -110,7 +110,9 @@ There are other options to experiment with probability such as .wchoose and .coi
 )
 #+END_SRC
 
-How to Use equations to decompose methods such as .normalizeSum, etc.
+ *Decomposing methods* 
+
+- .normalizeSum
 
 #+BEGIN_SRC js
 
