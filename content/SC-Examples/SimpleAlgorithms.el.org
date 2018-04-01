@@ -28,7 +28,7 @@ b = {SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
 4.wait;
 b.release;
 
-});//loop ends here 
+});//loop ends here
 }//fork (Routine) ends here
 )
 #+END_SRC
@@ -61,14 +61,14 @@ fork{
         "rolling the die...".postln;
 
 	6.wait;
-	~die = 
+	~die =
 	{
 
 	fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln; // if you use .coin example below comment this line
 	if(x>3,{~a.free},{~b.free}); // if you use .coin example below comment this line
 
-	
+
 	if(x>3, {"sound 1 is dead".postln},{"sound 2 is dead".postln}); // if you use .coin example below comment this line
 	4.wait; // if you use .coin example below comment this line
 
@@ -80,18 +80,18 @@ There are other options to experiment with probability such as .wchoose and .coi
 //[440,220,3350,660].wchoose([0.5, 0.25, 0.2, 0.05]) //the second array of .wchoose, weights the options of the first array.
 
 .coin
-//0.5.coin //fair coin, equal chance.  true or false as output 
+//0.5.coin //fair coin, equal chance.  true or false as output
 
 //0.2.coin //unfair coin, 20% chance true
 
 //0.95.coin //unfair coin, 95% chance true
-*/		
+*/
 
 //Uncomment the bolow code to use .coin instead of .choose and don't forget to comment the above code
 /*
 		var x = 0.5.coin.postln;
 		if(x = false, {~a.free},{~b.free});
-		
+
 
 	        "sound 1 or sound 2 is dead?".postln;
 
@@ -102,51 +102,12 @@ There are other options to experiment with probability such as .wchoose and .coi
 	"free the remain sound_n".postln;
 	if(~a.isRunning, {~a.free}, {~b.free});
 	if(~b.isRunning, {~b.free}, {~a.free});
-			
-		
-};//Sub-routine ends here			
-}.value;// ~die ends here	
+
+
+};//Sub-routine ends here
+}.value;// ~die ends here
 };//Routine ends here
 )
-#+END_SRC
-
- *Decomposing methods* 
-
-- .normalizeSum
-
-#+BEGIN_SRC js
-
-
-// first run the array with the message .normalizeSum and see the results
-[16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
-
-//Doing some maths to demonstrate how the method .normalizeSum works
-
-//Below is the equation of the method .normalizeSum 
-
-//firts find the result of the summation of the array
-[16, 1.7, 38, 4.2, 21].sum //80.9
-
-//then add each value from the array seperately to the sumation of the array \
-// and divide the result with the result of the summation of the array
-//the last thing to do is to substract the result of each equation by 1 i.e (-1)
-
-(
-//run the code inside parentheses
-n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
-n = n-1;
-o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
-o = o-1;
-r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
-r = r-1;
-m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
-m = m-1;
-a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
-a = a-1;
-[n,o,r,m,a].asStream;
-)
-
-// see the results on the post window
 #+END_SRC
 
 *With complex sounds*
@@ -178,33 +139,71 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 
 	"dice game".postln;
 	"one sound is going to 'die'".postln;
-	
-        ~die = 
+
+        ~die =
 	{
-	
+
 	fork{
 	var x = [1,2, 3, 4, 5, 6].choose.postln;
 	if(x>3,{~a.free},{~b.free});
 
 	"sound 1 or sound 2 is dead?".postln;
-	
+
 	if(x>3, {"sound 1 is dead".postln},{"sound 2 is dead".postln});
-			
+
         4.wait;
 
 	"free the remain sound_n".postln;
 
 	if(~a.isRunning, {~a.free}, {~b.free});
 	if(~b.isRunning, {~b.free}, {~a.free});
-			
 
-};//Sub-routine ends here						
+
+};//Sub-routine ends here
 }.value;// ~die ends here
 };//Routine ends here
 )
 
 #+END_SRC
 
+ *Analysing methods*
+
+- .normalizeSum
+
+#+BEGIN_SRC js
+
+
+// first run the array with the message .normalizeSum and see the results
+[16, 1.7, 38, 4.2, 21].normalizeSum //the method .normalizeSum makes a new array which results from the division of the sum of the entries
+
+//We are going to use some maths to demonstrate how the method .normalizeSum works
+
+//firts find the result of the summation of the array
+[16, 1.7, 38, 4.2, 21].sum //80.9
+
+//then add each value from the array seperately to the summation of the array \
+// and divide the result with the result of the summation of the array
+//the last thing to do is to substract the result of each equation by 1 i.e (-1)
+
+//Below is an equation of the method .normalizeSum with the a collection of five items [16, 1.7, 38, 4.2, 21]
+
+(
+//run the code inside parentheses
+n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
+n = n-1;
+o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
+o = o-1;
+r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
+r = r-1;
+m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+m = m-1;
+a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+a = a-1;
+[n,o,r,m,a].asStream;
+)
+
+// see the results on the post window and compare them with the results of the [16, 1.7, 38, 4.2, 21].normalizeSum
+#+END_SRC
 
 *Using Patterns*
 
@@ -214,8 +213,8 @@ Scales and Patterns examples
 /*
 BA 181602
 Composing music with patterns paradigms
-Objective: Create sound textures while you playing a scale. 
-Synthesis technique: (FM synthesis) 
+Objective: Create sound textures while you playing a scale.
+Synthesis technique: (FM synthesis)
 */
 
 //Midi notation
@@ -260,21 +259,21 @@ Pbind(
 /*
 BA 181602
 Composing music with patterns paradigms.
-Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music 
+Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music
 */
 
 (
 fork{
-	
+
 ~scaleS = Scale.bartok;//experiment with other scales as well. See Scale.directory
 
 
 ~pattP = Prand((0..17)++ [\rest] ++ (16..0)++[\rest], inf);
-	
+
 ~pattD = Pn(Pgeom(0.25, 1, inf), Pgeom(1, 0.25, inf), inf);
-	
+
 ~pattD2 = Pn(Prand([0.025, 0.34, 0.16, 1], inf), Pseq([1, 0.34, 0.56, 0.25], inf), inf);
-	
+
 Pdef(\first_mov1,
  Pbind(\scale, ~scaleS,
 	\degree, ~pattP,
@@ -283,21 +282,21 @@ Pdef(\first_mov1,
 	"start with Bartok scale".postln;
 
 	15.wait;
-	
+
 	Pdef(\first_mov1).stop;
-	
+
 	"change to Dorian".postln;
-	
-~scaleS = Scale.dorian;	
+
+~scaleS = Scale.dorian;
 
 Pdef(\first_mov2,
  Pbind(\scale, ~scaleS,
 	\degree, ~pattP,
 	\dur, ~pattD2)).play;
-	
+
 	14.wait;
 	"now both".postln;
-	
+
 	Pdef(\first_mov1).play;
 
 	3.wait;
@@ -370,7 +369,3 @@ Pdef(\nmove,
 see more on /Streams-Patterns-Events/
 
 [[http://doc.sccode.org/Overviews/Streams.html][Streams]]
-
-
-
-

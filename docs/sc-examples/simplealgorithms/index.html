@@ -13,19 +13,19 @@
     <title>Algorithmic Composition Examples :: Αλγοριθμική Σύνθεση</title>
     
     
-    <link href="/ac-sc/css/nucleus.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/font-awesome.min.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/hybrid.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/featherlight.min.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/perfect-scrollbar.min.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/auto-complete.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/theme.css?1522520629" rel="stylesheet">
-    <link href="/ac-sc/css/hugo-theme.css?1522520629" rel="stylesheet">
+    <link href="/ac-sc/css/nucleus.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/font-awesome.min.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/hybrid.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/featherlight.min.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/perfect-scrollbar.min.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/auto-complete.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/theme.css?1522581311" rel="stylesheet">
+    <link href="/ac-sc/css/hugo-theme.css?1522581311" rel="stylesheet">
     
-      <link href="/ac-sc/css/theme-black.css?1522520629" rel="stylesheet">
+      <link href="/ac-sc/css/theme-black.css?1522581311" rel="stylesheet">
     
 
-    <script src="/ac-sc/js/jquery-2.x.min.js?1522520629"></script>
+    <script src="/ac-sc/js/jquery-2.x.min.js?1522581311"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -244,14 +244,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1522520629"></script>
-<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1522520629"></script>
+<script type="text/javascript" src="/ac-sc/js/lunr.min.js?1522581311"></script>
+<script type="text/javascript" src="/ac-sc/js/auto-complete.js?1522581311"></script>
 <script type="text/javascript">
     
         var baseurl = "\/ac-sc";
     
 </script>
-<script type="text/javascript" src="/ac-sc/js/search.js?1522520629"></script>
+<script type="text/javascript" src="/ac-sc/js/search.js?1522581311"></script>
 
     
   </div>
@@ -837,7 +837,7 @@ b = {SinOsc.ar(XLine.kr(500, 100, 4), 0, 0.4)}.play;
 4.wait;
 b.release;
 
-});//loop ends here 
+});//loop ends here
 }//fork (Routine) ends here
 )
 </code></pre>
@@ -867,7 +867,7 @@ fork{
         &quot;rolling the die...&quot;.postln;
 
 	6.wait;
-	~die = 
+	~die =
 	{
 
 	fork{
@@ -886,12 +886,12 @@ There are other options to experiment with probability such as .wchoose and .coi
 //[440,220,3350,660].wchoose([0.5, 0.25, 0.2, 0.05]) //the second array of .wchoose, weights the options of the first array.
 
 .coin
-//0.5.coin //fair coin, equal chance.  true or false as output 
+//0.5.coin //fair coin, equal chance.  true or false as output
 
 //0.2.coin //unfair coin, 20% chance true
 
 //0.95.coin //unfair coin, 95% chance true
-*/		
+*/
 
 //Uncomment the bolow code to use .coin instead of .choose and don't forget to comment the above code
 /*
@@ -910,51 +910,10 @@ There are other options to experiment with probability such as .wchoose and .coi
 	if(~b.isRunning, {~b.free}, {~a.free});
 
 
-};//Sub-routine ends here			
-}.value;// ~die ends here	
+};//Sub-routine ends here
+}.value;// ~die ends here
 };//Routine ends here
 )
-</code></pre>
-
-<p><strong>Decomposing methods</strong></p>
-
-<ul>
-<li>.normalizeSum</li>
-</ul>
-
-<pre><code class="language-js">
-
-
-// first run the array with the message .normalizeSum and see the results
-[16, 1.7, 38, 4.2, 21].normalizeSum // make an array of the division of the sum of the entries 
-
-//Doing some maths to demonstrate how the method .normalizeSum works
-
-//Below is the equation of the method .normalizeSum 
-
-//firts find the result of the summation of the array
-[16, 1.7, 38, 4.2, 21].sum //80.9
-
-//then add each value from the array seperately to the sumation of the array \
-// and divide the result with the result of the summation of the array
-//the last thing to do is to substract the result of each equation by 1 i.e (-1)
-
-(
-//run the code inside parentheses
-n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
-n = n-1;
-o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
-o = o-1;
-r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
-r = r-1;
-m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
-m = m-1;
-a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
-a = a-1;
-[n,o,r,m,a].asStream;
-)
-
-// see the results on the post window
 </code></pre>
 
 <p><strong>With complex sounds</strong></p>
@@ -987,7 +946,7 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 	&quot;dice game&quot;.postln;
 	&quot;one sound is going to 'die'&quot;.postln;
 
-        ~die = 
+        ~die =
 	{
 
 	fork{
@@ -1006,11 +965,52 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 	if(~b.isRunning, {~b.free}, {~a.free});
 
 
-};//Sub-routine ends here						
+};//Sub-routine ends here
 }.value;// ~die ends here
 };//Routine ends here
 )
 
+</code></pre>
+
+<p><strong>Analysing methods</strong></p>
+
+<ul>
+<li>.normalizeSum</li>
+</ul>
+
+<pre><code class="language-js">
+
+
+// first run the array with the message .normalizeSum and see the results
+[16, 1.7, 38, 4.2, 21].normalizeSum //the method .normalizeSum makes a new array which results from the division of the sum of the entries
+
+//We are going to use some maths to demonstrate how the method .normalizeSum works
+
+//firts find the result of the summation of the array
+[16, 1.7, 38, 4.2, 21].sum //80.9
+
+//then add each value from the array seperately to the summation of the array \
+// and divide the result with the result of the summation of the array
+//the last thing to do is to substract the result of each equation by 1 i.e (-1)
+
+//Below is an equation of the method .normalizeSum with the a collection of five items [16, 1.7, 38, 4.2, 21]
+
+(
+//run the code inside parentheses
+n = (16+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // start with the first item of the array (16)
+n = n-1;
+o = (1.7+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // then the second,
+o = o-1;
+r = (38+([16, 1.7, 38, 4.2, 21].sum)/ 80.9); // the third, and so on
+r = r-1;
+m = (4.2+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+m = m-1;
+a = (21+([16, 1.7, 38, 4.2, 21].sum)/ 80.9);
+a = a-1;
+[n,o,r,m,a].asStream;
+)
+
+// see the results on the post window and compare them with the results of the [16, 1.7, 38, 4.2, 21].normalizeSum
 </code></pre>
 
 <p><strong>Using Patterns</strong></p>
@@ -1020,8 +1020,8 @@ Dust.kr(XLine.kr(10, 1500, 1500, 100, 40, 4), XLine.kr(100, 400, 400, 200)), 0, 
 <pre><code class="language-js">/*
 BA 181602
 Composing music with patterns paradigms
-Objective: Create sound textures while you playing a scale. 
-Synthesis technique: (FM synthesis) 
+Objective: Create sound textures while you playing a scale.
+Synthesis technique: (FM synthesis)
 */
 
 //Midi notation
@@ -1065,7 +1065,7 @@ Pbind(
 <pre><code class="language-js">/*
 BA 181602
 Composing music with patterns paradigms.
-Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music 
+Objective: a) Experiment with patterns and scales b) Change scale and duration after n time, c) play all scales, d) stop the music
 */
 
 (
@@ -1093,7 +1093,7 @@ Pdef(\first_mov1,
 
 	&quot;change to Dorian&quot;.postln;
 
-~scaleS = Scale.dorian;	
+~scaleS = Scale.dorian;
 
 Pdef(\first_mov2,
  Pbind(\scale, ~scaleS,
@@ -1573,20 +1573,20 @@ Pdef(\nmove,
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/ac-sc/js/clipboard.min.js?1522520629"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.min.js?1522520629"></script>
-    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1522520629"></script>
-    <script src="/ac-sc/js/jquery.sticky.js?1522520629"></script>
-    <script src="/ac-sc/js/featherlight.min.js?1522520629"></script>
-    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1522520629"></script>
-    <script src="/ac-sc/js/highlight.pack.js?1522520629"></script>
+    <script src="/ac-sc/js/clipboard.min.js?1522581311"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.min.js?1522581311"></script>
+    <script src="/ac-sc/js/perfect-scrollbar.jquery.min.js?1522581311"></script>
+    <script src="/ac-sc/js/jquery.sticky.js?1522581311"></script>
+    <script src="/ac-sc/js/featherlight.min.js?1522581311"></script>
+    <script src="/ac-sc/js/html5shiv-printshiv.min.js?1522581311"></script>
+    <script src="/ac-sc/js/highlight.pack.js?1522581311"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/ac-sc/js/modernizr.custom.71422.js?1522520629"></script>
-    <script src="/ac-sc/js/learn.js?1522520629"></script>
-    <script src="/ac-sc/js/hugo-learn.js?1522520629"></script>
+    <script src="/ac-sc/js/modernizr.custom.71422.js?1522581311"></script>
+    <script src="/ac-sc/js/learn.js?1522581311"></script>
+    <script src="/ac-sc/js/hugo-learn.js?1522581311"></script>
 
-    <link href="/ac-sc/mermaid/mermaid.css?1522520629" type="text/css" rel="stylesheet" />
-    <script src="/ac-sc/mermaid/mermaid.js?1522520629"></script>
+    <link href="/ac-sc/mermaid/mermaid.css?1522581311" type="text/css" rel="stylesheet" />
+    <script src="/ac-sc/mermaid/mermaid.js?1522581311"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
