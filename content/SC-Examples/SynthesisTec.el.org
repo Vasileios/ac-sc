@@ -55,7 +55,26 @@ FreqScope.new
 
 //add frequencies using the Mix Ugen
 
-{Mix.fill(10, {SinOsc.ar(440+460.rand, 0, 0.03)})}.play;
+{Mix.fill(12, {SinOsc.ar(440+460.rand, 0, 0.03)})}.play;
+
+(
+Example from The SuperCollider Book (Wilson, 2011 p.37)
+{
+	Mix.ar(
+	Array.fill(12,
+		{|count|
+		var harm;
+		harm = count + 1 * 110; // remeber precedence: count + 1, then * 110
+			SinOsc.ar(harm, mul: max(0,  SinOsc.kr(count+1/4))
+			)*1/(count+1)
+})
+
+)*0.7
+	
+	
+}.play;
+)
+
 
 //Add also different waveforms i.e sawtooth waveforms
 
