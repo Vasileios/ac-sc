@@ -53,13 +53,12 @@ FreqScope.new
 
 {SinOsc.ar([440, 880, 880*3/2, 1600*4/3, 2000], 0, [0.6, 0.1, 0.09, 0.08, 0.09])}.play//or .scope
 
-//add frequencies using the Mix Ugen
-
-{Mix.fill(12, {SinOsc.ar(440+460.rand, 0, 0.03)})}.play;
+//Using Mix.ar, kr(). Sum an array of channels.
 
 (
 //This example is from The SuperCollider Book (Wilson, 2011 p.37)
 {
+
 	Mix.ar(
 	Array.fill(12,
 		{|count|
@@ -190,7 +189,7 @@ carrier*modulator;
 
 {SinOsc.ar(440, 0, SinOsc.ar(0.25), 0.25)}.scope
 
-// adding a MouseX variable to control the modulation of the amplitude
+// try also a MouseX variable to control the modulation of the amplitude
 
 {
 var carrier, modulator, carrfreq, modfreq, modamp;
