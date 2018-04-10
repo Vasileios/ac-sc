@@ -60,7 +60,7 @@
 	"title": "Notation",
 	"tags": [],
 	"description": "",
-	"content": "chapter 1 Notation MIDI\nThe lowest note musicians use is C-1, which has the MIDI number 0. The number 12 = C0, 24 = C1, 36 = C2, 48 = C3, 60 = C4 (which is middle C on the piano, remember this one), and so on. A 440 is above middle C so it is 69.\n60, 62, 63, 60, 66\nFrequencies\nIt is the number of cycles (per second) of a periodic wave.\n0-20000Hz\n261.62, 293.66, 311.13, 261.62, 370;\nHexadecimal\n16 symbols\n(0-9, A-F)\n0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F\n0000003C, 0000003E, 0000003F, 0000003C, 00000042\nBinary\n00111100, 00111110, 00111111, 00111100 01000010\nPitch class method\nC4, D4, Eb4, C4, F#4\n"
+	"content": "chapter 1 Notation MIDI\nThe lowest note musicians use is C-1, which has the MIDI number 0. The number 12 = C0, 24 = C1, 36 = C2, 48 = C3, 60 = C4 (which is middle C on the piano, remember this one), and so on. A 440 is above middle C so it is 69.\n60, 62, 63, 60, 66\nFrequencies\nIt is the number of cycles (per second) of a periodic wave.\nThe human range: 20-20000Hz\n261.62, 293.66, 311.13, 261.62, 370;\nHexadecimal\n16 symbols\n(0-9, A-F)\n0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F\n0000003C, 0000003E, 0000003F, 0000003C, 00000042\nBinary\n00111100, 00111110, 00111111, 00111100 01000010\nPitch class method\nC4, D4, Eb4, C4, F#4\n"
 },
 {
 	"uri": "https://vasileios.github.io/ac-sc/introduction/glossary/",

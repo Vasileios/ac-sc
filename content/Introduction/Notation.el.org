@@ -21,7 +21,7 @@ so it is 69.
 
 It is the number of cycles (per second) of a periodic wave.
 
-0-20000Hz
+The human range: 20-20000Hz 
 
 261.62, 293.66, 311.13, 261.62, 370;
 
