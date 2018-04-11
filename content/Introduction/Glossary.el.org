@@ -43,7 +43,7 @@ the amplitudes of any individual wave)
 
 =SC Stream= Streams represent sequences of values that are obtained one at a time.
 
-=SC Pbind= The pattern Pbind connects specific patterns with specific names. Consult its help page for details.
+=SC Pbind= The Event Pattern Class Pbind connects specific patterns with specific names. Consult its help page for details.
 
 =wavetable= is a table with the amplitude values of a signal
 
