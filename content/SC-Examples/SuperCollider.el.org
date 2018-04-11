@@ -29,7 +29,7 @@ A Function is an expression which defines operations to be performed when it is 
 
 #+BEGIN_SRC js
 
-// Functions in SuperCollider are within curly brackets {}
+// Functions in SuperCollider are within curly brackets  (also called "braces") {}
 
 { arg a, b, c;  var d;   d = a * b; c + d }
 
