@@ -70,3 +70,8 @@ Trautmann, Lutz, and Rudolf Rabenstein. 2012. Digital Sound Synthesis by Physica
 - https://stephenhammer.com/2010/05/tuning-recipe/
 - http://tonalsoft.com/monzo/55edo/55edo.htm
 - http://casfaculty.case.edu/ross-duffin/why-i-hate-vallotti-or-is-it-young/5-why-i-hate-vallotti-or-is-it-young/sarabande-in-g-minor-vallotti/
+
+SuperCollider Tutorials:
+https://composerprogrammer.com/teaching/supercollider/sctutorial/tutorial.html
+https://ccrma.stanford.edu/~ruviaro/texts/A_Gentle_Introduction_To_SuperCollider.pdf
+http://supercolliderbook.net
