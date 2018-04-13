@@ -404,7 +404,7 @@ x.set(\gate, 0);
 
 #+END_SRC
 
-more examples on Granular Synthesis
+more examples on [[https://vasileios.github.io/ac-sc/sc-examples/granularsynthesis/][Granular Synthesis]]
 
 **** Physical Modeling
 
