@@ -430,7 +430,7 @@ source = TGrains.ar(2, Impulse.ar(trate), b, rate, BufDur.kr(b)*bufdur, dur, Dse
 
 
 
-Pbind(\instrument, \tgrain, \dur, Pseq(e), \trate, Pseq(e), \rate, 1, \amp, 1, \bufdur, Pseq(e.sqrt)).play;
+Pbind(\instrument, \tgrain, \dur, Pseq(e.sqrt), \trate, Pseq(e), \rate, 1, \amp, 1, \bufdur, Pseq(e.reciprocal)).play;
 
 
 };
