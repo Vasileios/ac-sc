@@ -376,10 +376,10 @@ see more on /Streams-Patterns-Events/
 /*
 BA 180205
 Create data and collect
-Objective: Create data, collect and amp to the arguments of the synth
+Objective: Create data (an array of values i.e integers or floats), and map them to the arguments of the synth
 */
 
-//Collect data as stream (array)
+//Create and collect data as stream (array)
 //iterate over a collection
 (
 a = 10.do{|n|
