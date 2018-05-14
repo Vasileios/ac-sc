@@ -215,6 +215,34 @@ GENETIC ALGORITHMS AND ADAPTATION
 αντιμετωπιστούν καλύτερα σε γενετικές γραμματικές.
 Για εφαρμογές αλγοριθμικής σύνθεσης, τα Νευρωνικά Δίκτυα χρησιμοποιούνται συχνά στο πλαίσιο των υβριδικών συστημάτων.
 
+Γενετικοί Αλγόριθμοι και Νευρωνικά Δίκτυα στην δόμηση μουσικών και ηχητικών σημάτων. (Artificial life)
+Machine learning and Data mining
+- biological neural networks
+SuperCollider: NeuralNet SuperCollider->NatureToolkit (L-system Libray)
+Genetic Algorithms in designing audiovisual materials.
+Neural Algorithms and AI. Machine Learning, Deep Learning, Big data, Tensor Flow, Keras, Chainer. //Some Machine Learning Resources: SuperCollider Classes and UGens
+In the Quarks:
+- MathLib//Multiupleauthors:ΣυμπεριλαμβάνειταMarkovSetκαιFuzzySetclassesπερισσότερηυπο- στήριξη μαθηματικών για μήτρες (math support for matrices) και πολλά άλλα.
+- ContextSnake //Gerhard Nierhaus, Alberto de Campo: A Markov pattern with variable context depth
+- KDTree//DanStowell:adatastructureforfastersearchthroughalargesetofmultidimensionalfeature vectors (e.g., useful for concatenative synthesis (concatenating short samples of recorded sound).
+- KMeans //Dan Stowell: basic unsupervised clustering algorithm (Unsupervised learning)
+- NatureToolkit // /Batuhan Bozkurt’s GA, L-systems, και Cellular Automata του Batuhan Bozkurt.
+Υπάρχουν επίσης έργα με Γενετικό Αλγόριθμο (GA) από τους Fredrik Olofsson, Dan Stowell, Matthew Yee-King.
+- DanStowell’sMCLDUGens(inthesc3-plugins,http://sourceforge.net/projects/sc3-plugins/) contain some server side learning algorithms:
+- SOMTrain //self-organizing map (data dimensionality reduction tool)
+- GaussClass //Gaussian classifier.
+- Chris Kiefer and Nick Collins NeuralNet class, ένα πρόγραμμα που επιταχύνει την εκμάθηση:
+7
+http://ck13.net/?page_id=35
+Ο Chris Kiefer δημιούργσε μία κλάσση για τα CTRNNs: Continuous-Time Recurrent Neural Networks Απο τον Collins -> website: http://www.sussex.ac.uk/Users/nc81/code.html#SC Reinforcement learning classes, such as for the SARSA (state-action-reward-state-action) algorithm Επίσης, στην SCMIR Library:
+- GMM //Gaussian Mixture Model (relies on provided external program)
+- NaiveBayes
+- MarkovModel //another implementation, fixed order
+- PPMC //Prediction by Partial Match algorithm C; a variable order Markov Model
+Υπάρχουν μερικές εκδόσεις αλγορίθμων μηχανικής μάθησης (Machine Learning) που είναι ενσωματω- μένες στο UGens σύνθεσης, όπως το KmeansToBPSet1 στα SLUGens, ή το MarkovSynth από τον Batuhan Bozkurt.
+Η μηχανική μάθηση είναι ένα ευρύ πεδίο και υπάρχουν αλληλεπικαλύψεις με άλλους αλγόριθμους, όπως πληροφορίες θεωρητικών σχέσεων μεταξύ αλγορίθμων που έχουν εκπαιδευτεί με σύμβολα όπως MarkovModels και αλγόριθμοι πρόβλεψης / συμπίεσης όπως η Γραμμική Προγνωστική Κωδικοποίηση ή η Lempel-Ziv (στο Quark redSys από τον Fredik Olofsson, είναι εφαρμογές πολλών αλγορίθμων συμπίεσης). (Collins)
+
+
 **** Artificial intelligence
 
 Η "Τεχνιτή Νοημοσύνη" περιλαμβάνει μια ποικιλία διαδικασιών για
