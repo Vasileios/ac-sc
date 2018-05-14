@@ -243,7 +243,7 @@ http://ck13.net/?page_id=35
 - NaiveBayes
 - MarkovModel another implementation, fixed order
 - PPMC Prediction by Partial Match algorithm C; a variable order Markov Model
-Υπάρχουν μερικές εκδόσεις αλγορίθμων μηχανικής μάθησης (Machine Learning) που είναι ενσωματω- μένες στο UGens σύνθεσης, όπως το KmeansToBPSet1 στα SLUGens, ή το MarkovSynth από τον Batuhan Bozkurt.
+Υπάρχουν μερικές εκδόσεις αλγορίθμων μηχανικής μάθησης (Machine Learning) που είναι ενσωματωμένες στο UGens σύνθεσης, όπως το KmeansToBPSet1 στα SLUGens, ή το MarkovSynth από τον Batuhan Bozkurt.
 Η μηχανική μάθηση είναι ένα ευρύ πεδίο και υπάρχουν αλληλεπικαλύψεις με άλλους αλγόριθμους, όπως πληροφορίες θεωρητικών σχέσεων μεταξύ αλγορίθμων που έχουν εκπαιδευτεί με σύμβολα όπως MarkovModels και αλγόριθμοι πρόβλεψης / συμπίεσης όπως η Γραμμική Προγνωστική Κωδικοποίηση ή η Lempel-Ziv (στο Quark redSys από τον Fredik Olofsson, είναι εφαρμογές πολλών αλγορίθμων συμπίεσης). (Collins)
 
 
