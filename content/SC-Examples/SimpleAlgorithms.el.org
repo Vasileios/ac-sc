@@ -577,7 +577,7 @@ SynthDef(\blipClock, {|out = 0, gate = 1, freq = 440, numharm = 200,  freq2 = 22
 				args.postln;	//  post the input arguments to our event function 
 							//  (will post logical time in beats, elapsed time 
 							//  in seconds of enclosing thread and this clock)
-//use Env.perc without gate
+
 
 				Synth(\blipClock, [\freq, 60, \numharm, 120.rand2, \amp, 0.6]);// make a bleep
 				1.0	// reschedules every beat
@@ -588,7 +588,7 @@ SynthDef(\blipClock, {|out = 0, gate = 1, freq = 440, numharm = 200,  freq2 = 22
 
 (
 //Scheduling tempo with Routines
-//use Env.perc without gate
+
 ~f = fork{
 ~ev = Event.new( [
 	~t.tempo_(4);
@@ -600,7 +600,7 @@ SynthDef(\blipClock, {|out = 0, gate = 1, freq = 440, numharm = 200,  freq2 = 22
 ]).play;
 	
 	12.wait;
-	//~ev.stop;
+	
 
 	~t.clear;
 };
