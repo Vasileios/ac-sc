@@ -574,13 +574,13 @@ SynthDef(\blipClock, {|out = 0, gate = 1, freq = 440, numharm = 200,  freq2 = 22
 ~t = TempoClock(2); // make a new tempoclock of 2 beats per second means 12bpm
 
 ~t.schedAbs(0, { | ... args |	// start at absolute beat 0 immediately
-				args.postln;	//  post the input arguments to our event function 
+args.postln;	//  post the input arguments to our event function 
 							//  (will post logical time in beats, elapsed time 
 							//  in seconds of enclosing thread and this clock)
 
 
-				Synth(\blipClock, [\freq, 60, \numharm, 120.rand2, \amp, 0.6]);// make a bleep
-				1.0	// reschedules every beat
+Synth(\blipClock, [\freq, 60, \numharm, 120.rand2, \amp, 0.6]);// make a bleep
+	1.0	// reschedules every beat
 })
 
 )
