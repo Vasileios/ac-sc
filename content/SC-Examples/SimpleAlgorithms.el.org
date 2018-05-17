@@ -438,7 +438,7 @@ Pbind(\instrument, \tgrain, \dur, Pseq(e.sqrt), \trate, Pseq(e), \rate, 1, \amp,
 
 #+END_SRC
 
-*** Kolakoski sequence
+ *Kolakoski sequence*
 
 In mathematics, the Kolakoski sequence, sometimes also known as the
 Oldenburger-Kolakoski sequence,[1] is an infinite sequence of symbols
@@ -543,5 +543,67 @@ SynthDef(\hihat, {| out = 0, bufnum = 2, amp = 0.3, rate = 1, cutoff = 2000 |
 
   };
 }
+
+#+END_SRC
+
+
+*Scheduling Tempo*
+
+#+BEGIN_SRC js
+(
+
+//create SynthDef
+SynthDef(\blipClock, {|out = 0, gate = 1, freq = 440, numharm = 200,  freq2 = 220, cutoff = 444,  amp = 0.8, rq = 1, pan = 0 |
+	var env, source, filter;
+
+		env = EnvGen.kr(Env.perc, doneAction: 2);
+	//	env = EnvGen.kr(Env.adsr(0.6, 0.3, 0.4, 1), gate,   doneAction: 2);
+
+	source =
+	Mix.fill(2, {Blip.ar(SinOsc.ar(freq*2, freq2*3, freq*0.6), numharm, amp*env)+SinOsc.ar(freq, 0,  amp*env)});
+	//	filter = RLPF.ar(source, cutoff, rq, amp).softclip;
+		filter = LPF.ar(source, cutoff, amp).softclip;
+
+	Out.ar(out, Pan2.ar(filter, pan))*0.4;
+	
+}).add;
+)
+
+//create a new Tempoclock
+(
+~t = TempoClock(2); // make a new tempoclock of 2 beats per second means 12bpm
+
+~t.schedAbs(0, { | ... args |	// start at absolute beat 0 immediately
+				args.postln;	//  post the input arguments to our event function 
+							//  (will post logical time in beats, elapsed time 
+							//  in seconds of enclosing thread and this clock)
+//use Env.perc without gate
+
+				Synth(\blipClock, [\freq, 60, \numharm, 120.rand2, \amp, 0.6]);// make a bleep
+				1.0	// reschedules every beat
+})
+
+)
+
+
+(
+//Scheduling tempo with Routines
+//use Env.perc without gate
+~f = fork{
+~ev = Event.new( [
+	~t.tempo_(4);
+	6.wait;
+	~t.tempo_(2);
+	6.wait;
+	~t.tempo_(1);
+	6.wait;
+]).play;
+	
+	12.wait;
+	//~ev.stop;
+
+	~t.clear;
+};
+)
 
 #+END_SRC
