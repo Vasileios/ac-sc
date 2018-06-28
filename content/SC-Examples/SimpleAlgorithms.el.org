@@ -87,7 +87,7 @@ There are other options to experiment with probability such as .wchoose and .coi
 //0.95.coin //unfair coin, 95% chance true
 */
 
-//Uncomment the bolow code to use .coin instead of .choose and don't forget to comment the above code
+//Comment out the bolow code to use .coin instead of .choose and don't forget to comment the above code
 /*
 		var x = 0.5.coin.postln;
 		if(x = false, {~a.free},{~b.free});
