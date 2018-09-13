@@ -14,7 +14,7 @@ weight=60
 /*
 Algorithmic composition paradigms
 BA 181502
-Objective: create a Routine and repeat it n times
+Objective:  create a sine wave and accelerate and decelarate its frequency nth times.
 */
 
 fork{//this alternative syntax goes for Routine
