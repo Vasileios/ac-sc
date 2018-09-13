@@ -82,7 +82,7 @@ SC-Help: Classes |GUI->Views->ScopeView
 3/2->perfect fifth
 4/3->perfect fourth
 5/4->major third 
-5/3->magor sixth 
+5/3->major sixth 
 6/5->minor third 
 9/8->tone
 15/8->diatonic seventh
