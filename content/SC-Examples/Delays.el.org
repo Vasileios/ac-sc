@@ -52,4 +52,20 @@ DelayN.ar(z, 0.1, 0.1, 1, z); // input is mixed with delay via the add input
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/300, 1/300, 3) }.play;
 { CombC.ar(Decay.ar(Dust.ar(1,0.1), 0.2, WhiteNoise.ar), 1/400, 1/400, 3) }.scope(1, zoom:4);
 #+END_SRC
+
+Another example
+
+#+BEGIN_SRC js
+// Sound Sample Delay
+
+b = Buffer.read(s, Platform.resourceDir +/+ "sounds/a11wlk01.wav");
+// loop is true
+{
+var signal;
+var delaytime = MouseX.kr(0.000022675, 1); // from a sample to 1 s
+signal = PlayBuf.ar(1, b.bufnum, BufRateScale.kr(b.bufnum), loop:1);
+x =  DelayN.ar(signal, 0.6, delaytime); // try replacing with CombN (with 0 decayTime)
+(signal + x).dup
+}.play
+#+END_SRC
 //etc
