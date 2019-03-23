@@ -24,6 +24,9 @@ Husbands, Phil, Peter Copley, Alice Eldridge, and James Mandelis. 2007. ‘An In
 
 Miranda, Eduardo R., and John Al Biles. 2007. Evolutionary Computer Music. Springer Science & Business Media.
 
+Miranda, E. 2002. Computer Sound Design, Second Edition: Synthesis techniques and programming (2 edition). Amsterdam: Focal Press.
+
+
 Nierhaus, Gerhard. 2008. Algorithmic Composition: Paradigms of Automated Music Generation. 2009 edition. Wien ; New York: Springer.
 
 Roads, Curtis. 1996. The Computer Music Tutorial. Edition Unstated

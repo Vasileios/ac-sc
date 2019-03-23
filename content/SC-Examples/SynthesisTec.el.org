@@ -125,7 +125,12 @@ more examples on [[https://vasileios.github.io/ac-sc/sc-examples/spectral/][Spec
 
 **** Modulation synthesis
 
-FM synthesis (frequency modulation) is a fundamental digital sound synthesis technique employing a nonlinear oscillating function. The theory of FM was well established by the mid-twentieth century for radio frequencies. The use of FM in audio frequencies for the purpose of sound synthesis was not studied until late 60's. John Chowing at Stanford University was the first to study systematically FM synthesis. Chowing observed that complex audio spectra can be achieved with just two sinusoidal oscillators (Tolonen et al. 1998).
+FM synthesis (frequency modulation) is a fundamental digital sound
+synthesis technique employing a nonlinear oscillating function. The
+theory of FM was well established by the mid-twentieth century for
+radio frequencies. The use of FM in audio frequencies for the purpose
+of sound synthesis was not studied until late 60's. *John Chowing*
+(the inventor of FM synthesis) (Miranda 2002) at Stanford University was the first to study systematically FM synthesis. Chowing observed that complex audio spectra can be achieved with just two sinusoidal oscillators (Tolonen et al. 1998).
 
 #+BEGIN_SRC js
 
