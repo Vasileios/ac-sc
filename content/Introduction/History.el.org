@@ -18,6 +18,8 @@ weight = 5
 
  *Guido D'Arrezo*
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/LxkstaYPztM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 Επίσης, στο πλαίσιο της αλγοριθμικής σύνθεσης, γύρω στο AD 1000 είχε
 αναπτυχθεί η πρώτη προσέγγιση στην αυτόματη γένεση της μουσικής
 δομής. Ο Guido του Arezzo (γύρω στο 991-1031) συνέβαλε στην ανάπτυξη
@@ -44,9 +46,13 @@ To motet μαζι με τη ανάπτυξη της μουσικής σημει�
 
 Η αρχή του ισόρυθμου (isorhythm), που εφευρέθηκε από τον Philippe de Vitry και εξελίσεται με τον Guillaume de Machaut, αποτελείται από πολλαπλά επαναλαμβανόμενα μελωδικά και ρυθμικά μοντέλα τα οποία αλληλεπιδρούν μεταξύ τους και μπορούν να εμφανιστούν σε διαφορετικές αναλογίες.
 
-[[https://www.youtube.com/watch?v=Ke2BuKG65Sw&t=31s][De Vitry]]
+/De Vitry/
 
-[[https://www.youtube.com/watch?v=11A4wqv8_wo][Machaut]]
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Ke2BuKG65Sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+/Machaut/
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/_KW7mZUnLKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 *Johann Joseph Fux*
 
@@ -66,9 +72,9 @@ of Fugue" καθώς και τεχνική του Schönberg τον 20ο αιώ�
 του Raimundus Lullus διαπραγματεύεται αποτελεσματικά την έννοια του υπολογιστικού
 μουσικού συστήματος.
 
-Οι αναλογίες σχετικά με το hardware και το λογισμικό, τη μνήμη δεδομένων, το πρόγραμμα κλπ. είναι εμφανείς στα συστατικά, τους ορισμούς και τους κανόνες του "Ars Magna".
+Οι αναλογίες σχετικά με το hardware και το λογισμικό, τη μνήμη δεδομένων, το πρόγραμμα κλπ. είναι εμφανείς στα συστατικά, τους ορισμούς και τους κανόνες του "[[https://www.britannica.com/biography/Ramon-Llull#ref228858][Ars Magna]]".
 
- *Athanasius Kircher*
+ *[[http://kircher.stanford.edu/][Athanasius Kircher]]*
 
 O Kircher με το μουσικολογικό έργο του "Musurgia Universalis" από
 το 1650 επιρρέασε στην ανάπτυξη της δυτικής μουσικής - ιδιαίτερα στους
@@ -90,6 +96,7 @@ Musarithmica]] θεωρείται αλγοριθμική σύνθεση σε φ�
 
  *Leibnitz (1646-1716)*
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/4zmRcEv_wR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 [[https://upload.wikimedia.org/wikipedia/commons/3/3b/Gottfried_Wilhelm_Leibniz.jpg][Leibnitz]]
 
@@ -151,7 +158,7 @@ Caspar Schott (1608-1666),
 κλωστοϋφαντουργία. Το έτος 1725 ο Basile Bouchon ανέπτυξε το πρώτο
 σύστημα αυτόματου ελέγχου Αργαλειών ([[https://en.wikipedia.org/wiki/Basile_Bouchon#/media/File:Basile_Bouchon_1725_loom.jpg][Bouchon loom]]).
 
- *Babbage-Lovelace 18ος αιώνας*
+ *[[https://www.computerhistory.org/babbage/adalovelace/][Babbage-Lovelace]] 18ος αιώνας*
 
 Βασικός στόχος του Babbage είναι η μηχανοποίηση των διαδικασιών υπολογισμού, όπως αυτές απαιτούνται για τη δημιουργία πινάκων λογαρίθμου.
 
@@ -159,6 +166,8 @@ Caspar Schott (1608-1666),
 διαδραμάτισε σημαντικό ρόλο. Ήταν μια αυτοδίδακτος μαθηματικός και
 συνεργάστηκε με τον Babbage στην έννοια του «αναλυτικού κινητήρα»
 ([[https://en.wikipedia.org/wiki/Analytical_Engine#/media/File:AnalyticalMachine_Babbage_London.jpg][analytical engine]]).
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/5rtKoKFGFSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 [[http://static1.squarespace.com/static/507dba43c4aabcfd2216a447/507dba43c4aabcfd2216a451/539853fde4b043aa14e924b9/1411669805035/Lady+Ada+Lovelace.jpg?format=1000w][Ada Lovelace]]
 
@@ -173,7 +182,8 @@ analytique de Charles Babbage” το 1842. Η Ada Lovelace μετέφρασε �
 θεωρείται η πρώτη γυναίκα προγραμματιστής στην ιστορία του
 προγραμματισμού ηλεκτρονικών υπολογιστών - το πρόγραμμα *Ada*, που αναπτύχθηκε στη δεκαετία του 1970, πήρε το όνομά της.
 
-*Dice Game*
+*Musical Dice Game*
+Subject: [[https://en.wikipedia.org/wiki/Aleatoric_music][Aleatory music]]
 
 Επιπλέον, μπορούν να βρεθούν οι πρώτες εφαρμογές αλγορίθμων για εργασίες σύνθεσης
 στο δημοφιλές "μουσικό παιχνίδι με ζάρια" τον 18ο αιώνα.
@@ -253,6 +263,8 @@ o Kurt Gödel το 1931 καθόρισε σαφή όρια στις προσπά
 
 - John von Neumann (1903-1957) - /game theory/ and /quantum mechanics/, /Von Neumann architecture/ in computing, /linear programming/, /self-replicating machines/, /stochastic computing/.
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Y2jiQXI6nrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 IAS computer 1952 (5 kilobytes capacity)
 
 *Theory of Self-Reproducing Automata*
@@ -264,6 +276,8 @@ IAS computer 1952 (5 kilobytes capacity)
 - Hilbert's decision problem
 Given a mathematical proposition, can one find an algorithm to decide
 whether the proposition is true or false?
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/PovAWVxp_WI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 *Alan Turing*
 
@@ -375,19 +389,33 @@ See also here for more: /[[https://plato.stanford.edu/entries/computing-history/
 
 *Edgard Varèse* [[https://www.youtube.com/watch?v=R-R3F3ZVbi8][Poème électronique]] στο Philips Pavilion.
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/WQKyYmU2tPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 *Iannis Xenakis* και αλγοριθμική σύνθεση.
 
 *Formalised Music* ("aesthetic efficiency")
 
 [[https://www.youtube.com/watch?v=mXIJO-af_u8][Xenakis Analogique A]]
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/n2ZEp1pxAOw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 *Hiller and Isaacson* [[https://www.youtube.com/watch?v=n0njBFLQSk8][Illiac Suite]]
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Z-pqfXQu2qY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/n0njBFLQSk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
 *Ligeti*  [[https://www.youtube.com/watch?v=1AJoyqbMv_I][Continuum]] 1968
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/iPgwF3G5i4k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 *Herbert Brün* "SAWDUST"
 [[https://www.youtube.com/watch?v=4JZRBZF2scI][Dust]] (1976), More Dust (1977) etc.
 
 *Gottfried Michael Koenig* SSP (Sound Synthesis Program)
+
+*Karlheinz Stockhausen*
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/264HLeQIUv4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 and more...
