@@ -385,7 +385,16 @@ See also here for more: /[[https://plato.stanford.edu/entries/computing-history/
 
 *Serialism*
 
-*John Cage* "Reunion" (σκάκι)
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yWeFk6bmkIA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+*Arnold Schonberg*
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/K_0W5MIQrT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+*John Cage* "[[https://www.johncage.org/blog/cross_reunion.pdf][Reunion]]" (σκάκι)
+
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Rsh-udwpy6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 *Edgard Varèse* [[https://www.youtube.com/watch?v=R-R3F3ZVbi8][Poème électronique]] στο Philips Pavilion.
 
