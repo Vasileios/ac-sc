@@ -358,9 +358,13 @@ Von Neumann machines (parallel binary machines)
 
 - MANIAC (Los Alamos) 1952
 
-Δείτε παρακάτω ένα ντοκιμαντέρ σχετικά με την ιστορία και τους εφευρέτες των υπολογιστών.
+See also here for more: /[[https://plato.stanford.edu/entries/computing-history/][The Modern History of Computing]]/
 
+Επίσης, μπορείτε να παρακολουθήσετε το παρακάτω ένα ντοκιμαντέρ σχετικά με την ιστορία και τους εφευρέτες των υπολογιστών.
+
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qundvme1Tik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 [[https://www.youtube.com/watch?v=qundvme1Tik][Computer Pioneers]]
+
 
 
 **** Αλγοριθμική σύνθεση τον 20ο αιώνα
