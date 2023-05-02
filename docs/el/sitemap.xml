@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vasileios.github.io/ac-sc/introduction/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="el"
-                href="https://vasileios.github.io/ac-sc/introduction/"
-                />
   </url><url>
     <loc>https://vasileios.github.io/ac-sc/</loc>
     <xhtml:link

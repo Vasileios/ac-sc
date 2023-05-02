@@ -26,18 +26,6 @@
                 href="https://vasileios.github.io/ac-sc/en/introduction/history/"
                 />
   </url><url>
-    <loc>https://vasileios.github.io/ac-sc/en/introduction/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="el"
-                href="https://vasileios.github.io/ac-sc/introduction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://vasileios.github.io/ac-sc/en/introduction/"
-                />
-  </url><url>
     <loc>https://vasileios.github.io/ac-sc/en/introduction/paradigms/</loc>
     <xhtml:link
                 rel="alternate"
@@ -61,6 +49,8 @@
                 hreflang="en"
                 href="https://vasileios.github.io/ac-sc/en/categories/"
                 />
+  </url><url>
+    <loc>https://vasileios.github.io/ac-sc/en/introduction/</loc>
   </url><url>
     <loc>https://vasileios.github.io/ac-sc/en/tags/</loc>
     <xhtml:link
